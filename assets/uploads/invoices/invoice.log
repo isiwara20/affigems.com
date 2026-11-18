@@ -1,0 +1,100 @@
+2026-07-05 15:01:21 prepare_pdf start order_id=8
+2026-07-05 15:01:21 prepare_pdf full generator ok bytes=5517
+2026-07-05 15:01:21 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:01:21 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA2607054543.pdf bytes=5517
+2026-07-05 15:01:37 prepare_pdf start order_id=9
+2026-07-05 15:01:37 prepare_pdf full generator ok bytes=5083
+2026-07-05 15:01:37 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:01:37 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB2607057AC0.pdf bytes=5083
+2026-07-05 15:02:18 prepare_pdf start order_id=10
+2026-07-05 15:02:18 prepare_pdf full generator ok bytes=5100
+2026-07-05 15:02:18 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:02:18 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB2607056230.pdf bytes=5100
+2026-07-05 15:04:13 prepare_pdf start order_id=11
+2026-07-05 15:04:13 prepare_pdf full generator ok bytes=5103
+2026-07-05 15:04:13 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:04:13 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA260705579D.pdf bytes=5103
+2026-07-05 15:07:51 prepare_pdf start order_id=12
+2026-07-05 15:07:52 prepare_pdf full generator ok bytes=5081
+2026-07-05 15:07:52 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:07:52 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA26070508C7.pdf bytes=5081
+2026-07-05 15:32:10 prepare_pdf start order_id=13
+2026-07-05 15:32:10 prepare_pdf full generator ok bytes=5107
+2026-07-05 15:32:10 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:32:10 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA260705B0ED.pdf bytes=5107
+2026-07-05 15:33:46 prepare_pdf start order_id=14
+2026-07-05 15:33:46 prepare_pdf full generator ok bytes=5102
+2026-07-05 15:33:46 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:33:46 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB260705C989.pdf bytes=5102
+2026-07-05 15:45:21 prepare_pdf start order_id=15
+2026-07-05 15:45:21 prepare_pdf full generator ok bytes=5105
+2026-07-05 15:45:21 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:45:21 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA2607059524.pdf bytes=5105
+2026-07-05 15:48:49 prepare_pdf start order_id=16
+2026-07-05 15:48:50 prepare_pdf full generator ok bytes=5104
+2026-07-05 15:48:50 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:48:50 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA26070502DD.pdf bytes=5104
+2026-07-05 15:49:32 prepare_pdf start order_id=17
+2026-07-05 15:49:32 prepare_pdf full generator ok bytes=5081
+2026-07-05 15:49:32 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:49:32 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA26070576CB.pdf bytes=5081
+2026-07-05 15:52:48 prepare_pdf start order_id=18
+2026-07-05 15:52:48 prepare_pdf full generator ok bytes=5080
+2026-07-05 15:52:48 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:52:48 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA260705FBB0.pdf bytes=5080
+2026-07-05 15:53:29 prepare_pdf start order_id=19
+2026-07-05 15:53:29 prepare_pdf full generator ok bytes=5080
+2026-07-05 15:53:29 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:53:29 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA26070501EC.pdf bytes=5080
+2026-07-05 15:57:09 prepare_pdf start order_id=20
+2026-07-05 15:57:09 prepare_pdf full generator ok bytes=5104
+2026-07-05 15:57:09 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 15:57:09 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA2607056283.pdf bytes=5104
+2026-07-05 16:56:21 prepare_pdf start order_id=21
+2026-07-05 16:56:21 prepare_pdf full generator ok bytes=5105
+2026-07-05 16:56:21 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-05 16:56:21 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA260705BB85.pdf bytes=5105
+2026-07-06 07:08:24 prepare_pdf start order_id=22
+2026-07-06 07:08:24 prepare_pdf full generator ok bytes=5001
+2026-07-06 07:08:24 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 07:08:24 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA2607068E22.pdf bytes=5001
+2026-07-06 08:01:06 prepare_pdf start order_id=23
+2026-07-06 08:01:06 prepare_pdf full generator ok bytes=4879
+2026-07-06 08:01:06 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 08:01:06 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB2607066A9D.pdf bytes=4879
+2026-07-06 09:27:46 prepare_pdf start order_id=6
+2026-07-06 09:27:46 prepare_pdf full generator ok bytes=5002
+2026-07-06 09:27:46 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 09:27:46 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB260626339D.pdf bytes=5002
+2026-07-06 09:32:41 prepare_pdf start order_id=2
+2026-07-06 09:32:41 prepare_pdf full generator ok bytes=4884
+2026-07-06 09:32:41 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 09:32:41 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB260620A340.pdf bytes=4884
+2026-07-06 09:33:16 prepare_pdf start order_id=23
+2026-07-06 09:33:16 prepare_pdf full generator ok bytes=4880
+2026-07-06 09:33:16 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 09:33:16 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB2607066A9D.pdf bytes=4880
+2026-07-06 09:33:36 prepare_pdf start order_id=7
+2026-07-06 09:33:36 prepare_pdf full generator ok bytes=4895
+2026-07-06 09:33:36 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 09:33:36 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-WA260628EAE9.pdf bytes=4895
+2026-07-06 10:26:32 prepare_pdf start order_id=24
+2026-07-06 10:26:32 prepare_pdf full generator ok bytes=4887
+2026-07-06 10:26:32 prepare_pdf save dir=D:\Chandila\ezymart\helpers/../assets/uploads/invoices writable=yes
+2026-07-06 10:26:32 prepare_pdf saved path=D:\Chandila\ezymart\helpers/../assets/uploads/invoices\INV-AB260706E233.pdf bytes=4887
+2026-07-08 11:57:34 prepare_pdf start order_id=31
+2026-07-08 11:57:34 prepare_pdf full generator ok bytes=5019
+2026-07-08 11:57:34 prepare_pdf save dir=D:\Chandila\itclick\helpers/../assets/uploads/invoices writable=yes
+2026-07-08 11:57:34 prepare_pdf saved path=D:\Chandila\itclick\helpers/../assets/uploads/invoices\INV-WA2607089083.pdf bytes=5019
+2026-07-08 12:07:37 prepare_pdf start order_id=32
+2026-07-08 12:07:37 prepare_pdf full generator ok bytes=5014
+2026-07-08 12:07:37 prepare_pdf save dir=D:\Chandila\itclick\helpers/../assets/uploads/invoices writable=yes
+2026-07-08 12:07:37 prepare_pdf saved path=D:\Chandila\itclick\helpers/../assets/uploads/invoices\INV-AB260708078B.pdf bytes=5014
+2026-07-08 12:21:08 prepare_pdf start order_id=33
+2026-07-08 12:21:08 prepare_pdf full generator ok bytes=5016
+2026-07-08 12:21:08 prepare_pdf save dir=D:\Chandila\itclick\helpers/../assets/uploads/invoices writable=yes
+2026-07-08 12:21:08 prepare_pdf saved path=D:\Chandila\itclick\helpers/../assets/uploads/invoices\INV-AB260708C560.pdf bytes=5016
+2026-07-08 13:57:23 prepare_pdf start order_id=34
+2026-07-08 13:57:23 prepare_pdf full generator ok bytes=5129
+2026-07-08 13:57:23 prepare_pdf save dir=D:\Chandila\itclick\helpers/../assets/uploads/invoices writable=yes
+2026-07-08 13:57:23 prepare_pdf saved path=D:\Chandila\itclick\helpers/../assets/uploads/invoices\INV-AB260708E617.pdf bytes=5129
