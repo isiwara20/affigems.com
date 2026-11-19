@@ -726,6 +726,27 @@
     </div>
 
     <style>
+    .btn-subscribe {
+        width: 100%;
+        padding: 12px;
+        background: #eab308 !important;
+        color: #001f52 !important;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        letter-spacing: 0.3px;
+        box-shadow: 0 4px 14px rgba(234, 179, 8, 0.35);
+    }
+    .btn-subscribe:hover {
+        background: #ca8a04 !important;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(202, 138, 4, 0.45);
+    }
     .subscribe-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:99999; align-items:center; justify-content:center; backdrop-filter:blur(3px); }
     .subscribe-overlay.show { display:flex; animation:fadeInOverlay 0.2s ease; }
     .subscribe-modal { background:#fff; border-radius:18px; padding:40px; max-width:360px; width:90%; text-align:center; animation:scaleIn 0.25s ease; box-shadow:0 20px 50px rgba(0,0,0,0.15); }

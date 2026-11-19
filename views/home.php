@@ -149,8 +149,88 @@ try {
 .banner-slide--video { position: relative; width: 100%; height: clamp(400px, 46vw, 620px); background: #000; overflow: hidden; }
 .banner-video-wrapper { position: relative; width: 100%; height: 100%; overflow: hidden; }
 .banner-video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-.banner-slide-link { position: absolute; inset: 0; z-index: 4; cursor: pointer; display: block; }
+.banner-slide-link { position: absolute; inset: 0; z-index: 3; cursor: pointer; display: block; }
 .banner-image-link { display: block; width: 100%; line-height: 0; text-decoration: none; }
+
+/* Banner Video Luxury Overlay */
+.banner-video-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(90deg, rgba(0, 16, 45, 0.75) 0%, rgba(0, 24, 68, 0.45) 45%, rgba(0, 0, 0, 0.12) 78%, rgba(0, 0, 0, 0.35) 100%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, transparent 28%, transparent 72%, rgba(0, 10, 30, 0.6) 100%);
+    pointer-events: none;
+}
+.banner-video-content {
+    position: absolute;
+    top: 50%;
+    left: clamp(28px, 6vw, 70px);
+    transform: translateY(-50%);
+    z-index: 5;
+    max-width: clamp(340px, 46vw, 600px);
+    color: #ffffff;
+    pointer-events: none;
+}
+.banner-video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 15px;
+    border-radius: 999px;
+    background: rgba(0, 31, 82, 0.65);
+    border: 1px solid rgba(252, 233, 106, 0.5);
+    color: #fce96a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.banner-video-title {
+    font-size: clamp(1.85rem, 3.8vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 0 0 10px;
+    letter-spacing: 0.01em;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+.banner-video-subtitle {
+    font-size: clamp(13px, 1.35vw, 16px);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.5;
+    margin: 0 0 22px;
+    max-width: 480px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.banner-video-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.banner-video-cta {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #d97706 100%);
+    color: #001f52 !important;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 6px 22px rgba(245, 158, 11, 0.45);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.banner-video-cta:hover {
+    background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(217, 119, 6, 0.6);
+}
 .banner-video-sound-toggle {
     position: absolute; bottom: 46px; right: 20px; z-index: 6;
     width: 38px; height: 38px; border-radius: 50%;
@@ -184,16 +264,16 @@ try {
 }
 .category-icon-bar {
     position: relative;
-    background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
-    border-radius: 22px;
-    border: 1px solid rgba(0, 40, 104, 0.16);
-    box-shadow: 0 16px 40px rgba(0, 40, 104, 0.08), 0 3px 12px rgba(0, 40, 104, 0.05);
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 40, 104, 0.12);
+    box-shadow: 0 16px 40px rgba(0, 31, 82, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    padding: 16px 8px;
-    min-height: 112px;
+    padding: 16px 12px;
+    min-height: 110px;
     overflow: hidden;
 }
 .category-icon-bar::before {
@@ -203,7 +283,14 @@ try {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #001f52, #0048b3 50%, #001f52);
+    background: linear-gradient(90deg, #001f52 0%, #0044aa 30%, #f59e0b 50%, #0044aa 70%, #001f52 100%);
+    background-size: 200% 100%;
+    animation: goldSapphireSheen 6s ease infinite;
+}
+@keyframes goldSapphireSheen {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 .category-icon-item {
     position: relative;
@@ -222,63 +309,69 @@ try {
     content: '';
     position: absolute;
     right: 0;
-    top: 20%;
-    height: 60%;
+    top: 18%;
+    height: 64%;
     width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(0, 40, 104, 0.12), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(0, 40, 104, 0.1), transparent);
 }
 .category-icon-item:hover {
-    background: rgba(0, 40, 104, 0.04);
-    transform: translateY(-3px);
+    background: rgba(0, 40, 104, 0.03);
 }
 .category-icon-circle-wrap {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 .category-icon-circle {
-    width: 52px;
-    height: 52px;
+    position: relative;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f4f6fb 75%, #eaf0fb 100%);
-    border: 1.5px solid rgba(0, 40, 104, 0.22);
-    box-shadow: 0 4px 14px rgba(0, 40, 104, 0.08);
-    transition: all 0.35s ease;
+    background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f4f7fd 65%, #e9effb 100%);
+    border: 1.5px solid rgba(0, 40, 104, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 40, 104, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
 }
 .category-icon-circle i {
+    position: relative;
+    z-index: 2;
     font-size: 22px;
     color: #002868;
     line-height: 1;
     transition: all 0.35s ease;
 }
-.category-icon-sparkle {
+.category-gem-sheen {
     position: absolute;
-    top: -3px;
-    right: -3px;
-    font-size: 11px;
-    color: #003b94;
+    inset: -100%;
+    background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.65) 50%, transparent 60%);
     opacity: 0;
-    transform: scale(0.5);
-    transition: all 0.3s ease;
     pointer-events: none;
+    z-index: 3;
+    transition: opacity 0.3s ease;
 }
 .category-icon-item:hover .category-icon-circle {
-    background: linear-gradient(135deg, #002868 0%, #001f52 100%);
-    border-color: #003b94;
-    box-shadow: 0 8px 22px rgba(0, 40, 104, 0.22), 0 0 12px rgba(0, 59, 148, 0.25);
-    transform: scale(1.08) rotate(3deg);
+    background: radial-gradient(circle at 35% 25%, #004ecc 0%, #002868 65%, #001438 100%);
+    border-color: #004ecc;
+    box-shadow: 0 10px 24px rgba(0, 40, 104, 0.28), 0 0 18px rgba(0, 78, 204, 0.35);
+    transform: translateY(-5px) scale(1.06);
 }
 .category-icon-item:hover .category-icon-circle i {
-    color: #fff;
+    color: #ffffff;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
-.category-icon-item:hover .category-icon-sparkle {
+.category-icon-item:hover .category-gem-sheen {
     opacity: 1;
-    transform: scale(1);
+    animation: gemSheenSweep 0.8s ease forwards;
+}
+@keyframes gemSheenSweep {
+    0% { transform: translateX(-50%) translateY(-50%); }
+    100% { transform: translateX(50%) translateY(50%); }
 }
 .category-icon-meta {
     display: flex;
@@ -289,27 +382,29 @@ try {
     width: 100%;
 }
 .category-icon-label {
-    font-size: 12.5px;
+    position: relative;
+    font-size: 13px;
     font-weight: 700;
     text-align: center;
     line-height: 1.3;
     color: #002868;
-    transition: color 0.25s;
-    letter-spacing: 0.1px;
+    transition: all 0.25s ease;
+    letter-spacing: 0.2px;
     white-space: nowrap;
 }
 .category-icon-sub {
     font-size: 9.5px;
     font-weight: 600;
     color: #64748b;
-    letter-spacing: 0.4px;
-    margin-top: 2px;
+    letter-spacing: 0.5px;
+    margin-top: 3px;
     text-transform: uppercase;
     transition: color 0.25s;
     white-space: nowrap;
 }
 .category-icon-item:hover .category-icon-label {
-    color: #003b94;
+    color: #004ecc;
+    transform: translateY(-1px);
 }
 .category-icon-item:hover .category-icon-sub {
     color: #002868;
@@ -1096,22 +1191,35 @@ try {
     .banner-dots { display: none; }
     .banner-arrows { display: none; }
 
-    /* Mobile Banner Sizing: Video banners are significantly enlarged, while image banners remain standard */
+    /* Mobile Banner Sizing: Strict 100% slide width ensures adjacent slides never bleed into view */
+    .banner-slide {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
     .banner-slide--image img {
         width: 100%;
         height: auto;
         display: block;
     }
     .banner-slide--video {
-        height: clamp(420px, 75vh, 580px);
-        min-height: 420px;
+        height: clamp(400px, 72vh, 540px);
+        min-height: 400px;
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 0 clamp(8px, 2vw, 14px);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .banner-slide--video .banner-video-wrapper {
+        width: 100%;
+        height: 100%;
         border-radius: clamp(14px, 3.5vw, 20px);
-        margin: 0 clamp(8px, 2vw, 14px);
-        width: calc(100% - clamp(16px, 4vw, 28px));
         overflow: hidden;
         box-shadow: 0 14px 40px rgba(0, 40, 104, 0.22);
     }
-    .banner-slide--video .banner-video-wrapper,
     .banner-slide--video .banner-video {
         width: 100%;
         height: 100%;
@@ -1119,9 +1227,43 @@ try {
         object-position: center;
         border-radius: inherit;
     }
+    .banner-video-scrim {
+        background: linear-gradient(180deg, rgba(0, 16, 45, 0.35) 0%, rgba(0, 16, 45, 0.15) 30%, rgba(0, 16, 45, 0.75) 70%, rgba(0, 10, 30, 0.92) 100%);
+    }
+    .banner-video-content {
+        top: auto;
+        bottom: clamp(38px, 6vh, 48px);
+        left: 20px;
+        right: 20px;
+        transform: none;
+        max-width: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-video-badge {
+        font-size: 10px;
+        padding: 4px 12px;
+        margin-bottom: 8px;
+    }
+    .banner-video-title {
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+        margin-bottom: 6px;
+    }
+    .banner-video-subtitle {
+        font-size: 12px;
+        margin-bottom: 14px;
+        line-height: 1.4;
+    }
+    .banner-video-cta {
+        padding: 10px 24px;
+        font-size: 13px;
+    }
     .banner-video-sound-toggle {
-        bottom: 14px;
-        right: 14px;
+        top: 14px;
+        bottom: auto;
+        right: 22px;
         width: 34px;
         height: 34px;
         font-size: 12px;
@@ -1151,6 +1293,17 @@ try {
                         <source src="<?php echo htmlspecialchars(media_image_url($banner['video'])); ?>" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
+                    <div class="banner-video-scrim"></div>
+                    <div class="banner-video-content">
+                        <span class="banner-video-badge"><i class="fas fa-gem"></i> Ceylon Sapphires</span>
+                        <h2 class="banner-video-title"><?php echo htmlspecialchars(!empty($banner['title']) ? $banner['title'] : 'Royal Ceylon Sapphires & Fine Jewels'); ?></h2>
+                        <p class="banner-video-subtitle">Direct from Sri Lanka's historic mines &bull; 100% Certified Natural &bull; Global Delivery</p>
+                        <div class="banner-video-actions">
+                            <a href="<?php echo !empty($slideUrl) ? $slideUrl : BASE_URL . 'shop.php'; ?>" class="banner-video-cta">
+                                <span>Explore Collection</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                     <button type="button" class="banner-video-sound-toggle" onclick="toggleBannerVideoSound(this, event)" aria-label="Toggle video sound">
                         <i class="fas fa-volume-mute"></i>
                     </button>
@@ -1269,12 +1422,12 @@ foreach ($categoryIconBarConfig as $cfg) {
                         ? BASE_URL . 'shop.php?category=' . htmlspecialchars($item['slug'])
                         : BASE_URL . 'shop.php');
             ?>
-            <a href="<?php echo $href; ?>" class="category-icon-item" title="<?php echo htmlspecialchars($item['name']); ?>">
+            <a href="<?php echo $href; ?>" class="category-icon-item" aria-label="<?php echo htmlspecialchars($item['name']); ?>">
                 <div class="category-icon-circle-wrap">
                     <div class="category-icon-circle">
                         <i class="fas <?php echo $item['icon']; ?>"></i>
+                        <span class="category-gem-sheen"></span>
                     </div>
-                    <span class="category-icon-sparkle" aria-hidden="true">✦</span>
                 </div>
                 <div class="category-icon-meta">
                     <span class="category-icon-label">
@@ -1458,7 +1611,7 @@ foreach ($categoryIconBarConfig as $cfg) {
                 </div>
             </div>
             <div class="skincare-split-media">
-                <?php echo render_asset_image('assets/images/M01.png', [
+                <?php echo render_asset_image('assets/images/M01.webp', [
                     'alt' => 'Certified Ceylon Sapphires and Fine Jewels - Affinity Gems & Jewels',
                     'width' => 800,
                     'height' => 1000,
@@ -1548,7 +1701,7 @@ foreach ($categoryIconBarConfig as $cfg) {
                 </div>
             </div>
             <div class="home-about-photo">
-                <?php echo render_asset_image('assets/images/logo.png', [
+                <?php echo render_asset_image('assets/images/store.webp', [
                     'alt' => SITE_NAME,
                     'width' => 720,
                     'height' => 360,

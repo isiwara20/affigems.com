@@ -81,7 +81,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && (!isset($_SESSION
         #site-chrome.is-scrolled{--lumak-topbar-h:0px}
         .top-bar{background:#002868;color:#fff;font-size:12px;padding:10px 0;height:var(--lumak-topbar-real);box-sizing:border-box;display:flex;align-items:center}
         .top-bar-left span,.top-bar-right a,.top-bar-right .top-link,.top-bar-right .language-selector,.top-bar-right .currency-selector{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.92);font-weight:500;text-decoration:none}
-        .top-bar-left span i,.top-bar-right a i,.top-bar-right .top-link i,.top-bar-right .language-selector i,.top-bar-right .currency-selector i{color:rgba(255,255,255,0.85);font-size:11px;min-width:1em;text-align:center}
+        .top-bar-left span i,.top-bar-right a i,.top-bar-right .top-link i,.top-bar-right .language-selector i,.top-bar-right .currency-selector i{color:#fce96a;font-size:11px;min-width:1em;text-align:center}
+        .top-bar-right .currency-selector i.fa-chevron-down{color:rgba(255,255,255,0.75);font-size:9px}
         .top-bar-left span:hover,.top-bar-right a:hover,.top-bar-right .top-link:hover,.top-bar-right .language-selector:hover,.top-bar-right .currency-selector:hover{color:#fff}
         .top-bar-divider{width:1px;height:14px;background:rgba(255,255,255,0.22);margin:0 18px;flex-shrink:0}
         .top-bar-content{display:flex;justify-content:space-between;align-items:center;min-height:18px;width:100%}
@@ -170,6 +171,99 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && (!isset($_SESSION
     <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.12/dist/turbo.min.js" defer></script>
 </head>
 <body<?php echo !empty($bodyClass) ? ' class="' . htmlspecialchars($bodyClass) . '"' : ''; ?>>
+    <!-- Luxury Ceylon Sapphire Unveiling Animation (For International Luxury Clients) -->
+    <div id="gemIntroOverlay" class="gem-intro-overlay" onclick="if(event.target===this||event.target.classList.contains('gem-intro-backdrop')||event.target.classList.contains('gem-intro-ambient'))dismissGemIntro()">
+        <div class="gem-intro-ambient" aria-hidden="true">
+            <div class="gem-intro-radial-glow"></div>
+            <div class="gem-intro-dust-layer"></div>
+        </div>
+        <div class="gem-intro-particles" aria-hidden="true">
+            <span class="intro-star is-1">✦</span>
+            <span class="intro-star is-2">✦</span>
+            <span class="intro-star is-3">✧</span>
+            <span class="intro-star is-4">✦</span>
+            <span class="intro-star is-5">✧</span>
+            <span class="intro-star is-6">✦</span>
+            <span class="intro-star is-7">✦</span>
+            <span class="intro-star is-8">✧</span>
+        </div>
+        <div class="gem-intro-modal">
+            <!-- Faceted Royal Ceylon Sapphire Centerpiece -->
+            <div class="gem-intro-gemstone-stage">
+                <div class="gem-intro-halo-ring"></div>
+                <div class="gem-intro-faceted-sapphire">
+                    <svg viewBox="0 0 200 200" class="gem-sapphire-svg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="sapphireCore" cx="50%" cy="45%" r="65%">
+                                <stop offset="0%" stop-color="#38bdf8" />
+                                <stop offset="35%" stop-color="#1d4ed8" />
+                                <stop offset="70%" stop-color="#002868" />
+                                <stop offset="100%" stop-color="#00102e" />
+                            </radialGradient>
+                            <linearGradient id="facetHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                                <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.4" />
+                                <stop offset="100%" stop-color="#1e40af" stop-opacity="0.2" />
+                            </linearGradient>
+                            <linearGradient id="facetDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#1e3a8a" />
+                                <stop offset="100%" stop-color="#001845" />
+                            </linearGradient>
+                            <linearGradient id="facetGleam" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+                                <stop offset="60%" stop-color="#60a5fa" stop-opacity="0.3" />
+                                <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Outer Silhouette / Pavilion -->
+                        <polygon points="100,20 155,42 180,95 155,158 100,180 45,158 20,95 45,42" fill="url(#sapphireCore)" stroke="#60a5fa" stroke-width="1.5" />
+                        <!-- Outer Facet Triangles -->
+                        <polygon points="100,20 155,42 135,65" fill="#3b82f6" opacity="0.85" />
+                        <polygon points="100,20 45,42 65,65" fill="url(#facetHighlight)" opacity="0.95" />
+                        <polygon points="155,42 180,95 145,100" fill="#1d4ed8" opacity="0.9" />
+                        <polygon points="180,95 155,158 135,135" fill="url(#facetDeep)" opacity="0.9" />
+                        <polygon points="155,158 100,180 100,145" fill="#0f172a" opacity="0.9" />
+                        <polygon points="100,180 45,158 100,145" fill="#001f52" opacity="0.9" />
+                        <polygon points="45,158 20,95 65,135" fill="#1e3a8a" opacity="0.9" />
+                        <polygon points="20,95 45,42 55,100" fill="#60a5fa" opacity="0.8" />
+                        <!-- Inner Girdle & Table Facets -->
+                        <polygon points="65,65 135,65 145,100 135,135 65,135 55,100" fill="url(#sapphireCore)" stroke="#93c5fd" stroke-width="1" />
+                        <!-- Center Table Facet with Prismatic Reflection -->
+                        <polygon points="75,78 125,78 135,100 125,122 75,122 65,100" fill="url(#facetHighlight)" opacity="0.6" />
+                        <polygon points="85,85 115,85 122,100 115,115 85,115 78,100" fill="#ffffff" opacity="0.3" />
+                        <!-- Star facet reflections -->
+                        <line x1="100" y1="20" x2="100" y2="78" stroke="#ffffff" stroke-width="1.2" opacity="0.75" />
+                        <line x1="100" y1="122" x2="100" y2="180" stroke="#93c5fd" stroke-width="1.2" opacity="0.6" />
+                        <line x1="20" y1="95" x2="65" y2="100" stroke="#ffffff" stroke-width="1.2" opacity="0.7" />
+                        <line x1="145" y1="100" x2="180" y2="95" stroke="#93c5fd" stroke-width="1.2" opacity="0.6" />
+                    </svg>
+                    <div class="gem-gleam-flare"></div>
+                </div>
+            </div>
+
+            <div class="gem-intro-badge-row">
+                <span class="gem-intro-badge"><i class="fas fa-gem"></i> Royal Ceylon Sapphires &bull; Sri Lanka</span>
+            </div>
+            <h2 class="gem-intro-title">AFFINITY GEMS &amp; JEWELS</h2>
+            <p class="gem-intro-tagline">Direct-Source Bridge Between Sri Lanka&rsquo;s Finest Sapphire Mines and Discerning Connoisseurs Globally</p>
+            <div class="gem-intro-credentials">
+                <div class="intro-cred-item"><i class="fas fa-certificate"></i><span>State Gem Corp Registered</span></div>
+                <div class="intro-cred-dot">&bull;</div>
+                <div class="intro-cred-item"><i class="fas fa-shield-alt"></i><span>100% Certified Authentic</span></div>
+                <div class="intro-cred-dot">&bull;</div>
+                <div class="intro-cred-item"><i class="fas fa-globe-asia"></i><span>Insured Worldwide Delivery</span></div>
+            </div>
+            <div class="gem-intro-action">
+                <button type="button" class="gem-intro-enter-btn" onclick="dismissGemIntro()">
+                    <span>Enter Sapphire Boutique</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="gem-intro-progress-bar">
+                <div class="gem-intro-progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="page-wrapper" style="background:#fff;">
     <div id="site-chrome" data-turbo-permanent>
     <!-- Top Bar -->
@@ -185,6 +279,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && (!isset($_SESSION
             </div>
             <div class="top-bar-right">
                 <a href="<?php echo BASE_URL; ?>contact.php" class="top-link top-bar-hide-mobile">Help Center</a>
+                <span class="top-bar-divider top-bar-hide-mobile"></span>
+                <a href="#" onclick="replayGemIntro(event)" class="top-link top-bar-hide-mobile" title="Replay Sapphire Welcome Animation"><i class="fas fa-gem"></i> Welcome Intro</a>
                 <span class="top-bar-divider top-bar-hide-mobile"></span>
                 <div class="top-bar-utils">
                 <div class="currency-selector" id="currencySelector" onclick="toggleCurrencyMenu(event)">
@@ -724,6 +820,85 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && (!isset($_SESSION
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.currency-selector')) {
             document.querySelectorAll('.currency-dropdown').forEach(function(el) { el.classList.remove('show'); });
+        }
+    });
+
+    // ===== Ceylon Sapphire Welcome Intro Animation Controller =====
+    var gemIntroTimer = null;
+
+    function getGemIntroParam() {
+        try {
+            var p = new URLSearchParams(window.location.search);
+            return p.has('intro') || p.has('welcome');
+        } catch(e) {
+            return false;
+        }
+    }
+
+    window.dismissGemIntro = function() {
+        var el = document.getElementById('gemIntroOverlay');
+        if (!el) return;
+        if (gemIntroTimer) {
+            clearTimeout(gemIntroTimer);
+            gemIntroTimer = null;
+        }
+        el.classList.add('dismissing');
+        try {
+            sessionStorage.setItem('affigems_sapphire_intro_v3', '1');
+        } catch(e) {}
+        setTimeout(function() {
+            el.classList.remove('active', 'dismissing');
+        }, 550);
+    };
+
+    window.replayGemIntro = function(e) {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        var el = document.getElementById('gemIntroOverlay');
+        if (!el) return;
+        if (gemIntroTimer) {
+            clearTimeout(gemIntroTimer);
+            gemIntroTimer = null;
+        }
+        el.classList.remove('dismissing');
+        var fill = el.querySelector('.gem-intro-progress-fill');
+        if (fill) {
+            fill.style.animation = 'none';
+            void fill.offsetWidth;
+            fill.style.animation = '';
+        }
+        el.classList.add('active');
+        gemIntroTimer = setTimeout(window.dismissGemIntro, 3800);
+    };
+
+    function initGemIntroOnOpen() {
+        var el = document.getElementById('gemIntroOverlay');
+        if (!el) return;
+        var hasSeen = false;
+        try {
+            hasSeen = sessionStorage.getItem('affigems_sapphire_intro_v3') === '1';
+        } catch(e) {}
+
+        if (!hasSeen || getGemIntroParam()) {
+            el.classList.remove('dismissing');
+            var fill = el.querySelector('.gem-intro-progress-fill');
+            if (fill) {
+                fill.style.animation = 'none';
+                void fill.offsetWidth;
+                fill.style.animation = '';
+            }
+            el.classList.add('active');
+            gemIntroTimer = setTimeout(window.dismissGemIntro, 3800);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGemIntroOnOpen);
+    } else {
+        initGemIntroOnOpen();
+    }
+    document.addEventListener('turbo:load', function() {
+        if (getGemIntroParam()) {
+            initGemIntroOnOpen();
         }
     });
     </script>

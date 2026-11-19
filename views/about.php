@@ -110,11 +110,16 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     margin-bottom: 16px;
     letter-spacing: -0.02em;
 }
-.lumak-about-hero h1 span {
-    background: #f4f7fc;
+.lumak-about-hero h1 span.gem-text-shimmer {
+    background: linear-gradient(90deg, #ffffff 0%, #dbe5f5 25%, #fce96a 50%, #ffffff 75%, #dbe5f5 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gemTextSheen 5s linear infinite;
+}
+@keyframes gemTextSheen {
+    to { background-position: 200% center; }
 }
 .lumak-about-hero-lead {
     font-size: clamp(14px, 2.2vw, 16px);
@@ -123,6 +128,80 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     max-width: 620px;
     margin: 0 auto;
 }
+
+/* Animated Sapphire Gemstone Centerpiece */
+.hero-gem-emblem {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-gem-facet-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px dashed rgba(252, 233, 106, 0.45);
+    animation: rotateGemRing 16s linear infinite;
+    pointer-events: none;
+}
+.hero-gem-center {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: radial-gradient(circle at 30% 30%, #3d7fe8 0%, #002868 70%, #001740 100%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #ffffff;
+    box-shadow: 0 0 30px rgba(61, 127, 232, 0.6), 0 10px 24px rgba(0, 0, 0, 0.35);
+    animation: gemPulseGlow 3.5s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+.hero-gem-center i {
+    animation: gemFacetGlitter 3s ease-in-out infinite;
+    color: #ffffff;
+}
+.hero-gem-flare {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle, rgba(252, 233, 106, 0.4) 0%, rgba(61, 127, 232, 0.25) 45%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: flareBreath 3.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes rotateGemRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes gemPulseGlow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(61, 127, 232, 0.5), 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+    50% {
+        transform: scale(1.06);
+        box-shadow: 0 0 45px rgba(100, 160, 255, 0.85), 0 0 20px rgba(252, 233, 106, 0.5);
+    }
+}
+@keyframes gemFacetGlitter {
+    0%, 100% { opacity: 0.95; filter: drop-shadow(0 0 4px rgba(255,255,255,0.6)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 14px rgba(255,255,255,1)) drop-shadow(0 0 8px rgba(252,233,106,0.85)); }
+}
+@keyframes flareBreath {
+    0%, 100% { transform: scale(0.9); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Floating Gemstone Facets & Sparkles */
 .lumak-about-hero-hearts {
     position: absolute;
     inset: 0;
@@ -132,11 +211,32 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .lumak-about-hero-hearts i {
     position: absolute;
-    color: rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.2);
 }
-.lumak-about-hero-hearts .h1 { top: 18%; left: 8%; font-size: 24px; transform: rotate(-12deg); }
-.lumak-about-hero-hearts .h2 { top: 28%; right: 10%; font-size: 32px; opacity: 0.7; }
-.lumak-about-hero-hearts .h3 { bottom: 32%; left: 12%; font-size: 20px; transform: rotate(8deg); }
+.lumak-about-hero-hearts .h1 { top: 18%; left: 8%; font-size: 26px; transform: rotate(-12deg); animation: gemFloatSlow 6s ease-in-out infinite; }
+.lumak-about-hero-hearts .h2 { top: 26%; right: 10%; font-size: 32px; opacity: 0.7; animation: gemFloatSlow 7s ease-in-out infinite 1s; }
+.lumak-about-hero-hearts .h3 { bottom: 32%; left: 12%; font-size: 22px; transform: rotate(8deg); animation: gemFloatSlow 8s ease-in-out infinite 2s; }
+
+.gem-sparkle-star {
+    position: absolute;
+    color: #fce96a;
+    font-size: 18px;
+    pointer-events: none;
+    animation: gemTwinkle 3.2s ease-in-out infinite;
+}
+.gem-sparkle-star.s1 { top: 16%; left: 18%; animation-delay: 0s; font-size: 22px; }
+.gem-sparkle-star.s2 { top: 22%; right: 20%; animation-delay: 0.8s; font-size: 24px; color: #a5c7ff; }
+.gem-sparkle-star.s3 { bottom: 28%; left: 22%; animation-delay: 1.6s; font-size: 16px; }
+.gem-sparkle-star.s4 { bottom: 34%; right: 25%; animation-delay: 2.3s; font-size: 20px; color: #fce96a; }
+
+@keyframes gemTwinkle {
+    0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0.2; }
+    50% { transform: scale(1.3) rotate(45deg); opacity: 0.95; filter: drop-shadow(0 0 10px #fce96a); }
+}
+@keyframes gemFloatSlow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(8deg); }
+}
 
 .lumak-about-stats {
     display: grid;
@@ -222,7 +322,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     gap: 8px;
     border: 1px solid rgba(255,255,255,0.2);
 }
-.lumak-about-story-float i { font-size: 16px; color: #002868; }
+.lumak-about-story-float i { font-size: 16px; color: #fce96a; }
 .lumak-about-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -548,40 +648,75 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .lumak-about-pillars {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 20px;
     margin-bottom: clamp(40px, 6vw, 56px);
 }
 .lumak-about-pillar {
-    background: #fff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #dbe5f5;
+    border-radius: 20px;
+    padding: 34px 24px 30px;
     text-align: center;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 40, 104, 0.05);
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.lumak-about-pillar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.75s ease;
+    pointer-events: none;
+}
+.lumak-about-pillar:hover::before {
+    left: 150%;
 }
 .lumak-about-pillar:hover {
-    transform: translateY(-4px);
-    border-color: #001f52;
-    box-shadow: 0 14px 36px rgba(0, 40, 104, 0.12);
+    transform: translateY(-6px);
+    border-color: #003b94;
+    box-shadow: 0 18px 40px rgba(0, 40, 104, 0.14);
 }
 .lumak-about-pillar-icon {
-    width: 54px;
-    height: 54px;
-    margin: 0 auto 16px;
-    border-radius: 14px;
-    background: #002868;
-    color: #002868;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #002868 0%, #0042a5 100%);
+    color: #ffffff !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    box-shadow: 0 8px 20px rgba(0, 40, 104, 0.25);
+    font-size: 26px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 24px rgba(0, 40, 104, 0.28), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    transition: all 0.35s ease;
+}
+.lumak-about-pillar-icon i {
+    color: #ffffff !important;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.lumak-about-pillar:hover .lumak-about-pillar-icon {
+    background: linear-gradient(135deg, #003b94 0%, #001f52 100%);
+    transform: scale(1.1) rotate(4deg);
+    box-shadow: 0 14px 30px rgba(0, 40, 104, 0.38), 0 0 16px rgba(0, 59, 148, 0.45);
+}
+.lumak-about-pillar:hover .lumak-about-pillar-icon i {
+    color: #fce96a !important;
+    transform: scale(1.15);
 }
 .lumak-about-pillar h3 {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 800;
     color: #002868;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
 }
 .lumak-about-pillar p {
     font-size: 13px;
@@ -738,15 +873,48 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .lumak-about-cta-btn.primary {
-    background: #002868;
-    color: #002868;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #d97706 100%);
+    color: #001f52 !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.42), 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+.lumak-about-cta-btn.primary i {
+    color: #001f52 !important;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+.lumak-about-cta-btn.primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -120%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+    transform: rotate(25deg);
+    animation: gemButtonGleam 4s ease-in-out infinite;
+}
+@keyframes gemButtonGleam {
+    0% { left: -120%; }
+    25%, 100% { left: 160%; }
 }
 .lumak-about-cta-btn.primary:hover {
+    background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%);
+    color: #ffffff !important;
     transform: translateY(-2px);
-    background: #f1b71e;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-    color: #002868;
+    box-shadow: 0 12px 32px rgba(217, 119, 6, 0.55);
+}
+.lumak-about-cta-btn.primary:hover i {
+    color: #ffffff !important;
+    transform: scale(1.2) rotate(10deg);
 }
 .lumak-about-cta-btn.secondary {
     background: rgba(255,255,255,0.12);
@@ -816,11 +984,20 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
         <i class="fas fa-gem h1"></i>
         <i class="fas fa-certificate h2"></i>
         <i class="fas fa-ring h3"></i>
+        <span class="gem-sparkle-star s1">✦</span>
+        <span class="gem-sparkle-star s2">✦</span>
+        <span class="gem-sparkle-star s3">✧</span>
+        <span class="gem-sparkle-star s4">✦</span>
     </div>
     <div class="container">
         <div class="lumak-about-hero-inner">
+            <div class="hero-gem-emblem" aria-hidden="true">
+                <div class="hero-gem-facet-ring"></div>
+                <div class="hero-gem-flare"></div>
+                <div class="hero-gem-center"><i class="fas fa-gem"></i></div>
+            </div>
             <span class="lumak-about-hero-badge"><i class="fas fa-gem"></i> Direct Source for Sri Lankan Sapphires</span>
-            <h1>Introduction to <span>Affinity Gems &amp; Jewels</span></h1>
+            <h1>Introduction to <span class="gem-text-shimmer">Affinity Gems &amp; Jewels</span></h1>
             <p class="lumak-about-hero-lead">Serving as a direct source supplier of high-quality Sri Lankan sapphires, ethically sourced and meticulously graded. Registered with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce.</p>
         </div>
     </div>
