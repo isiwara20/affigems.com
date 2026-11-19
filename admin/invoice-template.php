@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Invoice Template - Admin | ARIGATO.LK</title>
+    <title>Invoice Template - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .invoice-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(360px,44%); gap:22px; align-items:start; }
         .content-card { background:#fff; border:1px solid #eee; border-radius:14px; padding:24px; margin-bottom:18px; }
         .content-card h3 { font-size:15px; font-weight:700; color:#0d1137; margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px; }
-        .content-card h3 i { color:#D4A017; }
+        .content-card h3 i { color:#002868; }
         .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
         .form-group { margin-bottom:14px; }
         .form-group label { display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px; }
@@ -69,20 +69,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .switch input { opacity:0; width:0; height:0; }
         .slider { position:absolute; cursor:pointer; inset:0; background:#d1d5db; border-radius:999px; transition:.2s; }
         .slider:before { content:""; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:.2s; }
-        .switch input:checked + .slider { background:#D4A017; }
+        .switch input:checked + .slider { background:#002868; }
         .switch input:checked + .slider:before { transform:translateX(20px); }
         .preview-panel { position:sticky; top:20px; }
         .preview-frame-wrap { background:#eef1f8; border:1px solid #e4e8f0; border-radius:14px; overflow:hidden; }
         .preview-toolbar { display:flex; justify-content:space-between; align-items:center; padding:12px 14px; background:#fff; border-bottom:1px solid #eee; }
         .preview-toolbar h4 { font-size:13px; font-weight:700; color:#0d1137; }
         .preview-frame { width:100%; height:720px; border:0; background:#eef1f8; }
-        .btn-preview { padding:8px 14px; border:none; border-radius:8px; background:#FFE8A8; color:#D4A017; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; }
-        .btn-preview:hover { background:#D4A017; color:#fff; }
+        .btn-preview { padding:8px 14px; border:none; border-radius:8px; background:#e8f0fe; color:#002868; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; }
+        .btn-preview:hover { background:#002868; color:#fff; }
         .token-hint { font-size:11px; color:#6b7099; margin-top:6px; }
         .save-bar { display:flex; gap:10px; justify-content:flex-end; margin-top:8px; }
         .range-row { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:center; margin-bottom:12px; }
-        .range-row input[type=range] { width:100%; accent-color:#D4A017; }
-        .range-value { min-width:42px; text-align:right; font-size:12px; font-weight:700; color:#D4A017; }
+        .range-row input[type=range] { width:100%; accent-color:#002868; }
+        .range-value { min-width:42px; text-align:right; font-size:12px; font-weight:700; color:#002868; }
         @media (max-width:1100px) { .invoice-layout { grid-template-columns:1fr; } .preview-panel { position:static; } }
         @media (max-width:768px) { .form-grid { grid-template-columns:1fr; } }
     </style>
@@ -210,7 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="preview-panel">
                             <div class="preview-frame-wrap">
                                 <div class="preview-toolbar">
-                                    <h4><i class="fas fa-eye" style="color:#D4A017;"></i> Live Preview</h4>
+                                    <h4><i class="fas fa-eye" style="color:#002868;"></i> Live Preview</h4>
                                     <div style="display:flex;align-items:center;gap:12px;">
                                         <label style="font-size:12px;color:#555;display:flex;align-items:center;gap:6px;cursor:pointer;">
                                             <input type="checkbox" name="preview_paid" value="1" form="invoiceForm" onchange="refreshPreview()"> Preview PAID seal
@@ -225,7 +225,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </form>
 
                 <div class="admin-footer">
-                    <p>&copy; <?php echo date('Y'); ?> ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

@@ -44,7 +44,7 @@ require_once __DIR__ . '/views/partials/header.php';
 .warranty-hero {
     position: relative;
     padding: clamp(40px, 6vw, 56px) 0 clamp(48px, 7vw, 64px);
-    background: #D49A0A;
+    background: #001f52;
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -61,25 +61,25 @@ require_once __DIR__ . '/views/partials/header.php';
 .warranty-section { padding: 0 0 60px; margin-top: -28px; position: relative; z-index: 2; }
 .warranty-container { max-width: 820px; margin: 0 auto; }
 .warranty-search {
-    background: #fff; border: 1px solid #F5E6B8; border-radius: 16px;
-    padding: 28px 30px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(196, 138, 10, 0.1);
+    background: #fff; border: 1px solid #dbe5f5; border-radius: 16px;
+    padding: 28px 30px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(0, 40, 104, 0.1);
 }
 .warranty-search-form { display: flex; gap: 12px; }
 .warranty-search-form input {
-    flex: 1; padding: 15px 20px; border: 1.5px solid #F5E6B8; border-radius: 12px;
-    font-size: 14px; font-family: 'Poppins', sans-serif; outline: none; background: #FFF8E6;
+    flex: 1; padding: 15px 20px; border: 1.5px solid #dbe5f5; border-radius: 12px;
+    font-size: 14px; font-family: 'Poppins', sans-serif; outline: none; background: #f8fafd;
 }
-.warranty-search-form input:focus { border-color: #E5A91A; background: #fff; box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.12); }
+.warranty-search-form input:focus { border-color: #003b94; background: #fff; box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.12); }
 .warranty-search-form button {
-    padding: 15px 28px; background: #D49A0A; color: #1a1a1a;
+    padding: 15px 28px; background: #001f52; color: #ffffff;
     border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;
     font-family: 'Poppins', sans-serif; white-space: nowrap;
 }
 .warranty-card {
-    background: #fff; border: 1px solid #F5E6B8; border-radius: 16px;
-    padding: 24px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(196, 138, 10, 0.06);
+    background: #fff; border: 1px solid #dbe5f5; border-radius: 16px;
+    padding: 24px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0, 40, 104, 0.06);
 }
-.warranty-card h3 { font-size: 16px; font-weight: 700; color: #D4A017; margin: 0 0 16px; }
+.warranty-card h3 { font-size: 16px; font-weight: 700; color: #002868; margin: 0 0 16px; }
 .warranty-product-head {
     display: grid;
     grid-template-columns: 88px 1fr;
@@ -124,7 +124,7 @@ require_once __DIR__ . '/views/partials/header.php';
 .warranty-status.active { color: #16a34a; }
 .warranty-status.expired { color: #ef4444; }
 .warranty-claim-btn {
-    margin-top: 18px; padding: 12px 22px; background: #D49A0A;
+    margin-top: 18px; padding: 12px 22px; background: #001f52;
     color: #fff; border: none; border-radius: 10px; font-family: 'Poppins', sans-serif;
     font-size: 13px; font-weight: 600; cursor: pointer;
 }
@@ -182,8 +182,8 @@ require_once __DIR__ . '/views/partials/header.php';
     gap: 8px;
     color: #0d1137;
 }
-.warranty-form-overlay i { color: #E5A91A; font-size: 18px; }
-.warranty-form-overlay span { font-size: 13px; font-weight: 700; color: #D4A017; }
+.warranty-form-overlay i { color: #003b94; font-size: 18px; }
+.warranty-form-overlay span { font-size: 13px; font-weight: 700; color: #002868; }
 .warranty-msg { margin-top: 12px; font-size: 13px; }
 .warranty-msg.success { color: #16a34a; }
 .warranty-msg.error { color: #ef4444; }
@@ -206,7 +206,7 @@ require_once __DIR__ . '/views/partials/header.php';
     background: #fff;
     border-radius: 16px;
     border: 1px solid #dbe7ff;
-    box-shadow: 0 18px 48px rgba(196, 138, 10, 0.28);
+    box-shadow: 0 18px 48px rgba(0, 40, 104, 0.28);
     padding: 24px 22px;
     text-align: center;
 }
@@ -226,7 +226,7 @@ require_once __DIR__ . '/views/partials/header.php';
     margin: 0 0 8px;
     font-size: 19px;
     font-weight: 800;
-    color: #D4A017;
+    color: #002868;
 }
 .warranty-success-text {
     margin: 0;
@@ -249,7 +249,7 @@ require_once __DIR__ . '/views/partials/header.php';
     padding: 11px 22px;
     border: none;
     border-radius: 10px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -275,8 +275,8 @@ require_once __DIR__ . '/views/partials/header.php';
     <div class="container">
         <div class="warranty-hero-inner">
             <span class="warranty-hero-badge"><i class="fas fa-shield-alt"></i> Warranty Support</span>
-            <h1>ARIGATO – Check Your Warranty Status</h1>
-            <p>Check the warranty details of your purchased product here.</p>
+            <h1><?php echo htmlspecialchars(SITE_NAME); ?> – Check Warranty &amp; Authenticity</h1>
+            <p>Verify the authenticity and warranty details of your purchased gemstone or fine jewel here.</p>
         </div>
     </div>
 </header>
@@ -293,21 +293,21 @@ require_once __DIR__ . '/views/partials/header.php';
 
             <?php if (!$searched): ?>
             <div class="warranty-card warranty-empty">
-                <i class="fas fa-shield-alt" style="font-size:2rem;color:#E5A91A;margin-bottom:12px;"></i>
+                <i class="fas fa-shield-alt" style="font-size:2rem;color:#003b94;margin-bottom:12px;"></i>
                 <p>Enter your invoice number (e.g. INV-AB260708A1B2) or the product serial number printed on your invoice to view warranty details.</p>
             </div>
             <?php elseif ($searchError): ?>
             <div class="warranty-card warranty-empty"><p><?php echo htmlspecialchars($searchError); ?></p></div>
             <?php elseif (empty($warrantyItems)): ?>
             <div class="warranty-card warranty-empty">
-                <h3 style="color:#D4A017;">No warranty record found</h3>
+                <h3 style="color:#002868;">No warranty record found</h3>
                 <p>Please check your invoice or serial number and try again.</p>
             </div>
             <?php else: ?>
                 <?php if (count($warrantyItems) > 1): ?>
                 <div class="warranty-card" style="padding:14px 18px;">
                     <p style="margin:0;font-size:13px;color:#4b5563;">
-                        <i class="fas fa-info-circle" style="color:#E5A91A;margin-right:6px;"></i>
+                        <i class="fas fa-info-circle" style="color:#003b94;margin-right:6px;"></i>
                         This invoice contains multiple products. Please choose the relevant product and submit the claim for that item.
                     </p>
                 </div>

@@ -35,8 +35,9 @@ function ezymart_whatsapp_order_message(
     array $cartItems,
     float $total
 ): string {
+    $brand = defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels';
     $lines = [
-        '*New Order from ARIGATO.LK*',
+        '*New Order from ' . $brand . '*',
         '',
         '*Order #:* ' . $orderNumber,
         '*Customer:* ' . $fullName,

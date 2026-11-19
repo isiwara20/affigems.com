@@ -39,10 +39,10 @@ function lumak_invoice_defaults(): array
         'auto_send_paid' => '1',
         'invoice_title' => 'TAX INVOICE',
         'invoice_prefix' => 'INV',
-        'accent_color' => '#C48A0A',
-        'secondary_color' => '#D4A017',
-        'company_name' => defined('ADMIN_BRAND') ? ADMIN_BRAND : 'ARIGATO.LK',
-        'company_tagline' => 'Quality Products & Reliable Delivery',
+        'accent_color' => '#002868',
+        'secondary_color' => '#002868',
+        'company_name' => defined('ADMIN_BRAND') ? ADMIN_BRAND : 'Affinity Gems & Jewels',
+        'company_tagline' => 'Your Direct Source for Sri Lankan Sapphires',
         'company_address' => defined('STORE_LOCATION') ? STORE_LOCATION : '',
         'company_phone' => defined('STORE_PHONE_1') ? STORE_PHONE_1 : '',
         'company_email' => defined('STORE_EMAIL') ? STORE_EMAIL : '',
@@ -50,10 +50,10 @@ function lumak_invoice_defaults(): array
         'show_logo' => '1',
         'tax_label' => 'Tax',
         'tax_rate' => '0',
-        'footer_note' => 'Thank you for shopping with ARIGATO.LK!',
-        'payment_note' => 'Please retain this invoice for your records. For payment queries, contact us using the details above.',
-        'terms_text' => 'All sales are final unless otherwise stated. Delivery timelines may vary for international orders.',
-        'email_subject' => 'Your Invoice #{invoice_number} - ARIGATO.LK',
+        'footer_note' => 'Thank you for choosing Affinity Gems and Jewels Pvt Ltd!',
+        'payment_note' => 'Please retain this invoice for your records. For gemstone inquiries and valuation queries, contact Murshid Munzeer at murshidmunzeer@gmail.com.',
+        'terms_text' => 'All Ceylon sapphires and gemstones are certified authentic. Handcrafted with excellence.',
+        'email_subject' => 'Your Invoice #{invoice_number} - Affinity Gems & Jewels',
         'email_message' => 'Hi {customer_name}, thank you for your order #{order_number}. Please find your invoice attached as a PDF.',
         'paid_seal_position' => 'over_totals',
         'paid_seal_offset_x' => '0',
@@ -379,8 +379,8 @@ function lumak_invoice_item_serial_label(array $item): string
 function lumak_invoice_render_html(array $order, array $items, ?array $settings = null): string
 {
     $settings = $settings ?: lumak_invoice_get_settings();
-    $accent = htmlspecialchars($settings['accent_color'] ?? '#D4A017');
-    $secondary = htmlspecialchars($settings['secondary_color'] ?? '#E5A91A');
+    $accent = htmlspecialchars($settings['accent_color'] ?? '#002868');
+    $secondary = htmlspecialchars($settings['secondary_color'] ?? '#003b94');
     $invoiceNo = htmlspecialchars(lumak_invoice_number($order, $settings));
     $orderNo = htmlspecialchars($order['order_number'] ?? '');
     $showLogo = ($settings['show_logo'] ?? '1') === '1';
@@ -403,7 +403,7 @@ function lumak_invoice_render_html(array $order, array $items, ?array $settings 
         if ($serialLabel !== '') {
             $name .= '<br><span style="font-size:10px;color:#666;">' . htmlspecialchars($serialLabel) . '</span>';
         }
-        $bg = ($i % 2 === 0) ? '#FFF8E6' : '#ffffff';
+        $bg = ($i % 2 === 0) ? '#f8fafd' : '#ffffff';
         $itemRows .= '<tr style="background:' . $bg . ';">'
             . '<td style="padding:10px 12px;border-bottom:1px solid #f0e8ff;text-align:center;color:#888;">' . $i . '</td>'
             . '<td style="padding:10px 12px;border-bottom:1px solid #f0e8ff;">' . $name . '</td>'
@@ -448,12 +448,12 @@ function lumak_invoice_render_html(array $order, array $items, ?array $settings 
         .title-row h2{font-size:28px;color:' . $accent . ';letter-spacing:.04em}
         .meta{font-size:12px;color:#666;line-height:1.9;text-align:right}
         .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
-        .card{background:#FFF8E6;border:1px solid #F5E6B8;border-radius:12px;padding:16px 18px}
+        .card{background:#f8fafd;border:1px solid #dbe5f5;border-radius:12px;padding:16px 18px}
         .card h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:' . $accent . ';margin-bottom:8px}
         .card p{font-size:13px;line-height:1.7;color:#555}
         .card strong{color:#222;font-size:14px}
-        table{width:100%;border-collapse:collapse;border:1px solid #F5E6B8;border-radius:12px;overflow:hidden}
-        th{background:#FFE8A8;color:' . $accent . ';font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:11px 12px;text-align:left}
+        table{width:100%;border-collapse:collapse;border:1px solid #dbe5f5;border-radius:12px;overflow:hidden}
+        th{background:#e8f0fe;color:' . $accent . ';font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:11px 12px;text-align:left}
         th.center{text-align:center} th.right{text-align:right}
         .totals{margin-top:18px;display:flex;justify-content:flex-end;position:relative;' . ($sealOverTotals ? 'min-height:128px;padding-bottom:8px;' : '') . '}
         .totals-box{width:300px;position:relative;z-index:2}
@@ -828,17 +828,17 @@ function lumak_invoice_send_for_order(int $orderId, string $trigger = 'manual'):
         $linkNote = '';
         if ($invoiceUrl !== '') {
             $linkNote = '<p style="margin:0 0 14px;font-size:13px;line-height:1.7;color:#555;">'
-                . 'Online copy: <a href="' . htmlspecialchars($invoiceUrl) . '" style="color:#D4A017;">Download invoice PDF</a>'
+                . 'Online copy: <a href="' . htmlspecialchars($invoiceUrl) . '" style="color:#002868;">Download invoice PDF</a>'
                 . '</p>';
         }
 
-        $emailBody = lumak_email_wrap('Invoice', '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">Your Invoice</h2>'
+        $emailBody = lumak_email_wrap('Invoice', '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">Your Invoice</h2>'
             . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">' . nl2br(htmlspecialchars($messageText)) . '</p>'
             . $linkNote
             . lumak_email_info_box([
                 ['Invoice Number', $invoiceNo],
                 ['Order Number', '#' . ($order['order_number'] ?? '')],
-                ['Total', 'LKR ' . number_format((float)($order['total'] ?? 0), 0), '#D4A017'],
+                ['Total', 'LKR ' . number_format((float)($order['total'] ?? 0), 0), '#002868'],
             ]));
 
         $emailSent = lumak_send_mail_with_attachment(

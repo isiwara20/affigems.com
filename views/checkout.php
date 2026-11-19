@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Checkout - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Checkout - " . SITE_NAME;
 require_once __DIR__ . '/../dal/CartDAL.php';
 require_once __DIR__ . '/../dal/CouponDAL.php';
 require_once __DIR__ . '/../dal/AddressDAL.php';
@@ -86,88 +86,88 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
 ?>
 
 <style>
-.checkout-section { padding: 30px 0 60px; background: linear-gradient(180deg, var(--purple-soft, #FFF8E6) 0%, #fff 140px); }
-.checkout-title { font-size: 1.6rem; font-weight: 700; color: var(--purple-dark, #D4A017); margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
-.checkout-title i { font-size: 1.2rem; color: var(--purple-primary, #E5A91A); }
+.checkout-section { padding: 30px 0 60px; background: linear-gradient(180deg, var(--purple-soft, #f8fafd) 0%, #fff 140px); }
+.checkout-title { font-size: 1.6rem; font-weight: 700; color: var(--purple-dark, #002868); margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+.checkout-title i { font-size: 1.2rem; color: var(--purple-primary, #003b94); }
 .checkout-subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
 
 .checkout-layout { display: grid; grid-template-columns: 1fr 380px; gap: 30px; align-items: start; }
 
 /* Form Sections */
-.checkout-form-section { background: #fff; border: 1px solid #F5E6B8; border-radius: 14px; padding: 28px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(196, 138, 10, 0.04); }
+.checkout-form-section { background: #fff; border: 1px solid #dbe5f5; border-radius: 14px; padding: 28px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 40, 104, 0.04); }
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
-.section-number { width: 28px; height: 28px; background: #D49A0A; color: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
-.section-header h3 { font-size: 15px; font-weight: 600; color: var(--purple-dark, #D4A017); }
+.section-number { width: 28px; height: 28px; background: #001f52; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.section-header h3 { font-size: 15px; font-weight: 600; color: var(--purple-dark, #002868); }
 
 .checkout-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 .checkout-form-group { margin-bottom: 16px; }
 .checkout-form-group label { display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
 .checkout-form-group label .required { color: #ef4444; }
-.checkout-input-wrap { display: flex; align-items: center; border: 1.5px solid #F5E6B8; border-radius: 10px; padding: 0 14px; background: #FFF8E6; transition: all 0.3s; }
-.checkout-input-wrap:focus-within { border-color: var(--purple-primary, #E5A91A); background: #fff; box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.1); }
-.checkout-input-wrap i { color: var(--purple-primary, #E5A91A); font-size: 13px; margin-right: 10px; }
+.checkout-input-wrap { display: flex; align-items: center; border: 1.5px solid #dbe5f5; border-radius: 10px; padding: 0 14px; background: #f8fafd; transition: all 0.3s; }
+.checkout-input-wrap:focus-within { border-color: var(--purple-primary, #003b94); background: #fff; box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.1); }
+.checkout-input-wrap i { color: var(--purple-primary, #003b94); font-size: 13px; margin-right: 10px; }
 .checkout-input-wrap input, .checkout-input-wrap select, .checkout-input-wrap textarea { flex: 1; padding: 12px 0; border: none; outline: none; font-family: 'Poppins', sans-serif; font-size: 13px; color: #333; background: transparent; }
 .checkout-input-wrap select { cursor: pointer; }
 .checkout-input-wrap textarea { resize: vertical; min-height: 60px; }
 
 /* Delivery Method */
-.delivery-option { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1.5px solid #F5E6B8; border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; }
-.delivery-option:hover { border-color: #F0D78C; }
-.delivery-option.selected { border-color: var(--purple-primary, #E5A91A); background: var(--purple-soft, #FFF8E6); }
-.delivery-option-icon { width: 40px; height: 40px; background: var(--purple-lavender, #FFE8A8); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--purple-primary, #E5A91A); font-size: 16px; }
+.delivery-option { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1.5px solid #dbe5f5; border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; }
+.delivery-option:hover { border-color: #c2d4f2; }
+.delivery-option.selected { border-color: var(--purple-primary, #003b94); background: var(--purple-soft, #f8fafd); }
+.delivery-option-icon { width: 40px; height: 40px; background: var(--purple-lavender, #e8f0fe); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--purple-primary, #003b94); font-size: 16px; }
 .delivery-option-info { flex: 1; }
-.delivery-option-info strong { display: block; font-size: 13px; color: var(--purple-dark, #D4A017); }
+.delivery-option-info strong { display: block; font-size: 13px; color: var(--purple-dark, #002868); }
 .delivery-option-info span { font-size: 11px; color: #888; }
-.delivery-option-price { font-size: 14px; font-weight: 600; color: var(--purple-dark, #D4A017); }
-.delivery-option-radio { width: 18px; height: 18px; border: 2px solid #F0D78C; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.delivery-option.selected .delivery-option-radio { border-color: var(--purple-primary, #E5A91A); }
-.delivery-option.selected .delivery-option-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #E5A91A); border-radius: 50%; }
+.delivery-option-price { font-size: 14px; font-weight: 600; color: var(--purple-dark, #002868); }
+.delivery-option-radio { width: 18px; height: 18px; border: 2px solid #c2d4f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.delivery-option.selected .delivery-option-radio { border-color: var(--purple-primary, #003b94); }
+.delivery-option.selected .delivery-option-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #003b94); border-radius: 50%; }
 
 /* Payment Method */
-.payment-option { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1.5px solid #F5E6B8; border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; }
-.payment-option:hover { border-color: #F0D78C; }
-.payment-option.selected { border-color: var(--purple-primary, #E5A91A); background: var(--purple-soft, #FFF8E6); }
-.payment-option-icon { width: 40px; height: 40px; background: var(--purple-lavender, #FFE8A8); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--purple-primary, #E5A91A); font-size: 16px; }
+.payment-option { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1.5px solid #dbe5f5; border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; }
+.payment-option:hover { border-color: #c2d4f2; }
+.payment-option.selected { border-color: var(--purple-primary, #003b94); background: var(--purple-soft, #f8fafd); }
+.payment-option-icon { width: 40px; height: 40px; background: var(--purple-lavender, #e8f0fe); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--purple-primary, #003b94); font-size: 16px; }
 .payment-option-info { flex: 1; }
-.payment-option-info strong { display: block; font-size: 13px; color: var(--purple-dark, #D4A017); }
+.payment-option-info strong { display: block; font-size: 13px; color: var(--purple-dark, #002868); }
 .payment-option-info span { font-size: 11px; color: #888; }
-.payment-option-radio { width: 18px; height: 18px; border: 2px solid #F0D78C; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.payment-option.selected .payment-option-radio { border-color: var(--purple-primary, #E5A91A); }
-.payment-option.selected .payment-option-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #E5A91A); border-radius: 50%; }
+.payment-option-radio { width: 18px; height: 18px; border: 2px solid #c2d4f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.payment-option.selected .payment-option-radio { border-color: var(--purple-primary, #003b94); }
+.payment-option.selected .payment-option-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #003b94); border-radius: 50%; }
 .payment-logos { display: flex; gap: 6px; margin-top: 2px; }
 .payment-logos img { height: 18px; }
 
 /* Order Summary Sidebar */
-.checkout-summary { background: #fff; border: 1px solid #F5E6B8; border-radius: 14px; padding: 28px; position: sticky; top: 130px; box-shadow: 0 4px 20px rgba(196, 138, 10, 0.06); }
-.checkout-summary h3 { font-size: 16px; font-weight: 700; color: var(--purple-dark, #D4A017); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #FFE8A8; display: flex; align-items: center; gap: 8px; }
-.checkout-summary h3 i { color: var(--purple-primary, #E5A91A); }
+.checkout-summary { background: #fff; border: 1px solid #dbe5f5; border-radius: 14px; padding: 28px; position: sticky; top: 130px; box-shadow: 0 4px 20px rgba(0, 40, 104, 0.06); }
+.checkout-summary h3 { font-size: 16px; font-weight: 700; color: var(--purple-dark, #002868); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #e8f0fe; display: flex; align-items: center; gap: 8px; }
+.checkout-summary h3 i { color: var(--purple-primary, #003b94); }
 
-.checkout-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #FFE8A8; }
+.checkout-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e8f0fe; }
 .checkout-item:last-of-type { border-bottom: none; }
-.checkout-item-img { width: 55px; height: 55px; border-radius: 8px; object-fit: cover; border: 1px solid #F5E6B8; flex-shrink: 0; }
+.checkout-item-img { width: 55px; height: 55px; border-radius: 8px; object-fit: cover; border: 1px solid #dbe5f5; flex-shrink: 0; }
 .checkout-item-info { flex: 1; }
 .checkout-item-info h4 { font-size: 12px; font-weight: 600; color: #333; line-height: 1.4; margin-bottom: 3px; }
 .checkout-item-info span { font-size: 11px; color: #888; }
-.checkout-item-price { font-size: 13px; font-weight: 700; color: var(--purple-dark, #D4A017); white-space: nowrap; }
+.checkout-item-price { font-size: 13px; font-weight: 700; color: var(--purple-dark, #002868); white-space: nowrap; }
 
-.checkout-totals { margin-top: 18px; padding-top: 16px; border-top: 1px solid #FFE8A8; }
+.checkout-totals { margin-top: 18px; padding-top: 16px; border-top: 1px solid #e8f0fe; }
 .checkout-total-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 13px; }
 .checkout-total-row span { color: #666; }
-.checkout-total-row strong { color: var(--purple-dark, #D4A017); }
+.checkout-total-row strong { color: var(--purple-dark, #002868); }
 .checkout-total-row.discount strong { color: #16a34a; }
-.checkout-total-row.grand-total { border-top: 1.5px solid var(--purple-dark, #D4A017); margin-top: 10px; padding-top: 12px; }
-.checkout-total-row.grand-total span { font-size: 15px; font-weight: 600; color: var(--purple-dark, #D4A017); }
-.checkout-total-row.grand-total strong { font-size: 20px; font-weight: 800; color: var(--purple-dark, #D4A017); }
+.checkout-total-row.grand-total { border-top: 1.5px solid var(--purple-dark, #002868); margin-top: 10px; padding-top: 12px; }
+.checkout-total-row.grand-total span { font-size: 15px; font-weight: 600; color: var(--purple-dark, #002868); }
+.checkout-total-row.grand-total strong { font-size: 20px; font-weight: 800; color: var(--purple-dark, #002868); }
 
-.btn-place-order { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px; background: #D49A0A; color: #1a1a1a; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 18px; font-family: 'Poppins', sans-serif; transition: all 0.3s; }
-.btn-place-order:hover { background: #D4A017; box-shadow: 0 6px 20px rgba(229, 169, 26, 0.25); transform: translateY(-1px); }
+.btn-place-order { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px; background: #001f52; color: #ffffff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 18px; font-family: 'Poppins', sans-serif; transition: all 0.3s; }
+.btn-place-order:hover { background: #002868; box-shadow: 0 6px 20px rgba(0, 40, 104, 0.25); transform: translateY(-1px); }
 .btn-place-order i { background: rgba(255,255,255,0.15); padding: 5px 8px; border-radius: 6px; }
 
 .checkout-or { text-align: center; font-size: 12px; color: #999; margin: 12px 0; }
 .btn-whatsapp-order { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px; background: #fff; color: #25d366; border: 1.5px solid #25d366; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s; text-decoration: none; }
 .btn-whatsapp-order:hover { background: #25d366; color: #fff; }
 
-.checkout-trust { margin-top: 20px; padding-top: 18px; border-top: 1px solid #FFE8A8; }
+.checkout-trust { margin-top: 20px; padding-top: 18px; border-top: 1px solid #e8f0fe; }
 .checkout-trust-item {
     display: flex;
     align-items: flex-start;
@@ -179,12 +179,12 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
 }
 .checkout-trust-item i {
     font-size: 16px;
-    color: var(--purple-primary, #E5A91A);
+    color: var(--purple-primary, #003b94);
     width: 38px;
     height: 38px;
     min-width: 38px;
     border-radius: 10px;
-    background: var(--purple-lavender, #FFE8A8);
+    background: var(--purple-lavender, #e8f0fe);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,7 +199,7 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
     display: block;
     font-size: 12px;
     font-weight: 600;
-    color: var(--purple-dark, #D4A017);
+    color: var(--purple-dark, #002868);
     margin-bottom: 2px;
 }
 .checkout-trust-item div span {
@@ -233,27 +233,27 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
 .checkout-address-options { display: flex; flex-direction: column; gap: 10px; }
 .checkout-address-card {
     display: flex; align-items: flex-start; gap: 12px;
-    padding: 16px; border: 1.5px solid #F5E6B8; border-radius: 12px;
+    padding: 16px; border: 1.5px solid #dbe5f5; border-radius: 12px;
     cursor: pointer; transition: all 0.2s; background: #fff;
 }
-.checkout-address-card:hover { border-color: #F0D78C; }
-.checkout-address-card.selected { border-color: var(--purple-primary, #E5A91A); background: var(--purple-soft, #FFF8E6); }
+.checkout-address-card:hover { border-color: #c2d4f2; }
+.checkout-address-card.selected { border-color: var(--purple-primary, #003b94); background: var(--purple-soft, #f8fafd); }
 .checkout-addr-radio {
-    width: 18px; height: 18px; border: 2px solid #F0D78C; border-radius: 50%;
+    width: 18px; height: 18px; border: 2px solid #c2d4f2; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;
 }
-.checkout-address-card.selected .checkout-addr-radio { border-color: var(--purple-primary, #E5A91A); }
-.checkout-address-card.selected .checkout-addr-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #E5A91A); border-radius: 50%; }
+.checkout-address-card.selected .checkout-addr-radio { border-color: var(--purple-primary, #003b94); }
+.checkout-address-card.selected .checkout-addr-radio::after { content: ''; width: 10px; height: 10px; background: var(--purple-primary, #003b94); border-radius: 50%; }
 .checkout-addr-content { flex: 1; }
 .checkout-addr-label { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.checkout-addr-label i { font-size: 13px; color: var(--purple-primary, #E5A91A); }
-.checkout-addr-label strong { font-size: 13px; color: var(--purple-dark, #D4A017); }
-.checkout-addr-default { font-size: 9px; padding: 2px 7px; background: #D49A0A; color: #1a1a1a; border-radius: 10px; font-weight: 600; }
+.checkout-addr-label i { font-size: 13px; color: var(--purple-primary, #003b94); }
+.checkout-addr-label strong { font-size: 13px; color: var(--purple-dark, #002868); }
+.checkout-addr-default { font-size: 9px; padding: 2px 7px; background: #001f52; color: #ffffff; border-radius: 10px; font-weight: 600; }
 .checkout-addr-text { font-size: 12px; color: #555; line-height: 1.5; margin: 0; }
 .checkout-addr-phone { font-size: 11px; color: #888; margin-top: 4px; display: flex; align-items: center; gap: 5px; }
 .checkout-addr-phone i { font-size: 10px; }
-.checkout-new-addr-trigger .checkout-addr-label i { color: var(--purple-primary, #E5A91A); }
-.checkout-new-address-form { margin-top: 16px; padding-top: 16px; border-top: 1px solid #FFE8A8; }
+.checkout-new-addr-trigger .checkout-addr-label i { color: var(--purple-primary, #003b94); }
+.checkout-new-address-form { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e8f0fe; }
 </style>
 
 <!-- Breadcrumb -->
@@ -336,7 +336,7 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
                         <!-- Address Selection -->
                         <?php if ($hasAddresses): ?>
                         <div class="checkout-address-section">
-                            <label style="display:block; font-size:13px; font-weight:600; color:var(--purple-dark, #D4A017); margin-bottom:12px;">Delivery Address</label>
+                            <label style="display:block; font-size:13px; font-weight:600; color:var(--purple-dark, #002868); margin-bottom:12px;">Delivery Address</label>
                             
                             <div class="checkout-address-options" id="addressOptions">
                                 <?php foreach ($savedAddresses as $idx => $addr): ?>
@@ -450,7 +450,7 @@ $slLocationsJson = json_encode(ezymart_sl_locations_for_js(), JSON_UNESCAPED_UNI
 
                             <?php if ($hasAddresses): ?>
                             <label style="display:flex; align-items:center; gap:8px; font-size:12px; color:#555; cursor:pointer; margin-top:8px;">
-                                <input type="checkbox" name="save_new_address" value="1" checked style="accent-color:#E5A91A;"> Save this address to my address book
+                                <input type="checkbox" name="save_new_address" value="1" checked style="accent-color:#003b94;"> Save this address to my address book
                             </label>
                             <?php endif; ?>
                         </div>

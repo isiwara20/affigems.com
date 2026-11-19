@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "About Us - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "About Us - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 
 $aboutBannerUrl = null;
@@ -14,11 +15,11 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 ?>
 
 <style>
-/* ===== ARIGATO.LK About Page ===== */
+/* ===== Affinity Gems & Jewels About Page ===== */
 .lumak-about-hero {
     position: relative;
     padding: clamp(56px, 10vw, 88px) 0 clamp(110px, 15vw, 140px);
-    background: #C48A0A;
+    background: #002868;
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -27,7 +28,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     align-items: center;
 }
 .lumak-about-hero.has-banner {
-    background: #8A6508;
+    background: #001f52;
 }
 .lumak-about-hero-bg {
     position: absolute;
@@ -46,8 +47,8 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     inset: 0;
     z-index: 1;
     background:
-        linear-gradient(180deg, rgba(138, 101, 8, 0.55) 0%, rgba(196, 138, 10, 0.72) 52%, rgba(110, 80, 6, 0.88) 100%),
-        linear-gradient(90deg, rgba(138, 101, 8, 0.35) 0%, transparent 35%, transparent 65%, rgba(138, 101, 8, 0.35) 100%);
+        linear-gradient(180deg, rgba(0, 40, 104, 0.55) 0%, rgba(0, 40, 104, 0.72) 52%, rgba(110, 80, 6, 0.88) 100%),
+        linear-gradient(90deg, rgba(0, 40, 104, 0.35) 0%, transparent 35%, transparent 65%, rgba(0, 40, 104, 0.35) 100%);
     pointer-events: none;
 }
 .lumak-about-hero .container {
@@ -74,7 +75,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     height: min(360px, 70vw);
     bottom: -140px;
     left: -80px;
-    background: radial-gradient(circle, rgba(224, 168, 16, 0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 40, 104, 0.22) 0%, transparent 70%);
 }
 .lumak-about-hero.has-banner::before,
 .lumak-about-hero.has-banner::after {
@@ -84,7 +85,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .lumak-about-hero-inner {
     position: relative;
     z-index: 3;
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
 }
 .lumak-about-hero-badge {
@@ -110,16 +111,16 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     letter-spacing: -0.02em;
 }
 .lumak-about-hero h1 span {
-    background: #FFF3D6;
+    background: #f4f7fc;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 .lumak-about-hero-lead {
     font-size: clamp(14px, 2.2vw, 16px);
-    color: rgba(255,255,255,0.88);
+    color: rgba(255,255,255,0.92);
     line-height: 1.75;
-    max-width: 560px;
+    max-width: 620px;
     margin: 0 auto;
 }
 .lumak-about-hero-hearts {
@@ -131,56 +132,56 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .lumak-about-hero-hearts i {
     position: absolute;
-    color: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.14);
 }
-.lumak-about-hero-hearts .h1 { top: 18%; left: 8%; font-size: 20px; transform: rotate(-12deg); }
-.lumak-about-hero-hearts .h2 { top: 28%; right: 10%; font-size: 28px; opacity: 0.7; }
-.lumak-about-hero-hearts .h3 { bottom: 32%; left: 12%; font-size: 16px; transform: rotate(8deg); }
+.lumak-about-hero-hearts .h1 { top: 18%; left: 8%; font-size: 24px; transform: rotate(-12deg); }
+.lumak-about-hero-hearts .h2 { top: 28%; right: 10%; font-size: 32px; opacity: 0.7; }
+.lumak-about-hero-hearts .h3 { bottom: 32%; left: 12%; font-size: 20px; transform: rotate(8deg); }
 
 .lumak-about-stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
-    max-width: 880px;
+    max-width: 920px;
     margin: clamp(-70px, -8vw, -50px) auto 0;
     position: relative;
     z-index: 2;
     background: #fff;
     border-radius: 18px;
-    border: 1px solid #ebe0ff;
-    box-shadow: 0 16px 48px rgba(250, 188, 39, 0.12);
+    border: 1px solid #e8f0fe;
+    box-shadow: 0 16px 48px rgba(0, 40, 104, 0.12);
     overflow: hidden;
 }
 .lumak-about-stat {
     text-align: center;
     padding: clamp(18px, 3vw, 26px) 12px;
-    border-right: 1px solid #FFE8A8;
+    border-right: 1px solid #e8f0fe;
 }
 .lumak-about-stat:last-child { border-right: none; }
 .lumak-about-stat strong {
     display: block;
-    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
     font-weight: 800;
-    color: #E0A810;
+    color: #002868;
     line-height: 1.2;
     margin-bottom: 4px;
 }
 .lumak-about-stat span {
     font-size: 11px;
-    font-weight: 600;
-    color: #666;
+    font-weight: 700;
+    color: #002868;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
 .lumak-about-body {
     padding: clamp(48px, 7vw, 72px) 0 clamp(56px, 8vw, 80px);
-    background: #FFF8E6;
+    background: #FFFDF9;
 }
 
 .lumak-about-story {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
     gap: clamp(28px, 5vw, 48px);
     align-items: center;
     margin-bottom: clamp(40px, 6vw, 64px);
@@ -191,34 +192,37 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .lumak-about-story-frame {
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid #ebe0ff;
-    box-shadow: 0 20px 50px rgba(250, 188, 39, 0.12);
+    border: 2px solid #e8f0fe;
+    box-shadow: 0 20px 50px rgba(0, 40, 104, 0.14);
     line-height: 0;
     background: #fff;
+    padding: 30px;
+    text-align: center;
 }
 .lumak-about-story-frame img {
     width: 100%;
+    max-width: 380px;
     height: auto;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 4 / 3;
+    display: inline-block;
+    object-fit: contain;
 }
 .lumak-about-story-float {
     position: absolute;
     bottom: -16px;
     right: -12px;
-    background: #E0A810;
+    background: #002868;
     color: #fff;
-    padding: 14px 18px;
+    padding: 14px 20px;
     border-radius: 14px;
     font-size: 12px;
     font-weight: 700;
-    box-shadow: 0 8px 24px rgba(250, 188, 39, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 40, 104, 0.35);
     display: flex;
     align-items: center;
     gap: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
 }
-.lumak-about-story-float i { font-size: 16px; }
+.lumak-about-story-float i { font-size: 16px; color: #002868; }
 .lumak-about-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -227,19 +231,19 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #E0A810;
+    color: #002868;
     margin-bottom: 12px;
 }
 .lumak-about-story-text h2 {
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
     font-weight: 800;
-    color: #1a1a2e;
-    line-height: 1.2;
+    color: #002868;
+    line-height: 1.25;
     margin-bottom: 16px;
 }
 .lumak-about-story-text p {
     font-size: 14px;
-    color: #555;
+    color: #4b5563;
     line-height: 1.85;
     margin-bottom: 14px;
     text-align: justify;
@@ -247,17 +251,97 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .lumak-about-story-text p:last-child { margin-bottom: 0; }
 
+/* China Expansion & Collaboration Section */
+.affinity-expansion-section {
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid #e8f0fe;
+    box-shadow: 0 16px 48px rgba(0, 40, 104, 0.08);
+    padding: clamp(32px, 5vw, 48px);
+    margin-bottom: clamp(40px, 6vw, 64px);
+}
+.affinity-expansion-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto clamp(28px, 4vw, 36px);
+}
+.affinity-expansion-head h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 800;
+    color: #002868;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+.affinity-expansion-head p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+}
+.affinity-expansion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+.affinity-expansion-card {
+    background: #FFFDF9;
+    border-radius: 18px;
+    border: 1px solid #dbe5f5;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.affinity-expansion-card:hover {
+    transform: translateY(-4px);
+    border-color: #001f52;
+    box-shadow: 0 12px 32px rgba(0, 40, 104, 0.12);
+}
+.affinity-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #e8f0fe;
+    color: #001f52;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    align-self: flex-start;
+}
+.affinity-expansion-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #002868;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+.affinity-expansion-card p {
+    font-size: 13.5px;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+.affinity-expansion-card p:last-child {
+    margin-bottom: 0;
+}
+
 /* Director / leadership */
 .ez-director-section {
     margin-bottom: clamp(40px, 6vw, 64px);
 }
 .ez-director-card {
     display: grid;
-    grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
+    grid-template-columns: minmax(280px, 36%) minmax(0, 1fr);
     background: #fff;
-    border-radius: 18px;
-    border: 1px solid #FFF3D6;
-    box-shadow: 0 16px 48px rgba(196, 138, 10, 0.08);
+    border-radius: 20px;
+    border: 1px solid #e8f0fe;
+    box-shadow: 0 16px 48px rgba(0, 40, 104, 0.08);
     overflow: hidden;
     min-height: 400px;
 }
@@ -279,8 +363,8 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     padding: 32px 24px;
     background:
         radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.14) 0%, transparent 42%),
-        radial-gradient(circle at 82% 78%, rgba(212, 175, 55, 0.16) 0%, transparent 38%),
-        #C48A0A;
+        radial-gradient(circle at 82% 78%, rgba(0, 40, 104, 0.16) 0%, transparent 38%),
+        #002868;
     color: #fff;
     text-align: center;
 }
@@ -290,7 +374,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     width: min(220px, 55%);
     height: min(220px, 55%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 72%);
+    background: radial-gradient(circle, rgba(0, 40, 104, 0.25) 0%, transparent 72%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -303,7 +387,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .ez-director-visual-icons i {
     position: absolute;
-    color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.15);
 }
 .ez-director-visual-icons .icon-1 {
     top: 14%;
@@ -332,8 +416,8 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .ez-director-visual-logo {
     width: auto;
-    height: 52px;
-    filter: brightness(0) invert(1);
+    height: 48px;
+    object-fit: contain;
 }
 .ez-director-visual-badge {
     display: inline-flex;
@@ -342,25 +426,26 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     padding: 8px 14px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 .ez-director-visual-badge i {
-    color: var(--arigato-gold, #D4AF37);
+    color: #002868;
 }
 .ez-director-visual-name {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    font-weight: 700;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 800;
     line-height: 1.35;
-    max-width: 16ch;
+    color: #fff;
+    margin: 0;
 }
 .ez-director-visual-role {
     font-size: 12px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.78);
+    color: #e8f0fe;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -373,7 +458,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .ez-director-head {
     margin-bottom: 20px;
     padding-bottom: 18px;
-    border-bottom: 1px solid #EEF2F8;
+    border-bottom: 1px solid #e8f0fe;
 }
 .ez-director-label {
     display: block;
@@ -381,16 +466,15 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #E0A810;
-    margin-bottom: 10px;
+    color: #002868;
+    margin-bottom: 8px;
 }
 .ez-director-head h2 {
-    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
     font-weight: 800;
-    color: #0f172a;
+    color: #002868;
     line-height: 1.25;
     margin: 0 0 8px;
-    letter-spacing: -0.02em;
 }
 .ez-director-meta {
     font-size: 13px;
@@ -399,7 +483,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     margin: 0;
 }
 .ez-director-meta strong {
-    color: #E0A810;
+    color: #002868;
     font-weight: 600;
 }
 .ez-director-message blockquote {
@@ -410,8 +494,9 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .ez-director-message blockquote p {
     font-size: 14px;
     color: #475569;
-    line-height: 1.8;
-    margin: 0 0 10px;
+    line-height: 1.85;
+    margin: 0 0 12px;
+    text-align: justify;
 }
 .ez-director-message blockquote p:last-child {
     margin-bottom: 0;
@@ -423,7 +508,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     gap: 16px;
     flex-wrap: wrap;
     padding-top: 16px;
-    border-top: 1px solid #EEF2F8;
+    border-top: 1px solid #e8f0fe;
     margin-top: auto;
 }
 .ez-director-footer-text {
@@ -434,13 +519,30 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .ez-director-footer-text strong {
     display: block;
     font-size: 13px;
-    color: #0f172a;
+    color: #002868;
     margin-bottom: 2px;
 }
-.ez-director-footer img {
-    height: 36px;
-    width: auto;
-    opacity: 0.85;
+.ez-director-contact-links {
+    display: flex;
+    gap: 10px;
+}
+.ez-director-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.ez-director-btn.btn-call {
+    background: #002868;
+    color: #fff;
+}
+.ez-director-btn.btn-wa {
+    background: #25D366;
+    color: #fff;
 }
 
 .lumak-about-pillars {
@@ -451,7 +553,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .lumak-about-pillar {
     background: #fff;
-    border: 1px solid #ebe0ff;
+    border: 1px solid #e8f0fe;
     border-radius: 18px;
     padding: 28px 24px;
     text-align: center;
@@ -459,26 +561,26 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 }
 .lumak-about-pillar:hover {
     transform: translateY(-4px);
-    border-color: #d4c0ff;
-    box-shadow: 0 14px 36px rgba(250, 188, 39, 0.1);
+    border-color: #001f52;
+    box-shadow: 0 14px 36px rgba(0, 40, 104, 0.12);
 }
 .lumak-about-pillar-icon {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     margin: 0 auto 16px;
     border-radius: 14px;
-    background: #E0A810;
-    color: #fff;
+    background: #002868;
+    color: #002868;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    box-shadow: 0 8px 20px rgba(250, 188, 39, 0.28);
+    font-size: 22px;
+    box-shadow: 0 8px 20px rgba(0, 40, 104, 0.25);
 }
 .lumak-about-pillar h3 {
     font-size: 16px;
     font-weight: 700;
-    color: #1a1a2e;
+    color: #002868;
     margin-bottom: 10px;
 }
 .lumak-about-pillar p {
@@ -490,13 +592,13 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 
 .lumak-about-section-head {
     text-align: center;
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto clamp(28px, 4vw, 40px);
 }
 .lumak-about-section-head h2 {
-    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
     font-weight: 800;
-    color: #1a1a2e;
+    color: #002868;
     margin-bottom: 10px;
 }
 .lumak-about-section-head p {
@@ -517,28 +619,28 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     gap: 16px;
     align-items: flex-start;
     background: #fff;
-    border: 1px solid #ebe0ff;
+    border: 1px solid #e8f0fe;
     border-radius: 16px;
     padding: 22px 20px;
     transition: border-color 0.2s;
 }
-.lumak-about-value:hover { border-color: #d4c0ff; }
+.lumak-about-value:hover { border-color: #001f52; }
 .lumak-about-value > i {
     width: 44px;
     height: 44px;
     flex-shrink: 0;
     border-radius: 12px;
-    background: #FFE8A8;
-    color: #E0A810;
+    background: #f4f7fc;
+    color: #002868;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
 }
 .lumak-about-value h4 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
-    color: #1a1a2e;
+    color: #002868;
     margin-bottom: 6px;
 }
 .lumak-about-value p {
@@ -546,49 +648,6 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     color: #666;
     line-height: 1.65;
     margin: 0;
-}
-
-.lumak-about-collections {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    margin-bottom: clamp(40px, 6vw, 56px);
-}
-.lumak-about-collection {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 18px;
-    background: #fff;
-    border: 1px solid #ebe0ff;
-    border-radius: 14px;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.25s;
-}
-.lumak-about-collection:hover {
-    border-color: #E0A810;
-    background: #faf8ff;
-    transform: translateX(4px);
-    color: inherit;
-}
-.lumak-about-collection i {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: #FFF3D6;
-    color: #E0A810;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-}
-.lumak-about-collection span {
-    font-size: 13px;
-    font-weight: 600;
-    color: #333;
-    line-height: 1.35;
 }
 
 .lumak-about-contact-strip {
@@ -603,19 +662,19 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     gap: 14px;
     padding: 20px;
     background: #fff;
-    border: 1px solid #ebe0ff;
+    border: 1px solid #e8f0fe;
     border-radius: 14px;
 }
 .lumak-about-contact-item > i {
     font-size: 22px;
-    color: #E0A810;
+    color: #002868;
     flex-shrink: 0;
 }
 .lumak-about-contact-item strong {
     display: block;
     font-size: 12px;
     font-weight: 700;
-    color: #1a1a2e;
+    color: #002868;
     margin-bottom: 2px;
 }
 .lumak-about-contact-item span,
@@ -625,35 +684,37 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     text-decoration: none;
     line-height: 1.5;
 }
-.lumak-about-contact-item a:hover { color: #E0A810; }
+.lumak-about-contact-item a:hover { color: #002868; }
 
 .lumak-about-cta {
-    background: #E0A810;
+    background: linear-gradient(135deg, #002868 0%, #0d3882 100%);
     border-radius: 22px;
     padding: clamp(36px, 5vw, 52px) clamp(24px, 4vw, 40px);
     text-align: center;
     color: #fff;
     position: relative;
     overflow: hidden;
+    border: 1px solid #e8f0fe;
 }
 .lumak-about-cta::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 80% 20%, rgba(0, 40, 104, 0.2) 0%, transparent 50%);
     pointer-events: none;
 }
 .lumak-about-cta h3 {
-    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
     font-weight: 800;
     margin-bottom: 10px;
     position: relative;
+    color: #f4f7fc;
 }
 .lumak-about-cta > p {
     font-size: 14px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 24px;
-    max-width: 480px;
+    max-width: 580px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -677,14 +738,15 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .lumak-about-cta-btn.primary {
-    background: #fff;
-    color: #E0A810;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    background: #002868;
+    color: #002868;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 .lumak-about-cta-btn.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-    color: #D4A017;
+    background: #f1b71e;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+    color: #002868;
 }
 .lumak-about-cta-btn.secondary {
     background: rgba(255,255,255,0.12);
@@ -692,8 +754,17 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     border: 1px solid rgba(255,255,255,0.28);
 }
 .lumak-about-cta-btn.secondary:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.22);
     color: #fff;
+}
+.lumak-about-cta-btn.wa-btn {
+    background: #25D366;
+    color: #fff;
+}
+.lumak-about-cta-btn.wa-btn:hover {
+    background: #20ba5a;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 @media (min-width: 993px) {
@@ -706,20 +777,19 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 @media (max-width: 992px) {
     .lumak-about-story { grid-template-columns: 1fr; }
     .lumak-about-story-float { right: 12px; bottom: -12px; }
+    .affinity-expansion-grid { grid-template-columns: 1fr; }
     .ez-director-card { grid-template-columns: 1fr; min-height: 0; }
     .ez-director-visual { max-height: 360px; overflow: hidden; }
     .ez-director-visual-panel { min-height: 360px; }
     .lumak-about-pillars { grid-template-columns: 1fr; }
-    .lumak-about-collections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
     .lumak-about-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .lumak-about-stat:nth-child(2) { border-right: none; }
-    .lumak-about-stat:nth-child(-n+2) { border-bottom: 1px solid #FFE8A8; }
+    .lumak-about-stat:nth-child(-n+2) { border-bottom: 1px solid #e8f0fe; }
     .lumak-about-values { grid-template-columns: 1fr; }
     .lumak-about-contact-strip { grid-template-columns: 1fr; }
-    .lumak-about-collections { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -743,15 +813,15 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     <div class="lumak-about-hero-overlay" aria-hidden="true"></div>
     <?php endif; ?>
     <div class="lumak-about-hero-hearts" aria-hidden="true">
-        <i class="fas fa-mobile-alt h1"></i>
-        <i class="fas fa-headphones h2"></i>
-        <i class="fas fa-tablet-alt h3"></i>
+        <i class="fas fa-gem h1"></i>
+        <i class="fas fa-certificate h2"></i>
+        <i class="fas fa-ring h3"></i>
     </div>
     <div class="container">
         <div class="lumak-about-hero-inner">
-            <span class="lumak-about-hero-badge"><i class="fas fa-mobile-alt"></i> Mobiles &amp; Tech Accessories</span>
-            <h1>About <span><?php echo SITE_NAME; ?></span></h1>
-            <p class="lumak-about-hero-lead">Sri Lanka's trusted online destination for mobiles, accessories, and everyday tech essentials by <?php echo STORE_OWNER; ?>. Reliable products, island wide delivery, and friendly service from Battaramulla.</p>
+            <span class="lumak-about-hero-badge"><i class="fas fa-gem"></i> Direct Source for Sri Lankan Sapphires</span>
+            <h1>Introduction to <span>Affinity Gems &amp; Jewels</span></h1>
+            <p class="lumak-about-hero-lead">Serving as a direct source supplier of high-quality Sri Lankan sapphires, ethically sourced and meticulously graded. Registered with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce.</p>
         </div>
     </div>
 </header>
@@ -759,10 +829,10 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 <!-- Stats -->
 <div class="container">
     <div class="lumak-about-stats">
-        <div class="lumak-about-stat"><strong>100%</strong><span>Original Products</span></div>
-        <div class="lumak-about-stat"><strong>100+</strong><span>Tech Items</span></div>
-        <div class="lumak-about-stat"><strong>24/7</strong><span>Customer Care</span></div>
-        <div class="lumak-about-stat"><strong>SL</strong><span>Island Wide Delivery</span></div>
+        <div class="lumak-about-stat"><strong>100%</strong><span>Authentic Sapphires</span></div>
+        <div class="lumak-about-stat"><strong>State Gem Corp</strong><span>Registered Supplier</span></div>
+        <div class="lumak-about-stat"><strong>ICC Member</strong><span>Chamber of Commerce</span></div>
+        <div class="lumak-about-stat"><strong>Worldwide</strong><span>Insured Delivery</span></div>
     </div>
 </div>
 
@@ -773,43 +843,64 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
         <div class="lumak-about-story">
             <div class="lumak-about-story-visual">
                 <div class="lumak-about-story-frame">
-                    <?php echo render_asset_image('assets/images/about/ezymart-skincare-collection.png', [
-                        'alt' => 'Featured tech collection at ARIGATO.LK',
-                        'loading' => 'lazy',
-                        'width' => 800,
-                        'height' => 600,
-                    ]); ?>
+                    <img src="<?php echo asset_image_url('assets/images/logo.png'); ?>" alt="Affinity Gems & Jewels Logo" loading="lazy">
                 </div>
                 <div class="lumak-about-story-float">
-                    <i class="fas fa-truck"></i> Island Wide Delivery
+                    <i class="fas fa-award"></i> Direct Source Supplier
                 </div>
             </div>
             <div class="lumak-about-story-text">
-                <span class="lumak-about-eyebrow"><i class="fas fa-microchip"></i> Who We Are</span>
-                <h2>Your Trusted Mobile &amp; Tech Store</h2>
-                <p><?php echo SITE_NAME; ?> is an online mobile and technology store operated by <?php echo STORE_OWNER; ?>. We offer a carefully selected range of smartphones, accessories, and gadgets, office tech, and everyday digital essentials at competitive prices.</p>
-                <p>Based at <?php echo STORE_LOCATION; ?>, we serve customers across Sri Lanka with island wide delivery and friendly customer support. Whether you are upgrading your setup, buying accessories, or shopping for reliable tech products, <?php echo SITE_NAME; ?> is here to make your experience simple, safe, and convenient.</p>
+                <span class="lumak-about-eyebrow"><i class="fas fa-gem"></i> Heritage &amp; Excellence</span>
+                <h2>Your Direct Source for Sri Lankan Sapphires</h2>
+                <p>In the world of gemstones, Sri Lanka is renowned for its exceptional sapphires, which are celebrated not only for their breathtaking beauty but also for their deep cultural roots and economic significance. <strong>Affinity Gems and Jewels Pvt Ltd</strong> stands at the forefront of this illustrious tradition, serving as a direct source supplier of high-quality Sri Lankan sapphires.</p>
+                <p>With a legacy deeply embedded in the gem industry, we are a registered company with the <strong>State Gem Corporation of Sri Lanka</strong> and a long-standing member of the <strong>International Chamber of Commerce in Sri Lanka</strong>. Our reputation as a trusted entity in both local and international markets has been built on generations of expertise and a commitment to excellence.</p>
+                <p>At Affinity Gems, we prioritize quality, authenticity, and outstanding customer service. Our sapphires are ethically sourced and meticulously graded, ensuring they meet the highest industry standards. We recognize that in the luxury market, reputation is paramount, and we are dedicated to maintaining the integrity of our brand.</p>
             </div>
         </div>
 
-        <!-- Director -->
+        <!-- China Expansion & Collaboration Section -->
+        <div class="affinity-expansion-section">
+            <div class="affinity-expansion-head">
+                <span class="lumak-about-eyebrow"><i class="fas fa-globe-asia"></i> Global Market Presence</span>
+                <h2>The Importance of Expanding Our Business Network in China</h2>
+                <p>The Chinese market is experiencing a growing demand for high-quality gemstones, particularly sapphires. This presents a timely opportunity for Affinity Gems Pvt Ltd to expand our sales and marketing efforts in the region. By establishing a presence in China, we can tap into a lucrative market and position ourselves as a leading supplier of Sri Lankan sapphires. Our goal is to create personalized experiences for our clients, allowing them to appreciate the inherent beauty and value of our gemstones firsthand.</p>
+            </div>
+
+            <div class="affinity-expansion-grid">
+                <div class="affinity-expansion-card">
+                    <div>
+                        <span class="affinity-card-badge"><i class="fas fa-handshake"></i> Partnership</span>
+                        <h3>A Proposal for Collaboration</h3>
+                        <p>To facilitate this expansion, we humbly request your assistance in connecting us with your network of friends and business associates in China. Your connections could be instrumental in arranging meetings with potential clients who are seeking high-quality gemstones.</p>
+                        <p>We are more than willing to organize personal visits to showcase our stock at the convenience of interested parties. This collaborative approach not only enhances our market presence but also fosters a spirit of partnership that can lead to mutually beneficial outcomes.</p>
+                    </div>
+                </div>
+
+                <div class="affinity-expansion-card">
+                    <div>
+                        <span class="affinity-card-badge"><i class="fas fa-medal"></i> Our Commitment</span>
+                        <h3>Conclusion &amp; Global Outlook</h3>
+                        <p>The opportunity to extend Affinity Gems Pvt Ltd's reach in the Chinese market is both timely and essential for our growth. Our unwavering commitment to quality, ethical sourcing, and exceptional service distinguishes us from our competitors. We are excited about the prospect of collaborating with new partners in China and look forward to showcasing the beauty and value of Sri Lankan sapphires.</p>
+                        <p>We sincerely hope that you will consider our request for introductions and join us in this venture. Together, we can promote the exquisite allure of Sri Lankan sapphires and forge lasting partnerships that benefit all involved. Thank you for your time and consideration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Director / Leadership Section -->
         <div class="ez-director-section">
             <div class="ez-director-card">
                 <div class="ez-director-visual">
                     <div class="ez-director-visual-panel" aria-hidden="true">
                         <div class="ez-director-visual-glow"></div>
                         <div class="ez-director-visual-icons">
-                            <i class="fas fa-mobile-alt icon-1"></i>
-                            <i class="fas fa-microchip icon-2"></i>
-                            <i class="fas fa-store icon-3"></i>
+                            <i class="fas fa-gem icon-1"></i>
+                            <i class="fas fa-certificate icon-2"></i>
+                            <i class="fas fa-crown icon-3"></i>
                         </div>
                         <div class="ez-director-visual-center">
-                            <?php echo render_asset_image('assets/images/logobottom.png', [
-                                'alt' => SITE_NAME,
-                                'class' => 'ez-director-visual-logo',
-                                'loading' => 'lazy',
-                            ]); ?>
-                            <span class="ez-director-visual-badge"><i class="fas fa-user-tie"></i> Leadership</span>
+                            <img src="<?php echo asset_image_url('assets/images/logobottom.png'); ?>" alt="<?php echo htmlspecialchars(SITE_NAME); ?>" class="ez-director-visual-logo" loading="lazy">
+                            <span class="ez-director-visual-badge"><i class="fas fa-user-tie"></i> Executive Leadership</span>
                             <p class="ez-director-visual-name"><?php echo htmlspecialchars(STORE_DIRECTOR); ?></p>
                             <span class="ez-director-visual-role"><?php echo htmlspecialchars(STORE_DIRECTOR_TITLE); ?> · <?php echo htmlspecialchars(STORE_OWNER); ?></span>
                         </div>
@@ -817,25 +908,24 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
                 </div>
                 <div class="ez-director-message">
                     <div class="ez-director-head">
-                        <span class="ez-director-label">Leadership Message</span>
+                        <span class="ez-director-label">Managing Director's Statement</span>
                         <h2><?php echo htmlspecialchars(STORE_DIRECTOR); ?></h2>
                         <p class="ez-director-meta"><strong><?php echo htmlspecialchars(STORE_DIRECTOR_TITLE); ?></strong> · <?php echo htmlspecialchars(STORE_OWNER); ?></p>
                     </div>
                     <blockquote>
-                        <p><?php echo SITE_NAME; ?> was established to bring quality mobiles, accessories, and convenient online shopping to customers across Sri Lanka. We are committed to offering reliable service, fair prices, and products you can trust.</p>
-                        <p>Every order is handled with care — from secure packaging to timely island wide delivery. We believe in building lasting relationships with our customers through honesty, quality, and excellent support.</p>
-                        <p>Thank you for choosing <?php echo SITE_NAME; ?>. We look forward to serving you!</p>
+                        <p>Welcome to <strong>Affinity Gems and Jewels Pvt Ltd</strong>. Our journey in the gemstone industry is rooted in a lifelong dedication to the rare, natural gemstones of Sri Lanka. We believe that every sapphire tells a unique geological story of timeless beauty and cultural depth.</p>
+                        <p>As a registered direct source supplier with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce, we take personal pride in every stone we inspect, cut, and certify. Whether you are a private collector, jewelry connoisseur, or international trade partner in China and beyond, our promise to you is complete authenticity, ethical provenance, and unmatched personal care.</p>
+                        <p>We look forward to forging lasting relationships with you.</p>
                     </blockquote>
                     <div class="ez-director-footer">
                         <div class="ez-director-footer-text">
                             <strong><?php echo htmlspecialchars(STORE_DIRECTOR); ?></strong>
                             <?php echo htmlspecialchars(STORE_DIRECTOR_TITLE); ?>, <?php echo htmlspecialchars(STORE_OWNER); ?>
                         </div>
-                        <?php echo render_asset_image('assets/images/logobottom.png', [
-                            'alt' => SITE_NAME,
-                            'class' => 'ez-director-footer-logo',
-                            'loading' => 'lazy',
-                        ]); ?>
+                        <div class="ez-director-contact-links">
+                            <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>" class="ez-director-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+                            <a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>?text=<?php echo rawurlencode('Hello Murshid Munzeer, I am interested in collaborating with Affinity Gems & Jewels.'); ?>" target="_blank" rel="noopener noreferrer" class="ez-director-btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -846,92 +936,76 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
             <div class="lumak-about-pillar">
                 <div class="lumak-about-pillar-icon"><i class="fas fa-bullseye"></i></div>
                 <h3>Our Mission</h3>
-                <p>To deliver reliable mobiles, accessories, and tech essentials at fair prices with island wide delivery and excellent customer care across Sri Lanka.</p>
+                <p>To serve as the most trusted direct-source bridge between Sri Lanka's finest sapphire mines and discerning clients and partners globally.</p>
             </div>
             <div class="lumak-about-pillar">
-                <div class="lumak-about-pillar-icon"><i class="fas fa-eye"></i></div>
+                <div class="lumak-about-pillar-icon"><i class="fas fa-gem"></i></div>
                 <h3>Our Vision</h3>
-                <p>To become Sri Lanka's most trusted online mobile and technology destination, built on reliability, quality, and customer satisfaction.</p>
+                <p>To showcase the world-renowned beauty and cultural heritage of Ceylon sapphires on the global luxury stage through uncompromised excellence.</p>
             </div>
             <div class="lumak-about-pillar">
-                <div class="lumak-about-pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="lumak-about-pillar-icon"><i class="fas fa-shield-alt"></i></div>
                 <h3>Our Promise</h3>
-                <p>Every tech order is packed with care, shipped securely, and backed by friendly support. Your confidence in every product is our priority at <?php echo SITE_NAME; ?>.</p>
+                <p>Every gemstone is ethically unearthed, meticulously graded, laboratory certified, and backed by our personal guarantee of authenticity.</p>
             </div>
         </div>
 
         <!-- Values -->
         <div class="lumak-about-section-head">
             <h2>What We Stand For</h2>
-            <p>The values behind every product, every package, and every customer conversation at <?php echo SITE_NAME; ?>.</p>
+            <p>The foundational principles guiding every gemstone collection and partnership at Affinity Gems.</p>
         </div>
         <div class="lumak-about-values">
             <div class="lumak-about-value">
                 <i class="fas fa-certificate"></i>
                 <div>
-                    <h4>100% Original</h4>
-                    <p>Only reliable mobiles, accessories, and tech products sourced so you can shop with confidence.</p>
+                    <h4>State Gem Corp Registered</h4>
+                    <p>Officially licensed and registered with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce.</p>
                 </div>
             </div>
             <div class="lumak-about-value">
-                <i class="fas fa-spa"></i>
+                <i class="fas fa-leaf"></i>
                 <div>
-                    <h4>Practical Selection</h4>
-                    <p>Products chosen for everyday performance, compatibility, and value across home, office, and personal use.</p>
+                    <h4>Ethical &amp; Conflict-Free</h4>
+                    <p>Mined with environmental mindfulness from traditional Ceylon gem fields and cut by master gem artisans.</p>
                 </div>
             </div>
             <div class="lumak-about-value">
-                <i class="fas fa-truck"></i>
+                <i class="fas fa-microscope"></i>
                 <div>
-                    <h4>Island Wide Delivery</h4>
-                    <p>Secure checkout, careful packaging, and reliable shipping to your doorstep anywhere in Sri Lanka.</p>
+                    <h4>Meticulous Grading</h4>
+                    <p>Each sapphire is evaluated for color saturation, clarity, cut precision, and brilliance with international laboratory certification.</p>
                 </div>
             </div>
             <div class="lumak-about-value">
-                <i class="fas fa-headset"></i>
+                <i class="fas fa-globe"></i>
                 <div>
-                    <h4>Customer First</h4>
-                    <p>We listen, we care, and we support you before and after every order at <?php echo SITE_NAME; ?>.</p>
+                    <h4>Personal Showcase Visits</h4>
+                    <p>We organize personal showcase visits for partners and clients in China and internationally to experience our collection firsthand.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Collections -->
-        <div class="lumak-about-section-head">
-            <h2>Our Tech Categories</h2>
-            <p>Explore mobile and technology categories available at <?php echo SITE_NAME; ?>.</p>
-        </div>
-        <div class="lumak-about-collections">
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-mobile-alt"></i><span>Mobiles &amp; Phones</span></a>
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-keyboard"></i><span>Accessories</span></a>
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-network-wired"></i><span>Networking</span></a>
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-desktop"></i><span>Monitors &amp; Displays</span></a>
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-headphones"></i><span>Audio &amp; Peripherals</span></a>
-            <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-collection"><i class="fas fa-star"></i><span>Best Sellers</span></a>
-        </div>
-
-        <!-- Contact -->
+        <!-- Contact Strip -->
         <div class="lumak-about-contact-strip">
             <div class="lumak-about-contact-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                    <strong>Location</strong>
+                    <strong>Office &amp; Gallery</strong>
                     <span><?php echo STORE_LOCATION; ?></span>
                 </div>
             </div>
             <div class="lumak-about-contact-item">
                 <i class="fas fa-phone-alt"></i>
                 <div>
-                    <strong>Call Us</strong>
+                    <strong>Direct Hotline</strong>
                     <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a>
-                    <span> / </span>
-                    <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a>
                 </div>
             </div>
             <div class="lumak-about-contact-item">
                 <i class="fas fa-envelope"></i>
                 <div>
-                    <strong>Email</strong>
+                    <strong>Direct Email</strong>
                     <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a>
                 </div>
             </div>
@@ -939,12 +1013,12 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 
         <!-- CTA -->
         <div class="lumak-about-cta">
-            <h3>Ready to Shop Mobiles &amp; Tech?</h3>
-            <p>Browse our tech collections or reach out. We would love to help you find the right products for your setup, office, or everyday digital needs.</p>
+            <h3>Connect with Affinity Gems &amp; Jewels</h3>
+            <p>Interested in exploring our sapphire collection, discussing trade partnerships, or scheduling a personal showcase viewing? We warmly welcome your inquiry.</p>
             <div class="lumak-about-cta-btns">
-                <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-cta-btn primary"><i class="fas fa-shopping-bag"></i> Shop Tech</a>
+                <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-about-cta-btn primary"><i class="fas fa-gem"></i> View Sapphire Collection</a>
                 <a href="<?php echo BASE_URL; ?>contact.php" class="lumak-about-cta-btn secondary"><i class="fas fa-envelope"></i> Contact Us</a>
-                <a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener" class="lumak-about-cta-btn secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>?text=<?php echo rawurlencode('Hello Murshid Munzeer, I would like to inquire about Sri Lankan sapphires.'); ?>" target="_blank" rel="noopener noreferrer" class="lumak-about-cta-btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
             </div>
         </div>
 

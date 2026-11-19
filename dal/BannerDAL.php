@@ -14,12 +14,33 @@ class BannerDAL {
         $this->conn->exec("CREATE TABLE IF NOT EXISTS banners (
             id INT AUTO_INCREMENT PRIMARY KEY,
             title VARCHAR(255) NULL,
-            image VARCHAR(255) NOT NULL,
+            media_type ENUM('image','video') DEFAULT 'image',
+            image VARCHAR(255) NULL,
+            video VARCHAR(255) NULL,
             link VARCHAR(255) NULL,
             sort_order INT DEFAULT 0,
             status ENUM('active','inactive') DEFAULT 'active',
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+        // Schema migration check for existing tables
+        try {
+            $stmt = $this->conn->query("SHOW COLUMNS FROM banners LIKE 'media_type'");
+            if ($stmt && $stmt->rowCount() === 0) {
+                $this->conn->exec("ALTER TABLE banners ADD COLUMN media_type ENUM('image','video') DEFAULT 'image' AFTER title");
+            }
+        } catch (Throwable $e) {}
+
+        try {
+            $stmt = $this->conn->query("SHOW COLUMNS FROM banners LIKE 'video'");
+            if ($stmt && $stmt->rowCount() === 0) {
+                $this->conn->exec("ALTER TABLE banners ADD COLUMN video VARCHAR(255) NULL AFTER image");
+            }
+        } catch (Throwable $e) {}
+
+        try {
+            $this->conn->exec("ALTER TABLE banners MODIFY COLUMN image VARCHAR(255) NULL");
+        } catch (Throwable $e) {}
     }
 
     public function getActive() {
@@ -34,18 +55,31 @@ class BannerDAL {
         return $stmt->fetchAll();
     }
 
-    public function create($title, $image, $link, $sortOrder) {
-        $stmt = $this->conn->prepare("INSERT INTO banners (title, image, link, sort_order) VALUES (:title, :image, :link, :sort_order)");
-        return $stmt->execute([':title' => $title, ':image' => $image, ':link' => $link, ':sort_order' => (int)$sortOrder]);
+    public function create($title, $image, $link, $sortOrder, $mediaType = 'image', $video = null) {
+        $stmt = $this->conn->prepare("INSERT INTO banners (title, media_type, image, video, link, sort_order) VALUES (:title, :media_type, :image, :video, :link, :sort_order)");
+        return $stmt->execute([
+            ':title' => $title,
+            ':media_type' => $mediaType === 'video' ? 'video' : 'image',
+            ':image' => $image,
+            ':video' => $video,
+            ':link' => $link,
+            ':sort_order' => (int)$sortOrder
+        ]);
     }
 
     public function delete($id) {
-        $stmt = $this->conn->prepare("SELECT image FROM banners WHERE id = :id");
+        $stmt = $this->conn->prepare("SELECT image, video FROM banners WHERE id = :id");
         $stmt->execute([':id' => (int)$id]);
         $banner = $stmt->fetch();
-        if ($banner && $banner['image']) {
-            $path = __DIR__ . '/../' . $banner['image'];
-            if (file_exists($path)) unlink($path);
+        if ($banner) {
+            if (!empty($banner['image'])) {
+                $imgPath = __DIR__ . '/../' . ltrim($banner['image'], '/');
+                if (file_exists($imgPath)) @unlink($imgPath);
+            }
+            if (!empty($banner['video'])) {
+                $vidPath = __DIR__ . '/../' . ltrim($banner['video'], '/');
+                if (file_exists($vidPath)) @unlink($vidPath);
+            }
         }
         $stmt = $this->conn->prepare("DELETE FROM banners WHERE id = :id");
         return $stmt->execute([':id' => (int)$id]);

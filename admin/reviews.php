@@ -44,7 +44,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Reviews - Admin | ARIGATO.LK</title>
+    <title>Reviews - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -141,7 +141,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                             <tr class="<?php echo $status === 'pending' ? 'row-pending' : ''; ?>">
                                 <td>
                                     <div style="display:flex; align-items:center; gap:10px;">
-                                        <div style="width:34px; height:34px; background:#8A6508; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700;">
+                                        <div style="width:34px; height:34px; background:#001f52; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700;">
                                             <?php echo strtoupper(substr($review['user_name'], 0, 1)); ?>
                                         </div>
                                         <strong style="font-size:13px;"><?php echo htmlspecialchars($review['user_name']); ?></strong>
@@ -208,7 +208,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                 </div>
 
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

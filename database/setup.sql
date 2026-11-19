@@ -1,14 +1,14 @@
 -- =======================================================
--- ARIGATO.LK E-Commerce Database Setup
--- Complete Database Schema with all 30 required tables
+-- Affinity Gems & Jewels E-Commerce Database Setup
+-- Complete Database Schema with all required tables
 -- Compatible with MySQL / MariaDB (phpMyAdmin)
 -- =======================================================
 
-CREATE DATABASE IF NOT EXISTS `arigato_db`
+CREATE DATABASE IF NOT EXISTS `affigems_db`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE `arigato_db`;
+USE `affigems_db`;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `products` (
     `warranty_period` VARCHAR(20) NULL DEFAULT NULL,
     `image` VARCHAR(255) NULL,
     `images` TEXT NULL,
-    `author` VARCHAR(100) DEFAULT 'ARIGATO.LK',
+    `author` VARCHAR(100) DEFAULT 'Affinity Gems & Jewels',
     `status` ENUM('active', 'inactive') DEFAULT 'active',
     `featured` TINYINT(1) DEFAULT 0,
     `sort_order` INT DEFAULT 0,
@@ -442,7 +442,9 @@ CREATE TABLE IF NOT EXISTS `contact_messages` (
 CREATE TABLE IF NOT EXISTS `banners` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `title` VARCHAR(255) NULL,
-    `image` VARCHAR(255) NOT NULL,
+    `media_type` ENUM('image', 'video') DEFAULT 'image',
+    `image` VARCHAR(255) NULL,
+    `video` VARCHAR(255) NULL,
     `link` VARCHAR(255) NULL,
     `sort_order` INT DEFAULT 0,
     `status` ENUM('active', 'inactive') DEFAULT 'active',
@@ -531,24 +533,24 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- =======================================================
 
 -- Default Super Admin account:
--- Email: info@arigato.lk
+-- Email: murshidmunzeer@gmail.com
 -- Password: Admin@123
 INSERT INTO `admins` (`name`, `email`, `password`, `role`) VALUES 
-('ARIGATO.LK Admin', 'info@arigato.lk', '$2y$10$aUO5yA8qs2Kxc46vLoXnLu0tdlFEg89GydWBVQEin4pZrcLUohveO', 'super_admin')
+('Affinity Admin', 'murshidmunzeer@gmail.com', '$2y$10$aUO5yA8qs2Kxc46vLoXnLu0tdlFEg89GydWBVQEin4pZrcLUohveO', 'super_admin')
 ON DUPLICATE KEY UPDATE `password` = VALUES(`password`);
 
 -- Default Site Settings
 INSERT INTO `site_settings` (`setting_key`, `value`) VALUES 
-('store_name', 'ARIGATO.LK'),
-('store_phone', '077 899 8990 / 071 489 9899'),
-('store_email', 'info@arigato.lk'),
-('store_address', '779/3, Pannipitiya Road, Pelawatta, Battaramulla'),
-('whatsapp_number', '94778998990'),
+('store_name', 'Affinity Gems & Jewels'),
+('store_phone', '+94 777 554542'),
+('store_email', 'murshidmunzeer@gmail.com'),
+('store_address', '44/6 Jayasamagi Mawatha, Kalubowila, Dehiwala'),
+('whatsapp_number', '94777554542'),
 ('low_stock_threshold', '5'),
-('low_stock_email', 'info@arigato.lk'),
-('order_notification_email', 'info@arigato.lk'),
-('delivery_fee', '250'),
-('free_delivery_threshold', '2500'),
+('low_stock_email', 'murshidmunzeer@gmail.com'),
+('order_notification_email', 'murshidmunzeer@gmail.com'),
+('delivery_fee', '0'),
+('free_delivery_threshold', '0'),
 ('checkout_place_order_enabled', '1'),
 ('checkout_whatsapp_order_enabled', '1'),
 ('payment_cod_enabled', '1'),
@@ -571,25 +573,25 @@ ON DUPLICATE KEY UPDATE `value` = VALUES(`value`);
 
 -- Default Categories
 INSERT INTO `categories` (`id`, `name`, `slug`, `sort_order`, `status`) VALUES 
-(1, 'Smartphones & Tablets', 'smartphones-tablets', 1, 'active'),
-(2, 'Audio & Speakers', 'audio-speakers', 2, 'active'),
-(3, 'Accessories', 'accessories', 3, 'active'),
-(4, 'Wearables & Smartwatches', 'wearables-smartwatches', 4, 'active'),
-(5, 'Laptops & Computers', 'laptops-computers', 5, 'active'),
-(6, 'TVs & Home Entertainment', 'tvs-home-entertainment', 6, 'active')
+(1, 'Ceylon Sapphires', 'ceylon-sapphires', 1, 'active'),
+(2, 'Precious Gemstones', 'precious-gemstones', 2, 'active'),
+(3, 'Fine Rings', 'fine-rings', 3, 'active'),
+(4, 'Necklaces & Pendants', 'necklaces-pendants', 4, 'active'),
+(5, 'Bespoke Jewelry', 'bespoke-jewelry', 5, 'active'),
+(6, 'Certified Loose Stones', 'certified-loose-stones', 6, 'active')
 ON DUPLICATE KEY UPDATE `name` = VALUES(`name`);
 
 -- Default Subcategories
 INSERT INTO `subcategories` (`id`, `category_id`, `name`, `slug`, `sort_order`, `status`) VALUES 
-(1, 1, 'Apple iPhones', 'apple-iphones', 1, 'active'),
-(2, 1, 'Android Phones', 'android-phones', 2, 'active'),
-(3, 1, 'iPads & Tablets', 'ipads-tablets', 3, 'active'),
-(4, 2, 'Wireless Earbuds', 'wireless-earbuds', 1, 'active'),
-(5, 2, 'Headphones', 'headphones', 2, 'active'),
-(6, 2, 'Bluetooth Speakers', 'bluetooth-speakers', 3, 'active'),
-(7, 3, 'Chargers & Adapters', 'chargers-adapters', 1, 'active'),
-(8, 3, 'Cables & Hubs', 'cables-hubs', 2, 'active'),
-(9, 3, 'Cases & Covers', 'cases-covers', 3, 'active'),
-(10, 4, 'Apple Watch', 'apple-watch', 1, 'active'),
-(11, 4, 'Fitness Trackers', 'fitness-trackers', 2, 'active')
+(1, 1, 'Blue Sapphires', 'blue-sapphires', 1, 'active'),
+(2, 1, 'Royal Blue Sapphires', 'royal-blue-sapphires', 2, 'active'),
+(3, 1, 'Padparadscha Sapphires', 'padparadscha-sapphires', 3, 'active'),
+(4, 1, 'Yellow & Pink Sapphires', 'yellow-pink-sapphires', 4, 'active'),
+(5, 2, 'Natural Rubies', 'natural-rubies', 1, 'active'),
+(6, 2, 'Emeralds', 'emeralds', 2, 'active'),
+(7, 3, 'Sapphire Engagement Rings', 'sapphire-engagement-rings', 1, 'active'),
+(8, 3, 'Eternity Bands', 'eternity-bands', 2, 'active'),
+(9, 4, 'Sapphire Pendants', 'sapphire-pendants', 1, 'active'),
+(10, 5, 'Custom Cut Gemstones', 'custom-cut-gemstones', 1, 'active'),
+(11, 6, 'GIA & Local Certified Stones', 'certified-stones', 2, 'active')
 ON DUPLICATE KEY UPDATE `name` = VALUES(`name`);

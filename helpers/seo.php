@@ -1,6 +1,6 @@
 <?php
 /**
- * ARIGATO.LK — SEO meta description helpers
+ * Affinity Gems & Jewels — SEO meta description helpers
  */
 
 function ezymart_truncate_meta_description(string $text, int $max = 160): string
@@ -18,10 +18,10 @@ function ezymart_truncate_meta_description(string $text, int $max = 160): string
 function ezymart_product_meta_description(string $productName): string
 {
     $name = trim($productName);
-    $domain = defined('STORE_DOMAIN') ? STORE_DOMAIN : 'arigato.lk';
+    $domain = defined('STORE_DOMAIN') ? STORE_DOMAIN : 'affigems.com';
 
     $full = sprintf(
-        '%s Price in Sri Lanka. Buy %s at the best price in Sri Lanka with islandwide delivery. Shop at %s.',
+        '%s Price in Sri Lanka. Buy authentic certified %s at the best price with worldwide & islandwide delivery. Shop at %s.',
         $name,
         $name,
         $domain
@@ -31,7 +31,7 @@ function ezymart_product_meta_description(string $productName): string
     }
 
     $medium = sprintf(
-        '%s Price in Sri Lanka. Buy original %s online with islandwide delivery at %s.',
+        '%s Price in Sri Lanka. Buy natural Sri Lankan %s online at %s.',
         $name,
         $name,
         $domain
@@ -40,11 +40,12 @@ function ezymart_product_meta_description(string $productName): string
         return $medium;
     }
 
-    $short = sprintf('%s Price in Sri Lanka. Shop mobiles & tech accessories at %s.', $name, $domain);
+    $short = sprintf('%s Price in Sri Lanka. Certified Ceylon sapphires & fine jewels at %s.', $name, $domain);
     return ezymart_truncate_meta_description($short, 160);
 }
 
 function ezymart_product_page_title(string $productName): string
 {
-    return trim($productName) . ' Price in Sri Lanka - ARIGATO.LK';
+    $brand = defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels';
+    return trim($productName) . ' Price in Sri Lanka | ' . $brand;
 }

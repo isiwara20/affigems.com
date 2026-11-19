@@ -69,7 +69,7 @@ function startConversation() {
         $convId = $chatDAL->createConversation($userId);
         
         // Add welcome message
-        $welcomeMsg = "Hi! I'm your ARIGATO.LK assistant. I can help you find mobiles, accessories, check orders, or answer questions. How can I help you today?";
+        $welcomeMsg = "Hi! I'm your Affinity Gems & Jewels assistant. I can help you explore our certified Sri Lankan sapphires, precious gemstones, fine jewelry, check orders, or answer questions. How can I help you today?";
         $chatDAL->addMessage($convId, 'bot', $welcomeMsg);
         
         $messages = $chatDAL->getMessages($convId);
@@ -305,7 +305,7 @@ function generateBotResponse($message, $chatDAL, $conversationId) {
         $response['last_id'] = $msgId;
         
     } elseif (containsAny($msgLower, ['hello', 'hi', 'hey', 'good morning', 'good evening'])) {
-        $response['message'] = "Hello! Welcome to ARIGATO.LK. I can help you find mobiles, accessories, check orders, or answer any questions. What are you looking for?";
+        $response['message'] = "Hello! Welcome to Affinity Gems & Jewels. I can help you explore our certified Sri Lankan sapphires, gemstone collections, custom jewelry, check orders, or connect you with our team. What are you looking for today?";
         $response['quick_replies'] = ['Browse Products', 'Track Order', 'Contact Human'];
         $msgId = $chatDAL->addMessage($conversationId, 'bot', $response['message'], 'quick_replies', ['quick_replies' => $response['quick_replies']]);
         $response['last_id'] = $msgId;

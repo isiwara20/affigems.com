@@ -13,6 +13,24 @@ class CategoryDAL {
         }
         require_once __DIR__ . '/../helpers/db_schema.php';
         db_repair_auto_increment_table($this->conn, 'categories');
+
+        try {
+            $check = $this->conn->query("SELECT COUNT(*) FROM " . $this->table);
+            if ($check && (int)$check->fetchColumn() === 0) {
+                $defaults = [
+                    ['name' => 'Ceylon Sapphires', 'slug' => 'ceylon-sapphires', 'sort_order' => 1],
+                    ['name' => 'Precious Gemstones', 'slug' => 'precious-gemstones', 'sort_order' => 2],
+                    ['name' => 'Fine Rings', 'slug' => 'fine-rings', 'sort_order' => 3],
+                    ['name' => 'Necklaces & Pendants', 'slug' => 'necklaces-pendants', 'sort_order' => 4],
+                    ['name' => 'Bespoke Jewelry', 'slug' => 'bespoke-jewelry', 'sort_order' => 5],
+                    ['name' => 'Certified Loose Stones', 'slug' => 'certified-loose-stones', 'sort_order' => 6],
+                ];
+                $ins = $this->conn->prepare("INSERT INTO " . $this->table . " (name, slug, sort_order, status) VALUES (:name, :slug, :sort_order, 'active')");
+                foreach ($defaults as $d) {
+                    $ins->execute($d);
+                }
+            }
+        } catch (Throwable $e) {}
     }
 
     public function getAll() {

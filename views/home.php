@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "ARIGATO.LK - Mobile & Tech Store";
+$pageTitle = "Affinity Gems & Jewels - Your Direct Source for Sri Lankan Sapphires";
 require_once __DIR__ . '/../config/app.php';
 require_once __DIR__ . '/../dal/ProductDAL.php';
 require_once __DIR__ . '/../dal/CategoryDAL.php';
@@ -41,24 +41,66 @@ try {
 } catch (Exception $e) {}
 
 $categoryIconBarConfig = [
-    ['name' => 'Mobiles', 'short' => 'Mobiles', 'icon' => 'fa-mobile-alt', 'keywords' => ['mobile', 'mobiles', 'phone', 'phones', 'smartphone', 'smartphones']],
-    ['name' => 'Tablets', 'short' => 'Tablets', 'icon' => 'fa-tablet-alt', 'keywords' => ['tablet', 'tablets', 'ipad']],
-    ['name' => 'Audio', 'short' => 'Audio', 'icon' => 'fa-headphones', 'keywords' => ['audio', 'headphone', 'headphones', 'earphone', 'earphones', 'speaker', 'speakers']],
-    ['name' => 'Accessories', 'short' => 'Accessories', 'icon' => 'fa-plug', 'keywords' => ['accessory', 'accessories', 'case', 'cover', 'cable', 'charger', 'adapter']],
-    ['name' => 'Wearables', 'short' => 'Wearables', 'icon' => 'fa-clock', 'keywords' => ['wearable', 'wearables', 'watch', 'smartwatch', 'band', 'fitness']],
-    ['name' => 'Best Sellers', 'short' => 'Best Sellers', 'icon' => 'fa-star', 'keywords' => ['best-seller', 'best-sellers', 'featured', 'new-arrival']],
+    [
+        'name' => 'Sapphires',
+        'subtitle' => 'Ceylon Sapphires',
+        'short' => 'Sapphires',
+        'icon' => 'fa-gem',
+        'slug' => 'ceylon-sapphires',
+        'keywords' => ['sapphire', 'sapphires', 'ceylon-sapphire', 'blue-sapphire', 'ceylon-sapphires']
+    ],
+    [
+        'name' => 'Gemstones',
+        'subtitle' => 'Natural Gems',
+        'short' => 'Gemstones',
+        'icon' => 'fa-diamond',
+        'slug' => 'precious-gemstones',
+        'keywords' => ['gemstone', 'gemstones', 'precious', 'stone', 'stones', 'ruby', 'emerald', 'precious-gemstones']
+    ],
+    [
+        'name' => 'Fine Rings',
+        'subtitle' => 'Bespoke Rings',
+        'short' => 'Fine Rings',
+        'icon' => 'fa-ring',
+        'slug' => 'fine-rings',
+        'keywords' => ['ring', 'rings', 'fine-ring', 'fine-rings', 'engagement']
+    ],
+    [
+        'name' => 'Necklaces',
+        'subtitle' => 'Pendants & Chains',
+        'short' => 'Necklaces',
+        'icon' => 'fa-crown',
+        'slug' => 'necklaces-pendants',
+        'keywords' => ['necklace', 'necklaces', 'pendant', 'pendants', 'chain', 'necklaces-pendants']
+    ],
+    [
+        'name' => 'Bespoke Jewelry',
+        'subtitle' => 'Custom Designs',
+        'short' => 'Bespoke',
+        'icon' => 'fa-magic',
+        'slug' => 'bespoke-jewelry',
+        'keywords' => ['bespoke', 'jewelry', 'custom', 'jewel', 'bespoke-jewelry']
+    ],
+    [
+        'name' => 'Certified Stones',
+        'subtitle' => 'SGC & GIA Graded',
+        'short' => 'Certified',
+        'icon' => 'fa-certificate',
+        'slug' => 'certified-loose-stones',
+        'keywords' => ['certified', 'loose', 'loose-stones', 'certified-loose-stones', 'best-seller']
+    ],
 ];
 
 if (!function_exists('resolve_category_icon')) {
     function resolve_category_icon(string $name, string $slug, array $rules): string
     {
         $extraRules = [
-            ['icon' => 'fa-mobile-alt', 'keywords' => ['smartphone', 'mobile', 'phone']],
-            ['icon' => 'fa-tablet-alt', 'keywords' => ['tablet', 'ipad']],
-            ['icon' => 'fa-headphones', 'keywords' => ['accessories', 'audio', 'speaker', 'headphone']],
-            ['icon' => 'fa-plug', 'keywords' => ['charger', 'cable', 'power', 'adapter']],
-            ['icon' => 'fa-clock', 'keywords' => ['watch', 'wearable', 'smartwatch', 'band']],
-            ['icon' => 'fa-tv', 'keywords' => ['tv', 'entertainment', 'television']],
+            ['icon' => 'fa-gem', 'keywords' => ['sapphire', 'ceylon', 'gem', 'gemstone']],
+            ['icon' => 'fa-ring', 'keywords' => ['ring', 'bands', 'engagement']],
+            ['icon' => 'fa-crown', 'keywords' => ['necklace', 'pendant', 'jewel', 'tiara']],
+            ['icon' => 'fa-certificate', 'keywords' => ['certified', 'certificate', 'lab', 'gia', 'loose']],
+            ['icon' => 'fa-magic', 'keywords' => ['bespoke', 'custom', 'luxury']],
+            ['icon' => 'fa-award', 'keywords' => ['gold', 'diamond', 'precious']],
         ];
         $allRules = array_merge($rules, $extraRules);
         $catSlug = strtolower($slug);
@@ -71,7 +113,7 @@ if (!function_exists('resolve_category_icon')) {
                 }
             }
         }
-        return 'fa-spa';
+        return 'fa-gem';
     }
 }
 
@@ -95,187 +137,265 @@ try {
 ?>
 
 <style>
-/* ===== HOME PAGE - ARIGATO.LK BLUE + GOLD THEME ===== */
-:root { --blue-dark: #C48A0A; --blue-primary: #C48A0A; --blue-mid: #B8860B; --blue-light: #FFEEC2; --blue-accent: #E5A91A; --light-bg: #FFF8E6; --white: #ffffff; --text-dark: #1a1a2e; --text-gray: #666; --gold: #D4AF37; }
+/* ===== HOME PAGE - AFFINITY GEMS SAPPHIRE BLUE THEME ===== */
+:root { --blue-dark: #001f52; --blue-primary: #002868; --blue-mid: #003b94; --blue-light: #e8f0fe; --blue-accent: #0a58ca; --light-bg: #f8fafd; --white: #ffffff; --text-dark: #1a1a2e; --text-gray: #666; --gold: #002868; }
 
 /* Banner Section */
-.home-banner { position: relative; overflow: visible; background: linear-gradient(135deg, #FFF8E6 0%, #FFF3D6 50%, #FFE8A8 100%); width: 100%; padding-bottom: clamp(90px, 11vw, 120px); }
-.banner-viewport { width: 100%; overflow: hidden; position: relative; }
+.home-banner { position: relative; overflow: visible; background: transparent; width: 100%; padding-bottom: 0; }
+.banner-viewport { width: 100%; overflow: hidden; position: relative; transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
 .banner-slider { display: flex; align-items: flex-start; width: 100%; transition: transform 0.5s ease; will-change: transform; }
 .banner-slide { flex: 0 0 100%; flex-shrink: 0; position: relative; width: 100%; display: block; line-height: 0; }
-.banner-slide img { width: 100%; height: auto; max-height: none; min-height: 0; display: block; }
+.banner-slide--image img { width: 100%; height: auto; max-height: none; min-height: 0; display: block; }
+.banner-slide--video { position: relative; width: 100%; height: clamp(400px, 46vw, 620px); background: #000; overflow: hidden; }
+.banner-video-wrapper { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.banner-video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.banner-slide-link { position: absolute; inset: 0; z-index: 4; cursor: pointer; display: block; }
+.banner-image-link { display: block; width: 100%; line-height: 0; text-decoration: none; }
+.banner-video-sound-toggle {
+    position: absolute; bottom: 46px; right: 20px; z-index: 6;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6); color: #fff; border: 1px solid rgba(255, 255, 255, 0.35);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; backdrop-filter: blur(6px); transition: all 0.2s ease;
+}
+.banner-video-sound-toggle:hover { background: rgba(0, 0, 0, 0.85); transform: scale(1.08); }
 
-.banner-dots { position: absolute; bottom: clamp(118px, 13vw, 142px); left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+.banner-dots { position: absolute; bottom: 46px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
 .banner-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,82,212,0.2); cursor: pointer; transition: all 0.3s; }
 .banner-dot.active { background: var(--blue-primary); width: 28px; border-radius: 5px; }
 .banner-arrows { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; padding: 0 16px; transform: translateY(-50%); z-index: 5; pointer-events: none; }
 .banner-arrow { width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; color: var(--blue-primary); pointer-events: all; transition: all 0.2s; box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
 .banner-arrow:hover { background: var(--blue-primary); color: #fff; }
 
-/* Category Icon Bar - overlaps banner bottom, responsive all screens */
+/* Category Showcase Bar - Luxury Floating Gemstone Strip */
 .category-icon-bar-section {
     position: relative;
     z-index: 25;
-    margin-top: clamp(-115px, -13vw, -150px);
-    margin-bottom: clamp(24px, 3vw, 40px);
+    margin-top: clamp(-36px, -3.5vw, -46px);
+    margin-bottom: clamp(20px, 2.8vw, 34px);
     pointer-events: none;
-    padding: 0 clamp(12px, 2vw, 0);
+    padding: 0 clamp(10px, 2vw, 20px);
 }
 .category-icon-bar-section .container {
     pointer-events: auto;
-    max-width: 1280px;
-    padding-left: clamp(12px, 2vw, 20px);
-    padding-right: clamp(12px, 2vw, 20px);
+    max-width: 1240px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .category-icon-bar {
-    background: #fff;
-    border-radius: clamp(16px, 2vw, 22px);
-    box-shadow: 0 10px 36px rgba(250, 188, 39, 0.1), 0 2px 10px rgba(0, 0, 0, 0.04);
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+    border-radius: 22px;
+    border: 1px solid rgba(0, 40, 104, 0.16);
+    box-shadow: 0 16px 40px rgba(0, 40, 104, 0.08), 0 3px 12px rgba(0, 40, 104, 0.05);
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     align-items: stretch;
     justify-content: space-between;
-    padding: clamp(18px, 2.5vw, 28px) clamp(4px, 1vw, 12px);
-    min-height: clamp(96px, 12vw, 112px);
-    border: 1px solid #eee;
-    gap: 0;
+    padding: 16px 8px;
+    min-height: 112px;
+    overflow: hidden;
+}
+.category-icon-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #001f52, #0048b3 50%, #001f52);
 }
 .category-icon-item {
+    position: relative;
     flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #1a1a2e;
-    padding: clamp(6px, 1vw, 10px) clamp(4px, 0.8vw, 8px);
-    border-right: 1px solid #e8e8e8;
-    transition: all 0.25s;
-    min-width: 0;
+    padding: 10px 8px;
+    border-radius: 14px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.category-icon-item:last-child {
-    border-right: none;
+.category-icon-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 40, 104, 0.12), transparent);
 }
 .category-icon-item:hover {
-    transform: translateY(-2px);
+    background: rgba(0, 40, 104, 0.04);
+    transform: translateY(-3px);
 }
-.category-icon-item:hover .category-icon-circle i {
-    color: #E5A91A;
-}
-.category-icon-item:hover .category-icon-label {
-    color: #E0A810;
+.category-icon-circle-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 .category-icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: clamp(8px, 1.2vw, 12px);
-    flex-shrink: 0;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f4f6fb 75%, #eaf0fb 100%);
+    border: 1.5px solid rgba(0, 40, 104, 0.22);
+    box-shadow: 0 4px 14px rgba(0, 40, 104, 0.08);
+    transition: all 0.35s ease;
 }
 .category-icon-circle i {
-    font-size: clamp(22px, 2.4vw, 30px);
-    color: #E0A810;
+    font-size: 22px;
+    color: #002868;
     line-height: 1;
-    transition: color 0.25s;
+    transition: all 0.35s ease;
+}
+.category-icon-sparkle {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    font-size: 11px;
+    color: #003b94;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.category-icon-item:hover .category-icon-circle {
+    background: linear-gradient(135deg, #002868 0%, #001f52 100%);
+    border-color: #003b94;
+    box-shadow: 0 8px 22px rgba(0, 40, 104, 0.22), 0 0 12px rgba(0, 59, 148, 0.25);
+    transform: scale(1.08) rotate(3deg);
+}
+.category-icon-item:hover .category-icon-circle i {
+    color: #fff;
+}
+.category-icon-item:hover .category-icon-sparkle {
+    opacity: 1;
+    transform: scale(1);
+}
+.category-icon-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 .category-icon-label {
-    font-size: clamp(9px, 0.95vw, 11px);
+    font-size: 12.5px;
     font-weight: 700;
     text-align: center;
-    line-height: 1.35;
-    color: #1a1a2e;
+    line-height: 1.3;
+    color: #002868;
     transition: color 0.25s;
-    padding: 0 clamp(2px, 0.5vw, 6px);
-    width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+}
+.category-icon-sub {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 0.4px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    transition: color 0.25s;
+    white-space: nowrap;
+}
+.category-icon-item:hover .category-icon-label {
+    color: #003b94;
+}
+.category-icon-item:hover .category-icon-sub {
+    color: #002868;
 }
 .category-icon-label .label-short { display: none; }
 .category-icon-label .label-full { display: block; }
 
 /* Large desktop */
 @media (min-width: 1200px) {
-    .category-icon-label { font-size: 11px; }
-    .category-icon-circle i { font-size: 30px; }
+    .category-icon-circle { width: 56px; height: 56px; }
+    .category-icon-circle i { font-size: 24px; }
+    .category-icon-label { font-size: 13px; }
+    .category-icon-sub { font-size: 10px; }
 }
 
 /* Medium desktop */
 @media (max-width: 1199px) and (min-width: 992px) {
-    .category-icon-label { font-size: 10px; }
-    .category-icon-circle i { font-size: 26px; }
-    .category-icon-bar { padding: 22px 4px; min-height: 104px; }
-}
-
-/* Tablet — single row, equal columns */
-@media (max-width: 991px) and (min-width: 576px) {
-    .category-icon-bar-section { margin-top: -108px; }
-    .category-icon-bar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding: 18px 2px;
-        min-height: 98px;
-    }
-    .category-icon-item {
-        flex: 1 1 0;
-        min-width: 0;
-        padding: 8px 3px;
-        border-right: 1px solid #e8e8e8;
-        border-bottom: none;
-    }
-    .category-icon-item:last-child { border-right: none; }
-    .category-icon-circle i { font-size: 24px; }
-    .category-icon-label { font-size: 9px; line-height: 1.25; }
-    .category-icon-label .label-full { display: none; }
-    .category-icon-label .label-short { display: block; }
-}
-
-/* Mobile — single row, short labels */
-@media (max-width: 575px) {
-    .category-icon-bar-section {
-        margin-top: -92px;
-        margin-bottom: 28px;
-        padding: 0 8px;
-    }
-    .category-icon-bar-section .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .category-icon-bar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding: 14px 0;
-        min-height: 86px;
-        border-radius: 14px;
-    }
-    .category-icon-item {
-        flex: 1 1 0;
-        min-width: 0;
-        padding: 6px 2px;
-        border-right: 1px solid #e8e8e8;
-        border-bottom: none;
-    }
-    .category-icon-item:last-child { border-right: none; }
-    .category-icon-circle { margin-bottom: 6px; }
+    .category-icon-circle { width: 50px; height: 50px; }
     .category-icon-circle i { font-size: 20px; }
-    .category-icon-label { font-size: 8px; line-height: 1.25; padding: 0 1px; }
-    .category-icon-label .label-full { display: none; }
-    .category-icon-label .label-short { display: block; }
+    .category-icon-label { font-size: 12px; }
+    .category-icon-sub { font-size: 9px; }
 }
 
-/* Very small phones — still one row */
-@media (max-width: 360px) {
-    .category-icon-bar { padding: 12px 0; min-height: 78px; }
-    .category-icon-item { padding: 4px 1px; }
+/* Tablet */
+@media (max-width: 991px) and (min-width: 601px) {
+    .category-icon-bar {
+        padding: 12px 6px;
+        min-height: 96px;
+    }
+    .category-icon-circle { width: 44px; height: 44px; margin-bottom: 6px; }
     .category-icon-circle i { font-size: 18px; }
-    .category-icon-label { font-size: 7px; }
+    .category-icon-label { font-size: 11px; }
+    .category-icon-sub { display: none; }
+}
+
+/* Mobile & Small Screens — Sleek horizontal swipe reel with momentum & snap */
+@media (max-width: 600px) {
+    .banner-dots { bottom: 34px; }
+    .banner-video-sound-toggle { bottom: 34px; right: 14px; }
+    .category-icon-bar-section {
+        margin-top: -24px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+    .category-icon-bar {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        padding: 12px 8px;
+        min-height: 90px;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+    .category-icon-bar::-webkit-scrollbar {
+        display: none;
+    }
+    .category-icon-item {
+        flex: 0 0 calc(28% - 6px);
+        min-width: 82px;
+        scroll-snap-align: start;
+        padding: 6px 4px;
+    }
+    .category-icon-item:not(:last-child)::after {
+        display: none;
+    }
+    .category-icon-circle {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 6px;
+    }
+    .category-icon-circle i {
+        font-size: 17px;
+    }
+    .category-icon-label {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    .category-icon-label .label-full { display: none; }
+    .category-icon-label .label-short { display: block; }
+    .category-icon-sub { display: none; }
 }
 
 /* Brands Strip */
-.brands-strip { padding: 50px 0 30px; background: #FFF8E6; }
+.brands-strip { padding: 50px 0 30px; background: #f8fafd; }
 .brands-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 24px 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
 .brands-strip-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
 .brands-strip-title a { font-size: 12px; color: var(--blue-primary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 4px; }
@@ -283,7 +403,7 @@ try {
 .brands-all-img { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
 
 /* Categories Strip */
-.home-categories { padding: 40px 0; background: #FFF8E6; }
+.home-categories { padding: 40px 0; background: #f8fafd; }
 .home-section-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; }
 .home-section-title .section-title-label { display: flex; align-items: center; gap: 12px; }
 .home-section-icon {
@@ -295,16 +415,16 @@ try {
     justify-content: center;
     font-size: 17px;
     flex-shrink: 0;
-    box-shadow: 0 4px 14px rgba(250, 188, 39, 0.12);
+    box-shadow: 0 4px 14px rgba(0, 40, 104, 0.1);
 }
 .home-section-icon.collections {
-    background: linear-gradient(135deg, #FFF3D6 0%, #F5E6B8 100%);
-    color: #E0A810;
+    background: #eef4fc;
+    color: #002868;
 }
 .home-section-icon.popular {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    color: #D97706;
-    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.15);
+    background: #eef4fc;
+    color: #002868;
+    box-shadow: 0 4px 14px rgba(0, 40, 104, 0.1);
 }
 .home-section-title a { font-size: 13px; color: var(--blue-primary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 5px; }
 .home-section-title a:hover { color: var(--blue-mid); }
@@ -322,13 +442,13 @@ try {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(145deg, #FFF3D6 0%, #FFF8E6 55%, #fff 100%);
+    background: linear-gradient(145deg, #f0f4fa 0%, #e8f0fe 55%, #fff 100%);
 }
 .category-card-icon i {
     font-size: clamp(44px, 8vw, 58px);
-    color: #E0A810;
+    color: #002868;
     opacity: 0.9;
-    filter: drop-shadow(0 6px 16px rgba(250, 188, 39, 0.15));
+    filter: drop-shadow(0 6px 16px rgba(0, 40, 104, 0.12));
 }
 .category-card-bottom { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); z-index: 2; }
 .category-card-info { }
@@ -343,7 +463,7 @@ try {
 .home-products { padding: 45px 0; background: #fff; }
 
 /* Mega Deals */
-.home-mega-deals { padding: 45px 0; background: linear-gradient(135deg, #FFF8E6 0%, #fff 50%, #FFF3D6 100%); }
+.home-mega-deals { padding: 45px 0; background: linear-gradient(135deg, #f8fafd 0%, #fff 50%, #f0f4fa 100%); }
 .mega-deals-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
 .mega-deals-header .mega-title { display: flex; align-items: center; gap: 10px; }
 .mega-deals-header .mega-title h2 { font-size: 1.2rem; font-weight: 700; color: #1a1a2e; }
@@ -372,20 +492,20 @@ try {
 
 /* ===== Skincare split promo ===== */
 .skincare-split {
-    padding: clamp(40px, 6vw, 64px) 0;
+    padding: clamp(24px, 4vw, 40px) 0;
     background: #fff;
 }
 .skincare-split-wrap {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    min-height: clamp(420px, 42vw, 520px);
-    border-radius: clamp(16px, 2.5vw, 24px);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    min-height: clamp(280px, 28vw, 360px);
+    border-radius: clamp(14px, 2vw, 18px);
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 46, 120, 0.1);
+    box-shadow: 0 12px 40px rgba(0, 46, 120, 0.08);
 }
 .skincare-split-content {
-    padding: clamp(32px, 5vw, 52px) clamp(28px, 4vw, 48px);
-    background: #E0A810;
+    padding: clamp(22px, 3.2vw, 36px) clamp(22px, 3.2vw, 38px);
+    background: #002868;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -420,77 +540,77 @@ try {
     display: inline-block;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 8px;
 }
 .skincare-split-tag::before {
     content: '';
     display: inline-block;
-    width: 28px;
+    width: 22px;
     height: 2px;
     background: rgba(255, 255, 255, 0.5);
     vertical-align: middle;
-    margin-right: 12px;
+    margin-right: 8px;
 }
 .skincare-split-content h2 {
     position: relative;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: clamp(1.35rem, 2.5vw, 1.85rem);
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
 }
 .skincare-split-lead {
     position: relative;
-    font-size: clamp(14px, 1.8vw, 15px);
-    color: rgba(255, 255, 255, 0.82);
-    line-height: 1.75;
-    margin-bottom: 28px;
-    max-width: 420px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.55;
+    margin-bottom: 16px;
+    max-width: 440px;
 }
 .skincare-split-list {
     position: relative;
     list-style: none;
-    margin: 0 0 32px;
+    margin: 0 0 20px;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
 }
 .skincare-split-list li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 13px;
+    gap: 8px;
+    font-size: 12.5px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.95);
 }
 .skincare-split-list li i {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    font-size: 11px;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 10px;
 }
 .skincare-split-btns {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 .skincare-split-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 26px;
-    font-size: 13px;
+    gap: 6px;
+    padding: 10px 20px;
+    font-size: 12.5px;
     font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
@@ -498,17 +618,17 @@ try {
 }
 .skincare-split-btn--fill {
     background: #fff;
-    color: #D4A017;
+    color: #002868;
 }
 .skincare-split-btn--fill:hover {
     transform: translateY(-2px);
-    color: #C48A0A;
+    color: #001f52;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 .skincare-split-btn--line {
     background: transparent;
     color: #fff;
-    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
 }
 .skincare-split-btn--line:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -541,8 +661,8 @@ try {
 .skincare-split-trust a {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 18px 20px;
+    gap: 10px;
+    padding: 12px 16px;
     background: #fff;
     text-decoration: none;
     color: inherit;
@@ -553,7 +673,7 @@ try {
 }
 .skincare-split-trust i {
     font-size: 18px;
-    color: #E0A810;
+    color: #002868;
     flex-shrink: 0;
 }
 .skincare-split-trust strong {
@@ -656,14 +776,14 @@ try {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #E0A810;
+    color: #002868;
     margin-bottom: 10px;
 }
 .home-about-tag::before {
     content: '';
     width: 28px;
     height: 2px;
-    background: #E0A810;
+    background: #002868;
     border-radius: 2px;
 }
 .home-about-panel h2 {
@@ -676,7 +796,7 @@ try {
 }
 .home-about-panel h2 em {
     font-style: normal;
-    color: #E0A810;
+    color: #002868;
 }
 .home-about-lead {
     font-size: 14px;
@@ -705,22 +825,22 @@ try {
     gap: 10px;
     padding: 10px 12px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #F8FAFF 0%, #FFE8A8 100%);
-    border: 1px solid #FFF3D6;
+    background: #f4f7fc;
+    border: 1px solid #dbe5f5;
     min-width: 0;
 }
 .home-about-fact i {
     width: 32px;
     height: 32px;
     border-radius: 10px;
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(250, 188, 39, 0.18);
+    box-shadow: 0 4px 12px rgba(0, 40, 104, 0.18);
 }
 .home-about-fact div {
     min-width: 0;
@@ -758,22 +878,24 @@ try {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .home-about-cta .btn-main {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
-    box-shadow: 0 10px 24px rgba(250, 188, 39, 0.28);
+    box-shadow: 0 10px 24px rgba(0, 40, 104, 0.25);
 }
 .home-about-cta .btn-main:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(250, 188, 39, 0.34);
+    box-shadow: 0 14px 30px rgba(0, 40, 104, 0.35);
+    background: #001f52;
     color: #fff;
 }
 .home-about-cta .btn-ghost {
     background: transparent;
-    color: #E0A810;
-    border: 1.5px solid #F5E6B8;
+    color: #002868;
+    border: 1.5px solid #dbe5f5;
 }
 .home-about-cta .btn-ghost:hover {
-    background: #FFE8A8;
+    background: #e8f0fe;
+    color: #001f52;
 }
 .home-about-photo {
     position: relative;
@@ -793,7 +915,7 @@ try {
 .home-about-photo-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(138, 101, 8, 0.72);
+    background: rgba(0, 40, 104, 0.72);
     pointer-events: none;
 }
 .home-about-photo-meta {
@@ -827,9 +949,9 @@ try {
     margin-top: 18px;
     background: #fff;
     border-radius: 16px;
-    border: 1px solid #FFF3D6;
+    border: 1px solid #dbe5f5;
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(196, 138, 10, 0.06);
+    box-shadow: 0 12px 32px rgba(0, 40, 104, 0.06);
 }
 .home-about-strip-item {
     display: flex;
@@ -841,7 +963,7 @@ try {
 }
 .home-about-strip-item:last-child { border-right: none; }
 .home-about-strip-item i {
-    color: #E0A810;
+    color: #002868;
     font-size: 18px;
     flex-shrink: 0;
 }
@@ -973,6 +1095,37 @@ try {
     .trust-strip-item.hide-mobile { display: none; }
     .banner-dots { display: none; }
     .banner-arrows { display: none; }
+
+    /* Mobile Banner Sizing: Video banners are significantly enlarged, while image banners remain standard */
+    .banner-slide--image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .banner-slide--video {
+        height: clamp(420px, 75vh, 580px);
+        min-height: 420px;
+        border-radius: clamp(14px, 3.5vw, 20px);
+        margin: 0 clamp(8px, 2vw, 14px);
+        width: calc(100% - clamp(16px, 4vw, 28px));
+        overflow: hidden;
+        box-shadow: 0 14px 40px rgba(0, 40, 104, 0.22);
+    }
+    .banner-slide--video .banner-video-wrapper,
+    .banner-slide--video .banner-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+    }
+    .banner-video-sound-toggle {
+        bottom: 14px;
+        right: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
     .brands-grid { gap: 16px; }
     .brand-item { font-size: 14px; }
     .home-about-polaroid { max-width: 240px; }
@@ -984,16 +1137,37 @@ try {
 <!-- Banner Slider -->
 <section class="home-banner">
     <?php if (!empty($banners)): ?>
-    <div class="banner-viewport">
+    <div class="banner-viewport" id="bannerViewport">
     <div class="banner-slider" id="bannerSlider">
-        <?php foreach ($banners as $idx => $banner): ?>
-        <div class="banner-slide">
-            <img src="<?php echo htmlspecialchars(media_image_url($banner['image'])); ?>"
-                 alt="<?php echo htmlspecialchars($banner['title'] ?? ''); ?>"
-                 <?php if ($idx === 0): ?>fetchpriority="high" loading="eager" decoding="sync"<?php else: ?>loading="lazy" decoding="async"<?php endif; ?>>
+        <?php foreach ($banners as $idx => $banner): 
+            $isVideo = (($banner['media_type'] ?? '') === 'video') || (!empty($banner['video']));
+            $hasLink = !empty($banner['link']);
+            $slideUrl = $hasLink ? htmlspecialchars($banner['link']) : null;
+        ?>
+        <div class="banner-slide <?php echo $isVideo ? 'banner-slide--video' : 'banner-slide--image'; ?>" data-slide-type="<?php echo $isVideo ? 'video' : 'image'; ?>">
+            <?php if ($isVideo): ?>
+                <div class="banner-video-wrapper">
+                    <video class="banner-video" autoplay muted loop playsinline preload="auto" <?php if (!empty($banner['image'])): ?>poster="<?php echo htmlspecialchars(media_image_url($banner['image'])); ?>"<?php endif; ?>>
+                        <source src="<?php echo htmlspecialchars(media_image_url($banner['video'])); ?>" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <button type="button" class="banner-video-sound-toggle" onclick="toggleBannerVideoSound(this, event)" aria-label="Toggle video sound">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                    <?php if ($hasLink): ?>
+                    <a href="<?php echo $slideUrl; ?>" class="banner-slide-link" aria-label="<?php echo htmlspecialchars($banner['title'] ?? 'Explore'); ?>"></a>
+                    <?php endif; ?>
+                </div>
+            <?php else: ?>
+                <?php if ($hasLink): ?><a href="<?php echo $slideUrl; ?>" class="banner-image-link"><?php endif; ?>
+                <img src="<?php echo htmlspecialchars(media_image_url($banner['image'])); ?>"
+                     alt="<?php echo htmlspecialchars($banner['title'] ?? ''); ?>"
+                     <?php if ($idx === 0): ?>fetchpriority="high" loading="eager" decoding="sync"<?php else: ?>loading="lazy" decoding="async"<?php endif; ?>>
+                <?php if ($hasLink): ?></a><?php endif; ?>
+            <?php endif; ?>
         </div>
         <?php endforeach; ?>
-        </div>
+    </div>
     </div>
     <div class="banner-dots" id="bannerDots">
         <?php foreach ($banners as $idx => $b): ?>
@@ -1008,38 +1182,38 @@ try {
     <div class="lumak-hero-fallback">
         <div class="container lumak-hero-grid">
             <div class="lumak-hero-text">
-                <span class="lumak-hero-badge"><i class="fas fa-shopping-bag"></i> <?php echo STORE_TAGLINE; ?></span>
-                <h1>Welcome to <span class="lumak-gradient">ARIGATO.LK</span></h1>
-                <p>Mobile and tech products at great prices. Shop online with confidence from <?php echo STORE_OWNER; ?>.</p>
+                <span class="lumak-hero-badge"><i class="fas fa-gem"></i> <?php echo STORE_TAGLINE; ?></span>
+                <h1>Welcome to <span class="lumak-gradient"><?php echo SITE_NAME; ?></span></h1>
+                <p>Direct source supplier of high-quality Sri Lankan sapphires, fine jewelry and certified precious gemstones from <?php echo STORE_OWNER; ?>.</p>
                 <div class="lumak-hero-btns">
-                    <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
-                    <a href="<?php echo BASE_URL; ?>warranty.php" class="lumak-btn-outline"><i class="fas fa-shield-alt"></i> Check Warranty</a>
+                    <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-btn-primary">Explore Sapphires <i class="fas fa-arrow-right"></i></a>
+                    <a href="<?php echo BASE_URL; ?>about.php" class="lumak-btn-outline"><i class="fas fa-gem"></i> Our Story</a>
                 </div>
             </div>
             <div class="lumak-hero-image">
-                <?php echo render_asset_image('assets/images/pic02.png', [
-                    'alt' => 'ARIGATO.LK Online Shopping',
+                <?php echo render_asset_image('assets/images/logo.png', [
+                    'alt' => SITE_NAME . ' Sri Lankan Sapphires',
                     'fetchpriority' => 'high',
                     'loading' => 'eager',
                     'decoding' => 'sync',
-                    'onerror' => "this.src='" . asset_image_url('assets/images/logo.png') . "'",
+                    'style' => 'max-width:380px;height:auto;object-fit:contain;background:#fff;padding:24px;border-radius:18px;box-shadow:0 12px 36px rgba(0,0,0,0.08);',
                 ]); ?>
             </div>
         </div>
     </div>
     <style>
-    .lumak-hero-fallback { padding: 50px 0 110px; min-height: 380px; background: linear-gradient(135deg, #FFF8E6 0%, #FFF3D6 60%, #FFE8A8 100%); position: relative; overflow: hidden; }
-    .lumak-hero-fallback::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 30%, rgba(0,82,212,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(61,127,232,0.1) 0%, transparent 40%); pointer-events: none; }
+    .lumak-hero-fallback { padding: 50px 0 110px; min-height: 380px; background: linear-gradient(135deg, #f8fafd 0%, #f0f4fa 60%, #e8f0fe 100%); position: relative; overflow: hidden; }
+    .lumak-hero-fallback::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 30%, rgba(0,40,104,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(0,59,148,0.1) 0%, transparent 40%); pointer-events: none; }
     .lumak-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 1; }
-    .lumak-hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,82,212,0.1); color: #E0A810; font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
+    .lumak-hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,40,104,0.08); color: #002868; font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
     .lumak-hero-text h1 { font-size: 2.2rem; font-weight: 800; color: #1a1a2e; line-height: 1.2; margin-bottom: 14px; }
-    .lumak-gradient { color: #C48A0A; }
+    .lumak-gradient { color: #002868; }
     .lumak-hero-text p { font-size: 15px; color: #555; margin-bottom: 24px; line-height: 1.7; }
     .lumak-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .lumak-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; background: #E0A810; color: #1a1a1a; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
-    .lumak-btn-primary:hover { transform: translateY(-2px); background: #D49A0A; box-shadow: 0 8px 24px rgba(196,138,10,0.35); }
-    .lumak-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; background: #fff; color: #E0A810; border: 2px solid #E0A810; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
-    .lumak-btn-outline:hover { background: #FFE8A8; }
+    .lumak-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; background: #002868; color: #fff; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+    .lumak-btn-primary:hover { transform: translateY(-2px); background: #001f52; box-shadow: 0 8px 24px rgba(0,40,104,0.35); }
+    .lumak-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; background: #fff; color: #002868; border: 2px solid #002868; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+    .lumak-btn-outline:hover { background: #e8f0fe; }
     .lumak-hero-image img { width: 100%; max-height: 360px; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,82,212,0.2)); }
     @media (max-width: 768px) { .lumak-hero-grid { grid-template-columns: 1fr; text-align: center; } .lumak-hero-btns { justify-content: center; } .lumak-hero-text h1 { font-size: 1.6rem; } }
     </style>
@@ -1049,10 +1223,11 @@ try {
 <?php
 $iconBarItems = [];
 foreach ($categoryIconBarConfig as $cfg) {
-    $slug = '';
+    $slug = $cfg['slug'] ?? '';
     if (!empty($cfg['link'])) {
         $iconBarItems[] = [
             'name' => $cfg['name'],
+            'subtitle' => $cfg['subtitle'] ?? '',
             'short' => $cfg['short'] ?? $cfg['name'],
             'icon' => $cfg['icon'],
             'link' => $cfg['link'],
@@ -1074,6 +1249,7 @@ foreach ($categoryIconBarConfig as $cfg) {
     }
     $iconBarItems[] = [
         'name' => $cfg['name'],
+        'subtitle' => $cfg['subtitle'] ?? '',
         'short' => $cfg['short'] ?? $cfg['name'],
         'icon' => $cfg['icon'],
         'slug' => $slug,
@@ -1082,7 +1258,7 @@ foreach ($categoryIconBarConfig as $cfg) {
 }
 ?>
 
-<!-- Category Icon Bar (half over banner, half over content) -->
+<!-- Category Showcase Bar (Luxury Gemstone Collections) -->
 <div class="category-icon-bar-section">
     <div class="container">
         <div class="category-icon-bar">
@@ -1093,17 +1269,27 @@ foreach ($categoryIconBarConfig as $cfg) {
                         ? BASE_URL . 'shop.php?category=' . htmlspecialchars($item['slug'])
                         : BASE_URL . 'shop.php');
             ?>
-            <a href="<?php echo $href; ?>" class="category-icon-item">
-                <div class="category-icon-circle"><i class="fas <?php echo $item['icon']; ?>"></i></div>
-                <span class="category-icon-label">
-                    <span class="label-full"><?php echo htmlspecialchars($item['name']); ?></span>
-                    <span class="label-short"><?php echo htmlspecialchars($item['short'] ?? $item['name']); ?></span>
-                </span>
+            <a href="<?php echo $href; ?>" class="category-icon-item" title="<?php echo htmlspecialchars($item['name']); ?>">
+                <div class="category-icon-circle-wrap">
+                    <div class="category-icon-circle">
+                        <i class="fas <?php echo $item['icon']; ?>"></i>
+                    </div>
+                    <span class="category-icon-sparkle" aria-hidden="true">✦</span>
+                </div>
+                <div class="category-icon-meta">
+                    <span class="category-icon-label">
+                        <span class="label-full"><?php echo htmlspecialchars($item['name']); ?></span>
+                        <span class="label-short"><?php echo htmlspecialchars($item['short'] ?? $item['name']); ?></span>
+                    </span>
+                    <?php if (!empty($item['subtitle'])): ?>
+                    <span class="category-icon-sub"><?php echo htmlspecialchars($item['subtitle']); ?></span>
+                    <?php endif; ?>
+                </div>
             </a>
             <?php endforeach; ?>
-            </div>
-            </div>
         </div>
+    </div>
+</div>
 
 <!-- Weekly Deals -->
 <?php if ($megaDealsEnabled && !empty($megaDeals)): ?>
@@ -1184,38 +1370,38 @@ foreach ($categoryIconBarConfig as $cfg) {
                 </a>
                 <?php endforeach; ?>
             <?php else: ?>
-                <a href="<?php echo BASE_URL; ?>shop.php" class="category-card">
-                    <div class="category-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                <a href="<?php echo BASE_URL; ?>shop.php?category=ceylon-sapphires" class="category-card">
+                    <div class="category-card-icon"><i class="fas fa-gem"></i></div>
                     <div class="category-card-bottom">
                         <div class="category-card-info">
-                            <span class="category-card-name">Mobiles</span>
+                            <span class="category-card-name">Ceylon Sapphires</span>
                             <span class="category-card-link">Shop Now <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
                 </a>
-                <a href="<?php echo BASE_URL; ?>shop.php" class="category-card">
-                    <div class="category-card-icon"><i class="fas fa-tablet-alt"></i></div>
+                <a href="<?php echo BASE_URL; ?>shop.php?category=precious-gemstones" class="category-card">
+                    <div class="category-card-icon"><i class="fas fa-diamond"></i></div>
                     <div class="category-card-bottom">
                         <div class="category-card-info">
-                            <span class="category-card-name">Tablets</span>
+                            <span class="category-card-name">Precious Gemstones</span>
                             <span class="category-card-link">Shop Now <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
                 </a>
-                <a href="<?php echo BASE_URL; ?>shop.php" class="category-card">
-                    <div class="category-card-icon"><i class="fas fa-headphones"></i></div>
+                <a href="<?php echo BASE_URL; ?>shop.php?category=fine-rings" class="category-card">
+                    <div class="category-card-icon"><i class="fas fa-ring"></i></div>
                     <div class="category-card-bottom">
                         <div class="category-card-info">
-                            <span class="category-card-name">Audio</span>
+                            <span class="category-card-name">Fine Rings</span>
                             <span class="category-card-link">Shop Now <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
                 </a>
-                <a href="<?php echo BASE_URL; ?>shop.php" class="category-card">
-                    <div class="category-card-icon"><i class="fas fa-plug"></i></div>
+                <a href="<?php echo BASE_URL; ?>shop.php?category=necklaces-pendants" class="category-card">
+                    <div class="category-card-icon"><i class="fas fa-crown"></i></div>
                     <div class="category-card-bottom">
                         <div class="category-card-info">
-                            <span class="category-card-name">Accessories</span>
+                            <span class="category-card-name">Necklaces &amp; Pendants</span>
                             <span class="category-card-link">Shop Now <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
@@ -1250,35 +1436,30 @@ foreach ($categoryIconBarConfig as $cfg) {
     </div>
 </section>
 
-<!-- Mobiles & Tech -->
-<section class="skincare-split" aria-label="Mobiles and tech products">
+<!-- Direct Source Sri Lankan Sapphires & Jewels Showcase -->
+<section class="skincare-split" aria-label="Sri Lankan sapphires and precious gemstones">
     <div class="container">
         <div class="skincare-split-wrap">
             <div class="skincare-split-content">
-                <span class="skincare-split-tag">Trusted Mobile &amp; Tech Store</span>
-                <h2>Mobiles, Accessories<br>&amp; Tech Essentials</h2>
-                <p class="skincare-split-lead">Discover smartphones, accessories, audio gear, chargers, and other mobile related items with island wide delivery across Sri Lanka.</p>
+                <span class="skincare-split-tag">Direct Source</span>
+                <h2>Ceylon Sapphires &amp; Fine Jewels</h2>
+                <p class="skincare-split-lead">Directly sourced natural Sri Lankan sapphires, certified by the State Gem Corporation and crafted into fine luxury jewelry.</p>
                 <ul class="skincare-split-list">
-                    <li><i class="fas fa-check"></i> Quality Mobile Products</li>
-                    <li><i class="fas fa-check"></i> Island Wide Delivery</li>
-                    <li><i class="fas fa-check"></i> Mobiles, Accessories &amp; More</li>
-                    <li><i class="fas fa-check"></i> 24/7 Customer Support</li>
+                    <li><i class="fas fa-certificate"></i> State Gem Corp Registered</li>
+                    <li><i class="fas fa-gem"></i> 100% Certified Natural Stones</li>
                 </ul>
                 <div class="skincare-split-btns">
                     <a href="<?php echo BASE_URL; ?>shop.php" class="skincare-split-btn skincare-split-btn--fill">
-                        <i class="fas fa-shopping-bag"></i> Shop Tech
+                        <i class="fas fa-gem"></i> Explore Collection
                     </a>
                     <a href="<?php echo BASE_URL; ?>about.php" class="skincare-split-btn skincare-split-btn--line">
-                        Learn More
-                    </a>
-                    <a href="<?php echo BASE_URL; ?>warranty.php" class="skincare-split-btn skincare-split-btn--line">
-                        <i class="fas fa-shield-alt"></i> Check Warranty
+                        <i class="fas fa-info-circle"></i> Our Story
                     </a>
                 </div>
             </div>
             <div class="skincare-split-media">
                 <?php echo render_asset_image('assets/images/M01.png', [
-                    'alt' => 'Computer and tech items at ARIGATO.LK',
+                    'alt' => 'Certified Ceylon Sapphires and Fine Jewels - Affinity Gems & Jewels',
                     'width' => 800,
                     'height' => 1000,
                     'loading' => 'lazy',
@@ -1288,31 +1469,31 @@ foreach ($categoryIconBarConfig as $cfg) {
         </div>
         <div class="skincare-split-trust">
             <a href="<?php echo BASE_URL; ?>shop.php">
-                <i class="fas fa-mobile-alt"></i>
+                <i class="fas fa-gem"></i>
                 <div>
-                    <strong>Mobiles &amp; Phones</strong>
-                    <span>Latest smartphones for every budget</span>
+                    <strong>Ceylon Sapphires</strong>
+                    <span>Direct source natural blue sapphires</span>
                 </div>
             </a>
             <a href="<?php echo BASE_URL; ?>shop.php">
-                <i class="fas fa-headphones"></i>
+                <i class="fas fa-certificate"></i>
                 <div>
-                    <strong>Accessories</strong>
-                    <span>Cases, chargers, cables and more</span>
+                    <strong>Certified Authentic</strong>
+                    <span>State Gem Corporation registered</span>
                 </div>
             </a>
-            <a href="<?php echo BASE_URL; ?>shop.php">
-                <i class="fas fa-truck"></i>
+            <a href="<?php echo BASE_URL; ?>about.php">
+                <i class="fas fa-globe-asia"></i>
                 <div>
-                    <strong>Island Wide</strong>
-                    <span>Delivery Across Sri Lanka</span>
+                    <strong>China &amp; Global Reach</strong>
+                    <span>Personal showcase visits &amp; export</span>
                 </div>
             </a>
-            <a href="<?php echo BASE_URL; ?>shop.php">
+            <a href="<?php echo BASE_URL; ?>contact.php">
                 <i class="fas fa-shield-alt"></i>
                 <div>
-                    <strong>Quality Assured</strong>
-                    <span>Trusted mobile and tech products</span>
+                    <strong>Ethically Sourced</strong>
+                    <span>Mined with integrity &amp; care</span>
                 </div>
             </a>
         </div>
@@ -1327,54 +1508,55 @@ foreach ($categoryIconBarConfig as $cfg) {
                 <div class="home-about-panel-inner">
                     <div class="home-about-copy">
                         <p class="home-about-tag"><?php echo STORE_OWNER; ?></p>
-                        <h2>About <em>ARIGATO.LK</em></h2>
-                        <p class="home-about-lead">Your destination for mobiles, accessories, and reliable tech products across Sri Lanka.</p>
+                        <h2>About <em>Affinity Gems &amp; Jewels</em></h2>
+                        <p class="home-about-lead">Serving as a direct source supplier of high-quality Sri Lankan sapphires. Registered with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce.</p>
                     </div>
                     <div class="home-about-facts">
                         <div class="home-about-fact">
-                            <i class="fas fa-laptop"></i>
+                            <i class="fas fa-gem"></i>
                             <div>
-                                <strong>Trusted Tech</strong>
-                                <span>Reliable mobile products</span>
+                                <strong>Direct Source</strong>
+                                <span>High-quality Ceylon sapphires</span>
                             </div>
                         </div>
                         <div class="home-about-fact">
-                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-certificate"></i>
                             <div>
-                                <strong>Island Wide</strong>
-                                <span>Delivery across Sri Lanka</span>
+                                <strong>State Gem Corp</strong>
+                                <span>Registered &amp; licensed</span>
                             </div>
                         </div>
                         <div class="home-about-fact">
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <strong><?php echo STORE_PHONE_1; ?></strong>
-                                <span><?php echo STORE_PHONE_2; ?></span>
+                                <span>Murshid Munzeer</span>
                             </div>
                         </div>
                         <div class="home-about-fact">
                             <i class="fas fa-globe"></i>
                             <div>
                                 <strong><?php echo STORE_DOMAIN; ?></strong>
-                                <span>Shop online anytime</span>
+                                <span>Global trade &amp; personal viewings</span>
                             </div>
                         </div>
                     </div>
                     <div class="home-about-cta">
-                        <a href="<?php echo BASE_URL; ?>shop.php" class="btn-main"><i class="fas fa-shopping-bag"></i> Explore Products</a>
+                        <a href="<?php echo BASE_URL; ?>shop.php" class="btn-main"><i class="fas fa-gem"></i> Explore Sapphires</a>
                         <a href="<?php echo BASE_URL; ?>about.php" class="btn-ghost"><i class="fas fa-arrow-right"></i> Our Story</a>
                     </div>
                 </div>
             </div>
             <div class="home-about-photo">
-                <?php echo render_asset_image('assets/images/pic1..png', [
-                    'alt' => 'ARIGATO.LK mobile store',
+                <?php echo render_asset_image('assets/images/logo.png', [
+                    'alt' => SITE_NAME,
                     'width' => 720,
                     'height' => 360,
                     'loading' => 'lazy',
                     'decoding' => 'async',
+                    'style' => 'object-fit:contain;background:#fff;padding:40px;',
                 ]); ?>
-                <div class="home-about-photo-overlay" aria-hidden="true"></div>
+                <div class="home-about-photo-overlay" aria-hidden="true" style="background:rgba(0,40,104,0.45);"></div>
                 <div class="home-about-photo-meta">
                     <p><i class="fas fa-map-marker-alt"></i> <?php echo STORE_LOCATION; ?></p>
                 </div>
@@ -1384,29 +1566,29 @@ foreach ($categoryIconBarConfig as $cfg) {
             <div class="home-about-strip-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                    <strong>Store Location</strong>
-                    <span>Dehiaththakandiya, Sri Lanka</span>
+                    <strong>Location</strong>
+                    <span>Kalubowila, Dehiwala, Sri Lanka</span>
                 </div>
             </div>
             <div class="home-about-strip-item">
-                <i class="fas fa-spa"></i>
+                <i class="fas fa-gem"></i>
                 <div>
-                    <strong>Mobiles &amp; Tech</strong>
-                    <span>Reliable products and accessories</span>
+                    <strong>Sri Lankan Sapphires</strong>
+                    <span>Ethically sourced &amp; graded</span>
                 </div>
             </div>
             <div class="home-about-strip-item">
-                <i class="fas fa-shipping-fast"></i>
+                <i class="fas fa-plane-departure"></i>
                 <div>
-                    <strong>Fast Delivery</strong>
-                    <span>Island wide shipping</span>
+                    <strong>Worldwide Delivery</strong>
+                    <span>Insured international shipping</span>
                 </div>
             </div>
             <div class="home-about-strip-item">
-                <i class="fas fa-headset"></i>
+                <i class="fas fa-user-tie"></i>
                 <div>
-                    <strong>Customer Support</strong>
-                    <span>We're here to help</span>
+                    <strong>Direct Contact</strong>
+                    <span>Murshid Munzeer</span>
                 </div>
             </div>
         </div>
@@ -1506,21 +1688,84 @@ setInterval(nextTestimonial, 4000);
 <!-- Banner Slider JS -->
 <script>
 (function() {
-var currentSlide = 0;
+    var currentSlide = 0;
     var sliderInterval = null;
 
     function getBannerSlideCount() {
-    var slider = document.getElementById('bannerSlider');
+        var slider = document.getElementById('bannerSlider');
         if (!slider) return 0;
         return slider.querySelectorAll('.banner-slide').length;
-}
+    }
 
-function updateDots() {
+    function updateDots() {
         var dots = document.querySelectorAll('#bannerDots .banner-dot');
         dots.forEach(function(d, i) {
             d.classList.toggle('active', i === currentSlide);
         });
     }
+
+    function adjustBannerViewportHeight() {
+        var slider = document.getElementById('bannerSlider');
+        var viewport = document.getElementById('bannerViewport');
+        if (!slider || !viewport) return;
+        var slides = slider.querySelectorAll('.banner-slide');
+        if (slides[currentSlide]) {
+            var activeSlide = slides[currentSlide];
+            var h = activeSlide.offsetHeight;
+            if (h > 0) {
+                viewport.style.height = h + 'px';
+            }
+        }
+    }
+
+    function playActiveSlideVideo() {
+        var slider = document.getElementById('bannerSlider');
+        if (!slider) return;
+        var slides = slider.querySelectorAll('.banner-slide');
+        slides.forEach(function(slide, idx) {
+            var video = slide.querySelector('video');
+            if (!video) return;
+            if (idx === currentSlide) {
+                video.muted = true;
+                video.playsInline = true;
+                var playPromise = video.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function() {
+                        var resumeOnUserAction = function() {
+                            video.play();
+                            document.removeEventListener('touchstart', resumeOnUserAction);
+                            document.removeEventListener('click', resumeOnUserAction);
+                        };
+                        document.addEventListener('touchstart', resumeOnUserAction, { once: true, passive: true });
+                        document.addEventListener('click', resumeOnUserAction, { once: true });
+                    });
+                }
+            } else {
+                try { video.pause(); } catch(e) {}
+            }
+        });
+    }
+
+    window.toggleBannerVideoSound = function(btn, ev) {
+        if (ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+        }
+        var wrapper = btn ? btn.closest('.banner-video-wrapper') : null;
+        var video = wrapper ? wrapper.querySelector('video') : null;
+        if (!video) return;
+        video.muted = !video.muted;
+        var icon = btn.querySelector('i');
+        if (icon) {
+            if (video.muted) {
+                icon.className = 'fas fa-volume-mute';
+                btn.setAttribute('aria-label', 'Unmute video');
+            } else {
+                icon.className = 'fas fa-volume-up';
+                btn.setAttribute('aria-label', 'Mute video');
+            }
+        }
+    };
 
     window.goToSlide = function(index) {
         var slider = document.getElementById('bannerSlider');
@@ -1529,6 +1774,8 @@ function updateDots() {
         currentSlide = ((index % totalSlides) + totalSlides) % totalSlides;
         slider.style.transform = 'translate3d(-' + (currentSlide * 100) + '%, 0, 0)';
         updateDots();
+        adjustBannerViewportHeight();
+        playActiveSlideVideo();
     };
 
     window.nextSlide = function() {
@@ -1559,11 +1806,18 @@ function updateDots() {
         currentSlide = 0;
         slider.style.transform = 'translate3d(0, 0, 0)';
         updateDots();
+        adjustBannerViewportHeight();
+        playActiveSlideVideo();
 
+        // Autoplay carousel if multiple slides
         if (totalSlides > 1) {
-            sliderInterval = setInterval(window.nextSlide, 5000);
+            sliderInterval = setInterval(window.nextSlide, 6500);
         }
     }
+
+    window.addEventListener('resize', function() {
+        adjustBannerViewportHeight();
+    }, { passive: true });
 
     document.addEventListener('turbo:load', initBannerSlider);
     document.addEventListener('turbo:before-visit', stopBannerSlider);

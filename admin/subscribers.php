@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Subscribers - Admin | ARIGATO.LK</title>
+    <title>Subscribers - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
                         <p style="margin:6px 0 0; font-size:11px; color:#888; line-height:1.5;">HTML tags in this field are sent as formatted email content. Plain text is also supported.</p>
                     </div>
                     <div style="display:flex; gap:10px;">
-                        <button type="button" onclick="sendNewsletter()" style="padding:11px 24px; background:#8A6508; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                        <button type="button" onclick="sendNewsletter()" style="padding:11px 24px; background:#001f52; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
                             <i class="fas fa-paper-plane"></i> Send to All (<?php echo $totalSubs; ?>)
                         </button>
                         <button type="button" onclick="document.getElementById('newsletterForm').style.display='none'" style="padding:11px 18px; background:#f0f2f8; color:#555; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer;">
@@ -236,7 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
                 </div>
 
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

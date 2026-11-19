@@ -43,7 +43,7 @@
         .payment-back a { color: #666; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
         .summary-line { display:flex; justify-content:space-between; font-size:13px; padding:6px 0; color:#555; }
         .summary-line.surcharge { color:#b45309; }
-        .change-gateway { display:inline-block; margin-top:12px; font-size:12px; color:#E5A91A; text-decoration:none; }
+        .change-gateway { display:inline-block; margin-top:12px; font-size:12px; color:#003b94; text-decoration:none; }
         .card-form-wrap #card_container { min-height: 360px; }
         @media (max-width: 768px) { .payment-container { grid-template-columns: 1fr; margin: 20px auto; } }
     </style>

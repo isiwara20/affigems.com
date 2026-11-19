@@ -8,7 +8,7 @@
     .dp-pay-actions { text-align:center; margin-top:16px; }
     .dp-btn-pay {
         display:inline-flex; align-items:center; gap:8px;
-        padding:13px 28px; background:#D49A0A;
+        padding:13px 28px; background:#001f52;
         color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer;
     }
     .dp-btn-pay:disabled { opacity:.6; cursor:not-allowed; }
@@ -18,7 +18,7 @@
         background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; font-size:13px; text-align:center;
     }
     .dp-error .retry-link {
-        display:inline-block; margin-top:10px; color:#D4A017; font-weight:600; cursor:pointer; text-decoration:none;
+        display:inline-block; margin-top:10px; color:#002868; font-weight:600; cursor:pointer; text-decoration:none;
     }
 </style>
 

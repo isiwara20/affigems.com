@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "Shipping & Delivery Policy - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Shipping & Delivery Policy - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 ?>
 
@@ -20,7 +21,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Business Registration:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Trading Name:</strong> <?php echo SITE_NAME; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                 </ul>
@@ -58,7 +59,7 @@ require_once __DIR__ . '/partials/header.php';
                 <ul>
                     <li>Order verification and account confirmation</li>
                     <li>Stock confirmation</li>
-                    <li>Secure packing and labelling of mobiles, accessories, and tech products</li>
+                    <li>Secure packing and labelling of certified sapphires, gemstones, and jewelry</li>
                     <li>Handover to Sri Lanka Post or applicable courier partner</li>
                 </ul>
 
@@ -154,7 +155,7 @@ require_once __DIR__ . '/partials/header.php';
                 <p>We will work with you and SL Post to resolve failed deliveries where possible.</p>
 
                 <h2>13. Damaged or Lost Parcels</h2>
-                <p>Mobiles, accessories, and tech products require careful handling. If your parcel is:</p>
+                <p>Natural gemstones, certified sapphires, and fine jewelry require specialized secure handling. If your parcel is:</p>
                 <ul>
                     <li>Damaged during transit</li>
                     <li>Lost in the postal system</li>
@@ -178,8 +179,8 @@ require_once __DIR__ . '/partials/header.php';
                     <li>Refunds for refused orders may be subject to deduction of return and handling costs</li>
                 </ul>
 
-                <h2>15. Packaging of Mobiles &amp; Tech Products</h2>
-                <p>All orders are packed with care to protect devices, accessories, cables, and fragile electronic items during transit. We use appropriate padding and secure packaging to help your products arrive safely.</p>
+                <h2>15. Packaging of Gemstones &amp; Fine Jewelry</h2>
+                <p>All orders are packed with utmost care to protect fine gemstones, sapphire certificates, and luxury presentation boxes during transit. We use tamper-evident seals and padded security packaging to ensure your precious gems arrive in pristine condition.</p>
                 <ul>
                     <li>Items are checked before packing</li>
                     <li>Fragile products receive additional protective wrapping where needed</li>
@@ -208,7 +209,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Company:</strong> <?php echo STORE_OWNER; ?></li>
                     <li><strong>Business Registration:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                     <li><strong>WhatsApp:</strong> <a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener"><?php echo STORE_PHONE_1; ?></a></li>

@@ -171,7 +171,7 @@ $products = $productDAL->getActive();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Monthly Mega Deals - Admin | ARIGATO.LK</title>
+    <title>Monthly Mega Deals - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -388,7 +388,7 @@ $products = $productDAL->getActive();
 
                 <!-- Footer -->
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

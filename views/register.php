@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Register - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Register - " . SITE_NAME;
 $pagePreloadImages = [asset_image_url('assets/images/login-couple2.png')];
 require_once __DIR__ . '/partials/header.php';
 
@@ -20,7 +20,7 @@ unset($_SESSION['register_error'], $_SESSION['register_success'], $_SESSION['reg
             <!-- Left: Register Form -->
             <div class="login-form-container">
                 <h1>Create Your Account</h1>
-                <p class="login-subtitle">Join ARIGATO.LK and start shopping for quality tech products</p>
+                <p class="login-subtitle">Join <?php echo SITE_NAME; ?> and explore certified Sri Lankan sapphires &amp; fine jewelry</p>
 
                 <?php if ($registerError): ?>
                     <div class="alert alert-error">

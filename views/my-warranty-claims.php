@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'My Warranty Claims - ARIGATO.LK';
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = 'My Warranty & Inquiries - ' . SITE_NAME;
 require_once __DIR__ . '/../dal/WarrantyClaimDAL.php';
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in'] || (isset($_SESSION['is_admin']) && $_SESSION['is_admin'])) {
@@ -58,10 +58,10 @@ require_once __DIR__ . '/partials/header.php';
             <main class="profile-main">
                 <?php if (empty($claims)): ?>
                 <div class="profile-card" style="text-align:center; padding:40px 24px;">
-                    <i class="fas fa-shield-alt" style="font-size:2rem; color:#E5A91A; margin-bottom:12px;"></i>
-                    <h3 style="margin:0 0 8px; color:#D4A017;">No warranty claims yet</h3>
+                    <i class="fas fa-shield-alt" style="font-size:2rem; color:#003b94; margin-bottom:12px;"></i>
+                    <h3 style="margin:0 0 8px; color:#002868;">No warranty claims yet</h3>
                     <p style="color:#888; margin:0 0 18px;">Submit a claim from the warranty check page if your product is still under warranty.</p>
-                    <a href="<?php echo BASE_URL; ?>warranty.php" style="display:inline-flex; align-items:center; gap:8px; padding:12px 22px; background:#D49A0A; color:#1a1a1a; border-radius:10px; text-decoration:none; font-weight:600; font-size:13px;">
+                    <a href="<?php echo BASE_URL; ?>warranty.php" style="display:inline-flex; align-items:center; gap:8px; padding:12px 22px; background:#001f52; color:#ffffff; border-radius:10px; text-decoration:none; font-weight:600; font-size:13px;">
                         <i class="fas fa-search"></i> Check Warranty
                     </a>
                 </div>
@@ -69,13 +69,13 @@ require_once __DIR__ . '/partials/header.php';
                     <?php foreach ($claims as $claim):
                         $status = strtolower((string)($claim['status'] ?? 'pending'));
                     ?>
-                    <div class="profile-card" style="margin-bottom:16px; border-left:4px solid <?php echo $status === 'replaced' ? '#16a34a' : ($status === 'approved' ? '#E5A91A' : ($status === 'rejected' ? '#ef4444' : '#ea580c')); ?>;">
+                    <div class="profile-card" style="margin-bottom:16px; border-left:4px solid <?php echo $status === 'replaced' ? '#16a34a' : ($status === 'approved' ? '#003b94' : ($status === 'rejected' ? '#ef4444' : '#ea580c')); ?>;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; margin-bottom:12px;">
                             <div>
-                                <h3 style="margin:0 0 4px; font-size:16px; color:#D4A017;"><?php echo htmlspecialchars($claim['product_name']); ?></h3>
+                                <h3 style="margin:0 0 4px; font-size:16px; color:#002868;"><?php echo htmlspecialchars($claim['product_name']); ?></h3>
                                 <p style="margin:0; font-size:12px; color:#888;">Claim #<?php echo htmlspecialchars($claim['claim_number']); ?></p>
                             </div>
-                            <span style="font-size:11px; font-weight:700; text-transform:uppercase; padding:5px 12px; border-radius:20px; background:#f0f5fc; color:#D4A017;">
+                            <span style="font-size:11px; font-weight:700; text-transform:uppercase; padding:5px 12px; border-radius:20px; background:#f0f5fc; color:#002868;">
                                 <?php echo htmlspecialchars(ezymart_warranty_claim_status_label($status)); ?>
                             </span>
                         </div>

@@ -61,7 +61,7 @@
 .admin-ship-head {
     padding: 24px 24px 18px;
     text-align: center;
-    background: #C48A0A;
+    background: #002868;
     color: #fff;
 }
 .admin-ship-icon {

@@ -24,15 +24,25 @@ if (!ob_get_level()) {
     }
 }
 
-// Base URL - adjust if needed
-define('BASE_URL', '/Arigato_Ecommerce/');
-define('SITE_NAME', 'ARIGATO.LK');
-define('ADMIN_BRAND', 'ARIGATO.LK');
-define('STORE_OWNER', 'Arigato Mobile (Pvt) Ltd');
-define('STORE_BUSINESS_REG', '');
-define('STORE_DIRECTOR', 'Mohamed Shifan');
-define('STORE_DIRECTOR_TITLE', 'Owner');
-define('STORE_TAGLINE', 'Mobile & Tech Store');
+// Base URL - auto-detects folder path or defaults cleanly
+if (!defined('BASE_URL')) {
+    $docRoot = isset($_SERVER['DOCUMENT_ROOT']) ? str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']) ?: $_SERVER['DOCUMENT_ROOT']) : '';
+    $currentDir = str_replace('\\', '/', realpath(dirname(__DIR__)) ?: dirname(__DIR__));
+    if ($docRoot && str_starts_with($currentDir, $docRoot)) {
+        $sub = substr($currentDir, strlen($docRoot));
+        $base = '/' . trim($sub, '/') . '/';
+        define('BASE_URL', $base === '//' ? '/' : $base);
+    } else {
+        define('BASE_URL', '/affigems.com/');
+    }
+}
+define('SITE_NAME', 'Affinity Gems & Jewels');
+define('ADMIN_BRAND', 'Affinity Gems & Jewels');
+define('STORE_OWNER', 'Affinity Gems and Jewels Pvt Ltd');
+define('STORE_BUSINESS_REG', 'State Gem Corporation Registered');
+define('STORE_DIRECTOR', 'Murshid Munzeer');
+define('STORE_DIRECTOR_TITLE', 'Managing Director');
+define('STORE_TAGLINE', 'Your Direct Source for Sri Lankan Sapphires');
 
 /**
  * Canonical site URL for SMS, emails, and other outbound links.
@@ -63,7 +73,7 @@ function public_site_base_url(): string
         // fall through to domain-based default
     }
 
-    $domain = defined('STORE_DOMAIN') ? STORE_DOMAIN : 'arigato.lk';
+    $domain = defined('STORE_DOMAIN') ? STORE_DOMAIN : 'affigems.com';
     $path = rtrim(BASE_URL, '/');
     $base = 'https://' . $domain . $path;
 
@@ -106,17 +116,17 @@ function absolute_url(string $path = ''): string
 }
 
 // Store contact details
-define('STORE_PHONE_1', '077 899 8990');
-define('STORE_PHONE_2', '071 489 9899');
-define('STORE_EMAIL', 'info@arigato.lk');
-define('STORE_DOMAIN', 'arigato.lk');
-define('STORE_LOCATION', '779/3, Pannipitiya Road, Pelawatta, Battaramulla');
-define('STORE_WHATSAPP', '94778998990');
+define('STORE_PHONE_1', '+94 777 554542');
+define('STORE_PHONE_2', '+94 777 554542');
+define('STORE_EMAIL', 'murshidmunzeer@gmail.com');
+define('STORE_DOMAIN', 'affigems.com');
+define('STORE_LOCATION', '44/6 Jayasamagi Mawatha, Kalubowila, Dehiwala');
+define('STORE_WHATSAPP', '94777554542');
 
-// Map — Pelawatta, Battaramulla, Sri Lanka
-define('STORE_MAP_URL', 'https://www.google.com/maps/search/?api=1&query=779%2F3+Pannipitiya+Road+Pelawatta+Battaramulla');
-define('STORE_MAP_LAT', 0);
-define('STORE_MAP_LNG', 0);
+// Map — Kalubowila, Dehiwala, Sri Lanka
+define('STORE_MAP_URL', 'https://www.google.com/maps/search/?api=1&query=44%2F6+Jayasamagi+Mawatha%2C+Kalubowila%2C+Dehiwala');
+define('STORE_MAP_LAT', 6.8687);
+define('STORE_MAP_LNG', 79.8805);
 define('STORE_MAP_ZOOM', 16);
 
 if (!function_exists('store_map_embed_url')) {
@@ -241,10 +251,10 @@ if (!function_exists('render_store_phone_numbers')) {
 }
 
 // Social media profiles
-define('STORE_FACEBOOK_URL', 'https://www.facebook.com/share/1bRem2jefn/');
-define('STORE_INSTAGRAM_URL', 'https://www.instagram.com/arigatomobile?igsh=Yjk1ZjBweHB0bXM1');
-define('STORE_TIKTOK_URL', 'https://www.tiktok.com/@arigato.mobile?_r=1&_t=ZS-98GeJmdypSn');
-define('STORE_WHATSAPP_URL', 'https://wa.me/qr/X3N7Q4CNOAYDF1');
+define('STORE_FACEBOOK_URL', 'https://www.facebook.com/affinitygems');
+define('STORE_INSTAGRAM_URL', 'https://www.instagram.com/affinitygems');
+define('STORE_TIKTOK_URL', 'https://www.tiktok.com/@affinitygems');
+define('STORE_WHATSAPP_URL', 'https://wa.me/94777554542');
 
 // Currency (base prices in DB are LKR)
 require_once __DIR__ . '/currency.php';

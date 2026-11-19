@@ -125,7 +125,7 @@ class AuthController {
 
                 // Build reset link (use full URL for email)
                 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-                $host = $_SERVER['HTTP_HOST'] ?? 'arigato.lk';
+                $host = $_SERVER['HTTP_HOST'] ?? (defined('STORE_DOMAIN') ? STORE_DOMAIN : 'affigems.com');
                 $resetLink = $protocol . '://' . $host . rtrim(BASE_URL, '/') . '/reset-password.php?token=' . $token;
 
                 // Queue email to send AFTER response (no page delay)

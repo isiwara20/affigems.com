@@ -8,16 +8,16 @@
                     <!-- Brand Column -->
                     <div class="footer-col footer-brand-col">
                         <div class="footer-brand-name">
-                            <?php echo render_asset_image('assets/images/logobottom.png', ['alt' => 'ARIGATO.LK', 'class' => 'footer-logo-img', 'loading' => 'lazy']); ?>
+                            <?php echo render_asset_image('assets/images/logobottom.png', ['alt' => SITE_NAME, 'class' => 'footer-logo-img', 'loading' => 'lazy']); ?>
                         </div>
-                        <p class="brand-desc">ARIGATO.LK is your trusted online mobile store by <?php echo STORE_OWNER; ?>. Shop mobiles, accessories and tech products with island wide delivery across Sri Lanka.</p>
+                        <p class="brand-desc"><?php echo STORE_OWNER; ?> is your direct source supplier of high-quality Sri Lankan sapphires and precious gemstones. Registered with the State Gem Corporation of Sri Lanka and member of the International Chamber of Commerce.</p>
                         <div class="footer-contact">
                             <p class="footer-contact-line">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <button type="button" class="footer-address-link" onclick="openFooterMapPopup()" aria-label="View store location on map"><?php echo STORE_LOCATION; ?></button>
                             </p>
                             <p class="footer-contact-line footer-contact-optional"><i class="fas fa-globe" aria-hidden="true"></i><a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></p>
-                            <p class="footer-contact-line"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></p>
+                            <p class="footer-contact-line"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></p>
                             <p class="footer-contact-line"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></p>
                         </div>
                         <div class="footer-social">
@@ -136,7 +136,7 @@
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="ARIGATO.LK store location map"></iframe>
+                    title="<?php echo htmlspecialchars(SITE_NAME); ?> store location map"></iframe>
             </div>
             <a href="<?php echo htmlspecialchars(store_map_open_url()); ?>" target="_blank" rel="noopener noreferrer" class="footer-map-open-btn" data-turbo="false">
                 <i class="fas fa-external-link-alt"></i> Open in Google Maps
@@ -224,7 +224,7 @@
         align-items: center;
         gap: 8px;
     }
-    .footer-map-modal h3 i { color: #E0A810; }
+    .footer-map-modal h3 i { color: #002868; }
     .footer-map-address {
         font-size: 13px;
         color: #666;
@@ -236,7 +236,7 @@
         height: 280px;
         border-radius: 12px;
         overflow: hidden;
-        border: 1px solid #F5E6B8;
+        border: 1px solid #dbe5f5;
         margin-bottom: 14px;
     }
     .footer-map-open-btn {
@@ -244,15 +244,16 @@
         align-items: center;
         gap: 8px;
         padding: 11px 18px;
-        background: #E0A810;
-        color: #1a1a1a;
+        background: #002868;
+        color: #fff;
         border-radius: 10px;
         font-size: 13px;
         font-weight: 600;
         text-decoration: none;
         font-family: 'Poppins', sans-serif;
+        transition: background 0.2s;
     }
-    .footer-map-open-btn:hover { color: #1a1a1a; opacity: 0.95; background: #D49A0A; }
+    .footer-map-open-btn:hover { color: #fff; opacity: 0.95; background: #001f52; }
     @media (max-width: 480px) {
         .footer-map-frame { height: 220px; }
         .footer-map-modal { padding: 20px 16px; }
@@ -731,8 +732,8 @@
     .subscribe-modal-icon { font-size:48px; margin-bottom:16px; }
     .subscribe-modal h3 { font-size:20px; font-weight:700; color:#0d1137; margin-bottom:8px; }
     .subscribe-modal p { font-size:13px; color:#666; line-height:1.6; margin-bottom:24px; }
-    .subscribe-modal-btn { padding:12px 30px; background:#E0A810; color:#1a1a1a; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; }
-    .subscribe-modal-btn:hover { transform:translateY(-1px); box-shadow:0 4px 14px rgba(0,82,212,0.3); }
+    .subscribe-modal-btn { padding:12px 30px; background:#002868; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; }
+    .subscribe-modal-btn:hover { background:#001f52; transform:translateY(-1px); box-shadow:0 4px 14px rgba(0,40,104,0.3); }
     </style>
 
     <?php 

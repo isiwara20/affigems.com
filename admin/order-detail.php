@@ -123,8 +123,8 @@ if ($from === 'whatsapp' || $order['payment_method'] === 'whatsapp') {
         .status-badge.shipped { background: #f0fdf4; color: #16a34a; }
         .status-badge.delivered { background: #ecfdf5; color: #059669; }
         .status-badge.cancelled { background: #fef2f2; color: #ef4444; }
-        .btn-invoice { display:inline-flex; align-items:center; gap:6px; padding:10px 16px; background:#D49A0A; color:#1a1a1a; border:none; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; text-decoration:none; }
-        .btn-invoice.secondary { background:#FFE8A8; color:#D4A017; }
+        .btn-invoice { display:inline-flex; align-items:center; gap:6px; padding:10px 16px; background:#001f52; color:#ffffff; border:none; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; text-decoration:none; }
+        .btn-invoice.secondary { background:#e8f0fe; color:#002868; }
         .btn-invoice:hover { opacity:.92; }
         .status-badge.paid { background: #ecfdf5; color: #16a34a; }
         .status-badge.failed { background: #fef2f2; color: #ef4444; }
@@ -149,7 +149,7 @@ if ($from === 'whatsapp' || $order['payment_method'] === 'whatsapp') {
         }
         .serial-item input:read-only { background: #eef1f7; color: #555; }
         .serial-save-btn {
-            margin-top: 14px; padding: 10px 18px; background: #D4A017; color: #fff; border: none;
+            margin-top: 14px; padding: 10px 18px; background: #002868; color: #fff; border: none;
             border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif;
         }
         .serial-note { font-size: 12px; color: #6b7099; margin-top: 8px; line-height: 1.6; }
@@ -342,7 +342,7 @@ if ($from === 'whatsapp' || $order['payment_method'] === 'whatsapp') {
                 </div>
 
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "FAQ - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "FAQ - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 ?>
 
@@ -7,24 +8,24 @@ require_once __DIR__ . '/partials/header.php';
     <div class="container">
         <div class="page-content">
             <h1 class="page-title">Frequently Asked Questions</h1>
-            <p class="page-updated">Last updated: July 2026 &bull; <?php echo SITE_NAME; ?></p>
+            <p class="page-updated">Last updated: <?php echo date('F Y'); ?> &bull; <?php echo SITE_NAME; ?></p>
 
             <div class="page-body">
-                <p>Quick answers about shopping mobiles, accessories, and tech products at <?php echo SITE_NAME; ?>, operated by <?php echo STORE_OWNER; ?>. For anything not covered here, <a href="<?php echo BASE_URL; ?>contact.php">contact our team</a> - we're happy to help.</p>
+                <p>Quick answers about buying certified Sri Lankan sapphires, precious gemstones, and fine jewelry from <?php echo SITE_NAME; ?>, operated by <?php echo STORE_OWNER; ?>. For anything not covered here, <a href="<?php echo BASE_URL; ?>contact.php">contact our team</a> - we're happy to help.</p>
 
                 <h2>About <?php echo SITE_NAME; ?></h2>
                 <div class="faq-list">
                     <details class="faq-item" open>
                         <summary>What is <?php echo SITE_NAME; ?>?</summary>
-                        <p><?php echo SITE_NAME; ?> is an online mobile and tech store based in Battaramulla, Sri Lanka. We offer smartphones, accessories, and gadgets, and related tech products with island wide delivery across Sri Lanka.</p>
+                        <p><?php echo SITE_NAME; ?> is a premier direct source supplier of high-quality Sri Lankan sapphires and precious gemstones based at <?php echo STORE_LOCATION; ?>. We are registered with the State Gem Corporation of Sri Lanka and a proud member of the International Chamber of Commerce.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>What products do you sell?</summary>
-                        <p>We stock smartphones, accessories, and gadgets, office tech, peripherals, and other everyday technology products from trusted brands. Browse our full range on the <a href="<?php echo BASE_URL; ?>shop.php">shop page</a>.</p>
+                        <summary>What gemstones and jewelry do you offer?</summary>
+                        <p>We specialize in natural Sri Lankan sapphires (Blue, Cornflower, Royal Blue, Padparadscha, Pink, Yellow), precious gemstones, fine handcrafted jewelry, custom cut stones, and bespoke rings. Browse our collection on the <a href="<?php echo BASE_URL; ?>shop.php">shop page</a>.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Are your products 100% original?</summary>
-                        <p>Yes. We are committed to selling genuine, quality-assured tech products. Product descriptions on each item page include full details. If you have questions about a specific product before ordering, <a href="<?php echo BASE_URL; ?>contact.php">contact us</a>.</p>
+                        <summary>Are your gemstones 100% natural and certified?</summary>
+                        <p>Yes. All our sapphires and gemstones are 100% natural, ethically sourced from Sri Lanka's renowned mines, and meticulously graded. Each fine gemstone comes with authentic gemological certification.</p>
                     </details>
                 </div>
 
@@ -80,8 +81,8 @@ require_once __DIR__ . '/partials/header.php';
                         <p>Free or discounted shipping may be available during promotions or on minimum order values. Any active offers are shown at checkout and on promotional banners on our homepage.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>How are tech products packaged for delivery?</summary>
-                        <p>All items are packed securely to protect devices, accessories, and fragile components during transit. We use appropriate packaging to help your order arrive safely.</p>
+                        <summary>How are gemstones and jewelry packaged for delivery?</summary>
+                        <p>All gemstones and jewelry items are housed in velvet-lined luxury presentation cases, sealed securely, and insured for transit to ensure they arrive in pristine condition.</p>
                     </details>
                 </div>
 

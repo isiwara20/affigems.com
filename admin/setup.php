@@ -29,12 +29,12 @@ $conn->exec("CREATE TABLE IF NOT EXISTS admins (
 
 // Check if admin already exists
 $stmt = $conn->prepare("SELECT * FROM admins WHERE email = :email");
-$stmt->execute([':email' => 'info@arigato.lk']);
+$stmt->execute([':email' => 'murshidmunzeer@gmail.com']);
 $existing = $stmt->fetch();
 
 if ($existing) {
     echo "<h2>Admin account already exists!</h2>";
-    echo "<p><strong>Email:</strong> info@arigato.lk</p>";
+    echo "<p><strong>Email:</strong> murshidmunzeer@gmail.com</p>";
     echo "<p><strong>Password:</strong> Admin@123</p>";
     echo "<p><a href='/login.php'>Go to Login</a></p>";
 } else {
@@ -42,15 +42,15 @@ if ($existing) {
     $hashedPassword = password_hash('Admin@123', PASSWORD_DEFAULT);
     $stmt = $conn->prepare("INSERT INTO admins (name, email, password, role) VALUES (:name, :email, :password, :role)");
     $result = $stmt->execute([
-        ':name' => 'ARIGATO.LK Admin',
-        ':email' => 'info@arigato.lk',
+        ':name' => 'Affinity Gems Admin',
+        ':email' => 'murshidmunzeer@gmail.com',
         ':password' => $hashedPassword,
         ':role' => 'super_admin'
     ]);
 
     if ($result) {
         echo "<h2 style='color: green;'>Admin account created successfully!</h2>";
-        echo "<p><strong>Email:</strong> info@arigato.lk</p>";
+        echo "<p><strong>Email:</strong> murshidmunzeer@gmail.com</p>";
         echo "<p><strong>Password:</strong> Admin@123</p>";
         echo "<p style='color: red; margin-top: 20px;'><strong>IMPORTANT:</strong> Delete this file (admin/setup.php) after use!</p>";
         echo "<p><a href='/login.php'>Go to Login</a></p>";

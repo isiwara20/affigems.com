@@ -1,6 +1,18 @@
 <?php $chatbotLogoUrl = asset_image_url('assets/images/logo.png'); ?>
+<!-- Floating WhatsApp Button -->
+<a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>?text=<?php echo rawurlencode('Hello Affinity Gems & Jewels, I would like to inquire about your Sri Lankan sapphires and fine gemstones.'); ?>" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="whatsapp-floating-trigger" 
+   id="whatsappFloatingTrigger"
+   aria-label="Chat on WhatsApp"
+   title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-floating-tooltip">Chat on WhatsApp</span>
+</a>
+
 <!-- Chat Widget -->
-<div class="chatbot-trigger" id="chatbotTrigger" onclick="toggleChatbot()">
+<div class="chatbot-trigger" id="chatbotTrigger" onclick="toggleChatbot()" title="Chat with Assistant" aria-label="Open chat assistant">
     <i class="fas fa-comments"></i>
     <span class="chatbot-badge" id="chatbotBadge" style="display:none;">0</span>
 </div>
@@ -10,15 +22,15 @@
     <div class="chatbot-header">
         <div class="chatbot-header-info">
             <div class="chatbot-avatar">
-                <img src="<?php echo htmlspecialchars($chatbotLogoUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Bot">
+                <img src="<?php echo htmlspecialchars($chatbotLogoUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Affinity Assistant">
             </div>
             <div class="chatbot-header-text">
-                <h4>ARIGATO.LK</h4>
+                <h4><?php echo htmlspecialchars(SITE_NAME); ?></h4>
                 <span class="chatbot-status"><i class="fas fa-circle"></i> Online</span>
             </div>
         </div>
         <div class="chatbot-header-actions">
-            <button onclick="toggleChatbot()" class="chatbot-close-btn"><i class="fas fa-times"></i></button>
+            <button onclick="toggleChatbot()" class="chatbot-close-btn" aria-label="Close chat"><i class="fas fa-times"></i></button>
         </div>
     </div>
 

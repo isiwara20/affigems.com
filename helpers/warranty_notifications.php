@@ -18,7 +18,7 @@ function ezymart_warranty_admin_email(): string
     } catch (Throwable $e) {
     }
 
-    return defined('STORE_EMAIL') ? STORE_EMAIL : 'info@arigato.lk';
+    return defined('STORE_EMAIL') ? STORE_EMAIL : 'murshidmunzeer@gmail.com';
 }
 
 function ezymart_warranty_email_admin_template(array $data): string
@@ -42,18 +42,18 @@ function ezymart_warranty_email_admin_template(array $data): string
     $rows[] = ['Issue Type', $data['issue_type']];
 
     $isUpdate = strtolower((string)($data['status'] ?? 'pending')) !== 'pending';
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">'
         . ($isUpdate ? 'Warranty Claim Updated' : 'New Warranty Claim')
         . '</h2>'
         . '<p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#555;">A customer submitted a warranty claim on '
         . htmlspecialchars(lumak_email_brand_name()) . '.</p>'
         . lumak_email_info_box($rows)
-        . '<p style="margin:18px 0 8px;font-size:12px;font-weight:700;color:#D4A017;text-transform:uppercase;letter-spacing:0.04em;">Description</p>'
-        . '<div style="padding:16px 18px;background:#FFF8E6;border:1px solid #F5E6B8;border-radius:12px;font-size:14px;line-height:1.75;color:#333;white-space:pre-wrap;">'
+        . '<p style="margin:18px 0 8px;font-size:12px;font-weight:700;color:#002868;text-transform:uppercase;letter-spacing:0.04em;">Description</p>'
+        . '<div style="padding:16px 18px;background:#f8fafd;border:1px solid #dbe5f5;border-radius:12px;font-size:14px;line-height:1.75;color:#333;white-space:pre-wrap;">'
         . nl2br(htmlspecialchars($data['issue_description'])) . '</div>';
 
     if (!empty($data['attachment_url'])) {
-        $content .= '<p style="margin:18px 0 0;font-size:13px;"><a href="' . htmlspecialchars($data['attachment_url']) . '" style="color:#E5A91A;font-weight:600;">View attachment</a></p>';
+        $content .= '<p style="margin:18px 0 0;font-size:13px;"><a href="' . htmlspecialchars($data['attachment_url']) . '" style="color:#003b94;font-weight:600;">View attachment</a></p>';
     }
 
     if (!empty($data['admin_notes'])) {
@@ -71,7 +71,7 @@ function ezymart_warranty_email_customer_template(array $data): string
     $statusLabel = ezymart_warranty_claim_status_label($data['status'] ?? 'pending');
     $isUpdate = $status !== 'pending';
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;text-align:center;">'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;text-align:center;">'
         . ($isUpdate ? 'Warranty Claim Update' : 'Warranty Claim Received')
         . '</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;text-align:center;">Hi <strong>'

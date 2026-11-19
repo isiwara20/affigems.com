@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "My Orders - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "My Orders - " . SITE_NAME;
 require_once __DIR__ . '/../dal/OrderDAL.php';
 
 // Redirect if not logged in - BEFORE any output

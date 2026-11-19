@@ -151,7 +151,7 @@ $dateTo = date('M d, Y');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Admin Dashboard - ARIGATO.LK</title>
+    <title>Admin Dashboard - <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -225,12 +225,12 @@ $dateTo = date('M d, Y');
                 </div>
 
                 <?php if (ezymart_sms_is_configured()): ?>
-                <div style="margin-bottom:24px; padding:18px 22px; background:#D49A0A; border-radius:14px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+                <div style="margin-bottom:24px; padding:18px 22px; background:#001f52; border-radius:14px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
                     <div style="color:#fff;">
                         <strong style="font-size:14px;"><i class="fas fa-sms"></i> SMS Campaign</strong>
                         <p style="margin:4px 0 0; font-size:12px; opacity:0.9;">Send promotional SMS to customers via Notify.lk</p>
                     </div>
-                    <a href="<?php echo BASE_URL; ?>admin/sms-campaign.php" style="padding:10px 18px; background:#fff; color:#E5A91A; border-radius:10px; font-size:13px; font-weight:600; text-decoration:none;">Open Campaign</a>
+                    <a href="<?php echo BASE_URL; ?>admin/sms-campaign.php" style="padding:10px 18px; background:#fff; color:#003b94; border-radius:10px; font-size:13px; font-weight:600; text-decoration:none;">Open Campaign</a>
                 </div>
                 <?php endif; ?>
 
@@ -487,7 +487,7 @@ $dateTo = date('M d, Y');
 
                 <!-- Footer -->
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

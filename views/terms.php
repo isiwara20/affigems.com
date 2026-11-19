@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "Terms & Conditions - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Terms & Conditions - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 ?>
 
@@ -19,7 +20,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Business Registration Number:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Trading Name:</strong> <?php echo SITE_NAME; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                 </ul>
@@ -53,12 +54,12 @@ require_once __DIR__ . '/partials/header.php';
                 <p>We reserve the right to suspend or terminate accounts involved in fraudulent, abusive, or suspicious activity, or that violate these Terms &amp; Conditions.</p>
 
                 <h2>5. Products and Services</h2>
-                <p><?php echo SITE_NAME; ?> is an online store specialising in <strong>smartphones, accessories, and gadgets, peripherals, and related technology products</strong>. Our catalogue may include, without limitation:</p>
+                <p><?php echo SITE_NAME; ?> is a registered direct-source gemstone supplier specialising in <strong>natural Sri Lankan sapphires, certified precious gemstones, and fine handcrafted jewelry</strong>. Our catalogue may include, without limitation:</p>
                 <ul>
-                    <li>Laptops, desktops, monitors, and related hardware</li>
-                    <li>Mobile accessories and gadgets</li>
-                    <li>Networking devices, storage, and office tech</li>
-                    <li>Other digital and technology products where listed</li>
+                    <li>Natural Ceylon Blue, Royal Blue, and Cornflower Sapphires</li>
+                    <li>Padparadscha, Pink, and Yellow Sapphires</li>
+                    <li>Precious gemstones, rubies, and emeralds</li>
+                    <li>Bespoke rings, necklaces, and custom-designed luxury jewelry</li>
                 </ul>
                 <p>We are committed to offering authentic products sourced and selected with care. Product availability, brands, and catalogue items may change without prior notice. Product images and descriptions are for illustration; slight variations in packaging, colour, or model revision may occur depending on manufacturer updates.</p>
 
@@ -130,7 +131,7 @@ require_once __DIR__ . '/partials/header.php';
 
                 <h2>12. Warranties and Product Use</h2>
                 <p>Manufacturer warranties apply where available and as stated on the product or packaging. <?php echo STORE_OWNER; ?> does not provide warranties beyond those offered by the manufacturer unless expressly stated in writing.</p>
-                <p><strong>Technology product disclaimer:</strong> Product compatibility, performance, and suitability may vary depending on your devices, software, usage environment, and configuration. You are responsible for reviewing specifications and compatibility details before purchase. We are not liable for issues arising from incompatible hardware, unsupported software, improper installation, or misuse.</p>
+                <p><strong>Natural gemstone and jewelry disclaimer:</strong> All natural gemstones and sapphires possess unique inclusions, color variations, and natural characteristics that are inherent to authentic mined stones. Gemstone weights and measurements are stated to industry tolerances. Each certified stone is accompanied by authentic documentation where specified.</p>
                 <p>Warranty and quality claims do not cover:</p>
                 <ul>
                     <li>Normal wear or consumption of product</li>
@@ -217,7 +218,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Company:</strong> <?php echo STORE_OWNER; ?></li>
                     <li><strong>Business Registration:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                     <li><strong>WhatsApp:</strong> <a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener"><?php echo STORE_PHONE_1; ?></a></li>

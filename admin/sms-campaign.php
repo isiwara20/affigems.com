@@ -165,7 +165,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
 
                 <div class="content-card" style="background:#fff; border:1px solid #eee; border-radius:14px; padding:28px; margin-bottom:24px;">
                     <h3 style="font-size:15px; font-weight:700; color:#0d1137; margin-bottom:18px; display:flex; align-items:center; gap:8px;">
-                        <i class="fas fa-paper-plane" style="color:#E5A91A;"></i> Compose Campaign
+                        <i class="fas fa-paper-plane" style="color:#003b94;"></i> Compose Campaign
                     </h3>
                     <div style="margin-bottom:14px;">
                         <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">Campaign name (for logs)</label>
@@ -188,7 +188,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                         <textarea id="campaignMessage" rows="5" maxlength="480" placeholder="Your promotional message..." style="<?php echo $inputStyle; ?> resize:vertical;"></textarea>
                         <p style="font-size:11px; color:#6b7099; margin-top:4px;"><span id="charCount">0</span>/480 characters. Store name is added automatically.</p>
                     </div>
-                    <button type="button" id="sendCampaignBtn" <?php echo $smsReady ? '' : 'disabled'; ?> style="padding:12px 26px; background:#D49A0A; color:#1a1a1a; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button type="button" id="sendCampaignBtn" <?php echo $smsReady ? '' : 'disabled'; ?> style="padding:12px 26px; background:#001f52; color:#ffffff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <i class="fas fa-paper-plane"></i> Send Campaign
                     </button>
                     <div id="campaignStatus" style="margin-top:14px; font-size:13px;"></div>
@@ -253,7 +253,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                 </div>
 
                 <div class="admin-footer" style="margin-top:40px;">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>
@@ -355,7 +355,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
         if (!confirm('Send this SMS campaign now?')) return;
 
         btn.disabled = true;
-        status.innerHTML = '<span style="color:#E5A91A;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
+        status.innerHTML = '<span style="color:#003b94;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
 
         var form = new FormData();
         form.append('action', 'send');

@@ -21,7 +21,7 @@ body {
 /* ===== SIDEBAR ===== */
 .sidebar {
     width: 260px;
-    background: #8A6508;
+    background: #001f52;
     position: fixed;
     top: 0;
     left: 0;
@@ -136,10 +136,10 @@ body {
 }
 
 .nav-item.active {
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     font-weight: 500;
-    box-shadow: 0 4px 15px rgba(196, 138, 10, 0.35);
+    box-shadow: 0 4px 15px rgba(0, 40, 104, 0.35);
 }
 
 .nav-arrow {
@@ -296,7 +296,7 @@ body {
 
 .topbar-icon:hover {
     background: #f5f7fa;
-    color: #C48A0A;
+    color: #002868;
 }
 
 .notification-dot {
@@ -322,7 +322,7 @@ body {
 .admin-avatar {
     width: 40px;
     height: 40px;
-    background: #D49A0A;
+    background: #001f52;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -373,7 +373,7 @@ body {
 
 .admin-badge {
     display: inline-block;
-    background: #C48A0A;
+    background: #002868;
     color: #fff;
     font-size: 11px;
     font-weight: 600;
@@ -531,7 +531,7 @@ body {
 
 .chart-bar {
     flex: 1;
-    background: #D49A0A;
+    background: #001f52;
     border-radius: 8px 8px 0 0;
     position: relative;
     min-height: 20px;
@@ -539,7 +539,7 @@ body {
 }
 
 .chart-bar.highlight {
-    background: #C48A0A;
+    background: #002868;
     box-shadow: 0 -4px 15px rgba(37, 99, 235, 0.3);
 }
 
@@ -672,7 +672,7 @@ body {
     justify-content: center;
     font-size: 11px;
     font-weight: 600;
-    color: #C48A0A;
+    color: #002868;
     flex-shrink: 0;
 }
 
@@ -726,7 +726,7 @@ body {
 }
 
 .order-id {
-    color: #C48A0A;
+    color: #002868;
     font-weight: 600;
 }
 
@@ -870,7 +870,7 @@ body {
 
 .action-btn:hover {
     border-color: #D4AF37;
-    color: #C48A0A;
+    color: #002868;
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.18);
 }
 
@@ -1027,8 +1027,8 @@ body {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: #D49A0A;
-    color: #1a1a1a;
+    background: #001f52;
+    color: #ffffff;
     border: none;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
@@ -1037,11 +1037,11 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(196, 138, 10, 0.18);
+    box-shadow: 0 2px 8px rgba(0, 40, 104, 0.18);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(196, 138, 10, 0.34);
+    box-shadow: 0 6px 20px rgba(0, 40, 104, 0.34);
     transform: translateY(-1px);
 }
 
@@ -1168,7 +1168,7 @@ body {
     content: '';
     width: 4px;
     height: 18px;
-    background: #C48A0A;
+    background: #002868;
     border-radius: 2px;
 }
 
@@ -1181,7 +1181,7 @@ body {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #C48A0A;
+    color: #002868;
     margin-bottom: 8px;
 }
 
@@ -1203,9 +1203,9 @@ body {
 }
 
 .form-control:focus {
-    border-color: #C48A0A;
+    border-color: #002868;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(196, 138, 10, 0.10);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.10);
 }
 
 .form-control::placeholder {

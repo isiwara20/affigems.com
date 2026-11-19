@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Contact Us - ARIGATO.LK";
+$pageTitle = "Contact Us - Affinity Gems & Jewels";
 require_once __DIR__ . '/../config/app.php';
 require_once __DIR__ . '/../helpers/sms.php';
 require_once __DIR__ . '/partials/header.php';
@@ -20,7 +20,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
 .lumak-contact-hero {
     position: relative;
     padding: clamp(56px, 10vw, 88px) 0 clamp(110px, 15vw, 140px);
-    background: #D49A0A;
+    background: #001f52;
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -29,7 +29,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     align-items: center;
 }
 .lumak-contact-hero.has-banner {
-    background: #8A6508;
+    background: #001f52;
 }
 .lumak-contact-hero-bg {
     position: absolute;
@@ -48,8 +48,8 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     inset: 0;
     z-index: 1;
     background:
-        linear-gradient(180deg, rgba(138, 101, 8, 0.55) 0%, rgba(196, 138, 10, 0.72) 52%, rgba(110, 80, 6, 0.88) 100%),
-        linear-gradient(90deg, rgba(138, 101, 8, 0.35) 0%, transparent 35%, transparent 65%, rgba(138, 101, 8, 0.35) 100%);
+        linear-gradient(180deg, rgba(0, 40, 104, 0.55) 0%, rgba(0, 40, 104, 0.72) 52%, rgba(110, 80, 6, 0.88) 100%),
+        linear-gradient(90deg, rgba(0, 40, 104, 0.35) 0%, transparent 35%, transparent 65%, rgba(0, 40, 104, 0.35) 100%);
     pointer-events: none;
 }
 .lumak-contact-hero .container {
@@ -76,7 +76,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     height: min(360px, 70vw);
     bottom: -140px;
     left: -80px;
-    background: radial-gradient(circle, rgba(224, 168, 16, 0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 40, 104, 0.22) 0%, transparent 70%);
 }
 .lumak-contact-hero.has-banner::before,
 .lumak-contact-hero.has-banner::after {
@@ -112,7 +112,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     letter-spacing: -0.02em;
 }
 .lumak-contact-hero h1 span {
-    background: #FFF3D6;
+    background: #f4f7fc;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -150,7 +150,7 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     background: #fff;
     border-radius: 18px;
     border: 1px solid #ebe0ff;
-    box-shadow: 0 16px 48px rgba(229, 169, 26, 0.12);
+    box-shadow: 0 16px 48px rgba(0, 40, 104, 0.12);
     overflow: hidden;
 }
 .lumak-contact-quick-item {
@@ -160,14 +160,14 @@ foreach (['webp', 'jpg', 'jpeg', 'png'] as $ext) {
     text-align: center;
     gap: 8px;
     padding: clamp(18px, 3vw, 24px) 12px;
-    border-right: 1px solid #FFE8A8;
+    border-right: 1px solid #e8f0fe;
     text-decoration: none;
     color: inherit;
     transition: background 0.2s;
 }
 a.lumak-contact-quick-item {
     cursor: pointer;
-    -webkit-tap-highlight-color: rgba(229, 169, 26, 0.12);
+    -webkit-tap-highlight-color: rgba(0, 40, 104, 0.12);
 }
 .lumak-contact-quick-item--static {
     cursor: default;
@@ -178,13 +178,13 @@ a.lumak-contact-quick-item {
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    box-shadow: 0 6px 18px rgba(229, 169, 26, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 40, 104, 0.25);
 }
 .lumak-contact-quick-item strong {
     font-size: 12px;
@@ -206,7 +206,7 @@ a.lumak-contact-quick-item {
 
 .lumak-contact-body {
     padding: clamp(48px, 7vw, 72px) 0 clamp(56px, 8vw, 80px);
-    background: #FFF8E6;
+    background: #f8fafd;
 }
 
 .lumak-contact-grid {
@@ -236,20 +236,20 @@ a.lumak-contact-quick-item {
 .lumak-contact-info-card:hover {
     transform: translateY(-2px);
     border-color: #d4c0ff;
-    box-shadow: 0 12px 32px rgba(229, 169, 26, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 40, 104, 0.08);
 }
 .lumak-contact-info-icon {
     width: 48px;
     height: 48px;
     flex-shrink: 0;
     border-radius: 14px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    box-shadow: 0 6px 18px rgba(229, 169, 26, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 40, 104, 0.25);
 }
 .lumak-contact-info-icon.whatsapp { background: #25d366; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25); }
 .lumak-contact-info-content h3 {
@@ -265,7 +265,7 @@ a.lumak-contact-quick-item {
     margin: 0;
 }
 .lumak-contact-info-content a {
-    color: #E5A91A;
+    color: #003b94;
     font-weight: 600;
     text-decoration: none;
 }
@@ -285,8 +285,8 @@ a.lumak-contact-quick-item {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #C48A0A;
-    border: 1px solid #C48A0A;
+    background: #002868;
+    border: 1px solid #002868;
     color: #fff;
     display: flex;
     align-items: center;
@@ -296,8 +296,8 @@ a.lumak-contact-quick-item {
     transition: all 0.2s;
 }
 .lumak-contact-social a:hover {
-    background: #8A6508;
-    border-color: #8A6508;
+    background: #001f52;
+    border-color: #001f52;
     color: #fff;
     transform: translateY(-2px);
 }
@@ -339,12 +339,12 @@ a.lumak-contact-quick-item {
     border: 1px solid #ebe0ff;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(229, 169, 26, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 40, 104, 0.1);
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 .lumak-contact-form-header {
     padding: clamp(24px, 4vw, 32px) clamp(24px, 4vw, 36px);
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -448,9 +448,9 @@ a.lumak-contact-quick-item {
 .lumak-contact-form .form-group input:focus,
 .lumak-contact-form .form-group textarea:focus,
 .lumak-contact-form .form-group select:focus {
-    border-color: #E5A91A;
+    border-color: #003b94;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.08);
 }
 .lumak-contact-form .form-group textarea {
     min-height: 120px;
@@ -460,12 +460,12 @@ a.lumak-contact-quick-item {
     position: absolute;
     left: 14px;
     top: 39px;
-    color: #E5A91A;
+    color: #003b94;
     font-size: 14px;
     pointer-events: none;
     opacity: 0.85;
 }
-.lumak-contact-form .form-group:focus-within .input-icon { color: #E5A91A; }
+.lumak-contact-form .form-group:focus-within .input-icon { color: #003b94; }
 
 .lumak-contact-form-actions {
     margin-top: 8px;
@@ -491,15 +491,15 @@ a.lumak-contact-quick-item {
     width: 100%;
     flex: none;
     min-width: 0;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
-    box-shadow: 0 8px 22px rgba(229, 169, 26, 0.28);
+    box-shadow: 0 8px 22px rgba(0, 40, 104, 0.28);
     cursor: pointer;
     opacity: 1;
 }
 .lumak-contact-btn.submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(229, 169, 26, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 40, 104, 0.35);
     color: #fff;
 }
 .lumak-contact-btn.submit.is-loading {
@@ -559,7 +559,7 @@ a.lumak-contact-quick-item {
     background: #fff;
     border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 24px 64px rgba(196, 138, 10, 0.22);
+    box-shadow: 0 24px 64px rgba(0, 40, 104, 0.22);
     transform: translateY(16px) scale(0.98);
     transition: transform 0.28s ease;
 }
@@ -569,7 +569,7 @@ a.lumak-contact-quick-item {
 .lumak-contact-success-head {
     padding: 28px 28px 20px;
     text-align: center;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
 }
 .lumak-contact-success-icon {
@@ -611,11 +611,11 @@ a.lumak-contact-quick-item {
     padding: 12px 20px;
     margin-bottom: 18px;
     border-radius: 12px;
-    background: #FFF8E6;
+    background: #f8fafd;
     border: 2px dashed #b8d4ff;
     font-size: 1.35rem;
     font-weight: 800;
-    color: #D4A017;
+    color: #002868;
     letter-spacing: 0.06em;
 }
 .lumak-contact-success-note {
@@ -642,7 +642,7 @@ a.lumak-contact-quick-item {
     padding: 14px 22px;
     border: none;
     border-radius: 12px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     font-family: 'Poppins', system-ui, sans-serif;
     font-size: 14px;
@@ -652,7 +652,7 @@ a.lumak-contact-quick-item {
 }
 .lumak-contact-success-close:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(229, 169, 26, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 40, 104, 0.25);
 }
 
 .lumak-contact-section-head {
@@ -690,15 +690,15 @@ a.lumak-contact-quick-item {
     transition: all 0.25s;
 }
 .lumak-contact-help-card:hover {
-    border-color: #E5A91A;
+    border-color: #003b94;
     background: #faf8ff;
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(229, 169, 26, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 40, 104, 0.08);
     color: inherit;
 }
 .lumak-contact-help-card i {
     font-size: 24px;
-    color: #E5A91A;
+    color: #003b94;
     margin-bottom: 12px;
     display: block;
 }
@@ -719,7 +719,7 @@ a.lumak-contact-quick-item {
     border-radius: 22px;
     overflow: hidden;
     border: 1px solid #ebe0ff;
-    box-shadow: 0 16px 48px rgba(229, 169, 26, 0.08);
+    box-shadow: 0 16px 48px rgba(0, 40, 104, 0.08);
     background: #fff;
     margin-bottom: clamp(32px, 5vw, 48px);
 }
@@ -734,15 +734,15 @@ a.lumak-contact-quick-item {
     align-items: center;
     gap: 16px;
     padding: 20px 24px;
-    border-top: 1px solid #FFE8A8;
+    border-top: 1px solid #e8f0fe;
     flex-wrap: wrap;
 }
 .lumak-contact-map-footer > i {
     width: 48px;
     height: 48px;
     border-radius: 14px;
-    background: #FFF3D6;
-    color: #E5A91A;
+    background: #f4f7fc;
+    color: #003b94;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -761,11 +761,11 @@ a.lumak-contact-quick-item {
     margin: 0;
     line-height: 1.5;
 }
-.lumak-contact-map-footer a { color: #E5A91A; font-weight: 600; text-decoration: none; }
+.lumak-contact-map-footer a { color: #003b94; font-weight: 600; text-decoration: none; }
 .lumak-contact-map-footer a:hover { text-decoration: underline; }
 
 .lumak-contact-cta {
-    background: #D49A0A;
+    background: #001f52;
     border-radius: 22px;
     padding: clamp(36px, 5vw, 48px) clamp(24px, 4vw, 40px);
     text-align: center;
@@ -812,12 +812,12 @@ a.lumak-contact-quick-item {
 }
 .lumak-contact-cta-btn.primary {
     background: #fff;
-    color: #E5A91A;
+    color: #003b94;
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 .lumak-contact-cta-btn.primary:hover {
     transform: translateY(-2px);
-    color: #D4A017;
+    color: #002868;
 }
 .lumak-contact-cta-btn.secondary {
     background: rgba(255,255,255,0.12);
@@ -837,7 +837,7 @@ a.lumak-contact-quick-item {
 @media (max-width: 768px) {
     .lumak-contact-quick { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .lumak-contact-quick-item:nth-child(2) { border-right: none; }
-    .lumak-contact-quick-item:nth-child(-n+2) { border-bottom: 1px solid #FFE8A8; }
+    .lumak-contact-quick-item:nth-child(-n+2) { border-bottom: 1px solid #e8f0fe; }
     .lumak-contact-form .form-row { grid-template-columns: 1fr; }
     .lumak-contact-btn.submit { width: 100%; }
 }
@@ -863,15 +863,15 @@ a.lumak-contact-quick-item {
     <div class="lumak-contact-hero-overlay" aria-hidden="true"></div>
     <?php endif; ?>
     <div class="lumak-contact-hero-hearts" aria-hidden="true">
-        <i class="fas fa-headset h1"></i>
+        <i class="fas fa-gem h1"></i>
         <i class="fas fa-envelope h2"></i>
-        <i class="fas fa-comments h3"></i>
+        <i class="fas fa-certificate h3"></i>
     </div>
     <div class="container">
         <div class="lumak-contact-hero-inner">
-            <span class="lumak-contact-hero-badge"><i class="fas fa-headset"></i> We're Here to Help</span>
+            <span class="lumak-contact-hero-badge"><i class="fas fa-gem"></i> Direct Source Sapphires</span>
             <h1>Contact <span><?php echo SITE_NAME; ?></span></h1>
-            <p class="lumak-contact-hero-lead">Questions about an order, a product, or delivery? Our team at <?php echo STORE_OWNER; ?> is ready to help you.</p>
+            <p class="lumak-contact-hero-lead">Inquiries about our Sri Lankan sapphire collection, custom jewelry, or international trade partnerships? Murshid Munzeer and the team at <?php echo STORE_OWNER; ?> are ready to assist you.</p>
         </div>
     </div>
 </header>
@@ -883,26 +883,26 @@ a.lumak-contact-quick-item {
             <i class="fas fa-phone-alt"></i>
             <strong>Call Us</strong>
             <span class="lumak-contact-quick-phones">
-                <?php echo render_store_phone_numbers([STORE_PHONE_1, STORE_PHONE_2], [
+                <?php echo render_store_phone_numbers([STORE_PHONE_1], [
                     'table_class' => 'store-phone-table--sm',
                     'attrs' => ['data-turbo' => 'false'],
                 ]); ?>
             </span>
         </div>
-        <a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener" class="lumak-contact-quick-item">
+        <a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>" target="_blank" rel="noopener noreferrer" class="lumak-contact-quick-item">
             <i class="fab fa-whatsapp"></i>
             <strong>WhatsApp</strong>
-            <span>Chat instantly</span>
+            <span>Chat with Murshid Munzeer</span>
         </a>
         <a href="mailto:<?php echo STORE_EMAIL; ?>" class="lumak-contact-quick-item">
             <i class="fas fa-envelope"></i>
-            <strong>Email</strong>
+            <strong>Direct Email</strong>
             <span><?php echo STORE_EMAIL; ?></span>
         </a>
-        <a href="<?php echo BASE_URL; ?>track-order.php" class="lumak-contact-quick-item">
-            <i class="fas fa-box"></i>
-            <strong>Track Order</strong>
-            <span>Check delivery status</span>
+        <a href="<?php echo BASE_URL; ?>about.php" class="lumak-contact-quick-item">
+            <i class="fas fa-certificate"></i>
+            <strong>State Gem Corp</strong>
+            <span>Registered Supplier</span>
         </a>
     </div>
 </div>
@@ -922,26 +922,34 @@ a.lumak-contact-quick-item {
                 </div>
 
                 <div class="lumak-contact-info-card">
+                    <div class="lumak-contact-info-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="lumak-contact-info-content">
+                        <h3>Director / Contact Person</h3>
+                        <p><strong><?php echo htmlspecialchars(STORE_DIRECTOR); ?></strong><br><?php echo htmlspecialchars(STORE_DIRECTOR_TITLE); ?> · <?php echo htmlspecialchars(STORE_OWNER); ?></p>
+                    </div>
+                </div>
+
+                <div class="lumak-contact-info-card">
                     <div class="lumak-contact-info-icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="lumak-contact-info-content">
-                        <h3>Phone</h3>
-                        <?php echo render_store_phone_numbers([STORE_PHONE_1, STORE_PHONE_2], ['attrs' => ['data-turbo' => 'false']]); ?>
+                        <h3>Direct Phone</h3>
+                        <?php echo render_store_phone_numbers([STORE_PHONE_1], ['attrs' => ['data-turbo' => 'false']]); ?>
                     </div>
                 </div>
 
                 <div class="lumak-contact-info-card">
                     <div class="lumak-contact-info-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
                     <div class="lumak-contact-info-content">
-                        <h3>WhatsApp Support</h3>
-                        <p>Fast replies for orders, products, and delivery questions.<br><a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+                        <h3>WhatsApp Direct</h3>
+                        <p>Immediate inquiries for certified sapphires, gemstones, and showcase viewings.<br><a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>?text=<?php echo rawurlencode('Hello Murshid Munzeer, I am contacting you from your website.'); ?>" target="_blank" rel="noopener noreferrer">Message Murshid on WhatsApp</a></p>
                     </div>
                 </div>
 
                 <div class="lumak-contact-info-card">
-                    <div class="lumak-contact-info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="lumak-contact-info-icon"><i class="fas fa-envelope"></i></div>
                     <div class="lumak-contact-info-content">
-                        <h3>Working Hours</h3>
-                        <p>Monday – Saturday: 8:00 AM – 6:00 PM<br>Sunday: Closed<br><span style="font-size:12px;color:#E5A91A;">24/7 online ordering available</span></p>
+                        <h3>Email Address</h3>
+                        <p><a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></p>
                     </div>
                 </div>
 
@@ -989,12 +997,12 @@ a.lumak-contact-quick-item {
                         <div class="form-group">
                             <label for="contactTopic">Topic</label>
                             <select id="contactTopic" name="topic">
+                                <option value="Sapphire & Gemstone Inquiry">Sapphire &amp; Gemstone Inquiry</option>
+                                <option value="China Business Partnership">China Business Partnership / Showcase Visit</option>
+                                <option value="Custom Jewelry Design">Custom &amp; Bespoke Jewelry Design</option>
+                                <option value="Wholesale & Export">Wholesale &amp; Direct Export</option>
                                 <option value="General Enquiry">General Enquiry</option>
                                 <option value="Order Question">Order Question</option>
-                                <option value="Shipping & Delivery">Shipping &amp; Delivery</option>
-                                <option value="Returns & Refunds">Returns &amp; Refunds</option>
-                                <option value="Product Question">Product Question</option>
-                                <option value="Wholesale / Bulk Order">Wholesale / Bulk Order</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -1085,11 +1093,12 @@ a.lumak-contact-quick-item {
 
         <!-- CTA -->
         <div class="lumak-contact-cta">
-            <h3>Ready to Explore Tech Products?</h3>
-            <p>Browse our mobile and tech collections and find the right products for work, study, and everyday use.</p>
+            <h3>Ready to Explore Sri Lankan Sapphires?</h3>
+            <p>Browse our certified sapphire collections or reach out to Murshid Munzeer for private viewings and trade partnerships.</p>
             <div class="lumak-contact-cta-btns">
-                <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-contact-cta-btn primary"><i class="fas fa-shopping-bag"></i> Shop Now</a>
-                <a href="<?php echo BASE_URL; ?>about.php" class="lumak-contact-cta-btn secondary"><i class="fas fa-heart"></i> About ARIGATO.LK</a>
+                <a href="<?php echo BASE_URL; ?>shop.php" class="lumak-contact-cta-btn primary"><i class="fas fa-gem"></i> View Collection</a>
+                <a href="<?php echo BASE_URL; ?>about.php" class="lumak-contact-cta-btn secondary"><i class="fas fa-gem"></i> About Affinity Gems</a>
+                <a href="<?php echo htmlspecialchars(STORE_WHATSAPP_URL); ?>?text=<?php echo rawurlencode('Hello Murshid Munzeer, I am interested in your sapphire collections.'); ?>" target="_blank" rel="noopener noreferrer" class="lumak-contact-cta-btn secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
 

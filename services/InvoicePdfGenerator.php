@@ -17,8 +17,8 @@ class InvoicePdfGenerator extends FPDF
     {
         parent::__construct('P', 'mm', 'A4');
         $this->settings = $settings;
-        $this->accentRgb = lumak_invoice_hex_to_rgb($settings['accent_color'] ?? '#D4A017');
-        $this->secondaryRgb = lumak_invoice_hex_to_rgb($settings['secondary_color'] ?? '#E5A91A');
+        $this->accentRgb = lumak_invoice_hex_to_rgb($settings['accent_color'] ?? '#002868');
+        $this->secondaryRgb = lumak_invoice_hex_to_rgb($settings['secondary_color'] ?? '#003b94');
         $this->SetAutoPageBreak(true, 22);
         $this->SetMargins(15, 15, 15);
     }
@@ -127,7 +127,8 @@ class InvoicePdfGenerator extends FPDF
         $this->SetXY(15, 9);
         $this->SetFont('Arial', 'B', 18);
         $this->SetTextColor(255, 255, 255);
-        $this->Cell(120, 7, $this->encode($this->settings['company_name'] ?? 'ARIGATO.LK'), 0, 1);
+        $defaultCompany = defined('STORE_OWNER') ? STORE_OWNER : (defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems and Jewels Pvt Ltd');
+        $this->Cell(120, 7, $this->encode($this->settings['company_name'] ?? $defaultCompany), 0, 1);
 
         $this->SetX(15);
         $this->SetFont('Arial', '', 8);

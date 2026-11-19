@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Login - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Login - " . SITE_NAME;
 require_once __DIR__ . '/../helpers/sms.php';
 
 $pagePreloadImages = [asset_image_url('assets/images/login-couple.png')];
@@ -23,7 +23,7 @@ unset($_SESSION['login_error'], $_SESSION['login_email']);
             <!-- Left: Login Form -->
             <div class="login-form-container">
                 <h1>Welcome Back!</h1>
-                <p class="login-subtitle">Login to your ARIGATO.LK account</p>
+                <p class="login-subtitle">Login to your <?php echo SITE_NAME; ?> account</p>
 
                 <?php if ($loginError): ?>
                     <div class="alert alert-error login-inline-alert login-flash-alert" id="loginFlashAlert" role="alert">

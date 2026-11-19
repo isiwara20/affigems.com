@@ -98,14 +98,14 @@ $restOfWorldFee = $shippingConfig['rest_of_world'];
         .shipping-rates-table input[type="text"],
         .shipping-rates-table input[type="number"] { width:100%; padding:9px 10px; border:1.5px solid #e4e8f0; border-radius:8px; font-family:'Poppins',sans-serif; font-size:12px; outline:none; }
         .shipping-rates-table input[type="text"]:focus,
-        .shipping-rates-table input[type="number"]:focus { border-color:#E5A91A; }
+        .shipping-rates-table input[type="number"]:focus { border-color:#003b94; }
         .shipping-rates-table .col-flag { width:70px; }
         .shipping-rates-table .col-code { width:80px; }
         .shipping-rates-table .col-fee { width:120px; }
         .shipping-rates-table .col-enabled { width:70px; text-align:center; }
         .shipping-rates-table .col-remove { width:44px; text-align:center; }
-        .btn-add-country { margin-top:12px; border:1px dashed #c4b5fd; background:#FFF8E6; color:#D4A017; border-radius:10px; padding:8px 14px; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; }
-        .btn-add-country:hover { background:#FFE8A8; }
+        .btn-add-country { margin-top:12px; border:1px dashed #c4b5fd; background:#f8fafd; color:#002868; border-radius:10px; padding:8px 14px; font-size:12px; font-weight:600; cursor:pointer; font-family:'Poppins',sans-serif; }
+        .btn-add-country:hover { background:#e8f0fe; }
         .btn-remove-rate { border:none; background:#fef2f2; color:#ef4444; width:32px; height:32px; border-radius:8px; cursor:pointer; }
         .rest-of-world-row { display:grid; grid-template-columns:1fr 200px; gap:16px; margin-top:20px; padding-top:20px; border-top:1px solid #f0f0f0; align-items:end; }
         @media (max-width:768px) {
@@ -193,7 +193,7 @@ $restOfWorldFee = $shippingConfig['rest_of_world'];
 
                     <!-- International Shipping Rates -->
                     <div class="shipping-rates-card">
-                        <h3><i class="fas fa-globe-americas" style="color:#E5A91A;"></i> International Shipping Rates</h3>
+                        <h3><i class="fas fa-globe-americas" style="color:#003b94;"></i> International Shipping Rates</h3>
                         <p class="card-desc">Set delivery charges per country for worldwide orders. Customers select their country at checkout and the matching fee is applied automatically.</p>
 
                         <div class="shipping-rates-wrap">
@@ -235,13 +235,13 @@ $restOfWorldFee = $shippingConfig['rest_of_world'];
                         </div>
                     </div>
 
-                    <button type="submit" style="margin-top:10px; padding:13px 30px; background:#8A6508; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button type="submit" style="margin-top:10px; padding:13px 30px; background:#001f52; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <i class="fas fa-save"></i> Save Settings
                     </button>
                 </form>
 
                 <div class="admin-footer" style="margin-top:40px;">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

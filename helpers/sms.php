@@ -40,7 +40,7 @@ function ezymart_sms_settings(bool $refresh = false): array
         'admin_low_stock' => ($all['sms_admin_low_stock_enabled'] ?? '1') === '1',
         'order_notification_sms' => trim($all['order_notification_sms'] ?? ''),
         'low_stock_sms' => trim($all['low_stock_sms'] ?? ''),
-        'store_name' => trim($all['store_name'] ?? (defined('SITE_NAME') ? SITE_NAME : 'ARIGATO.LK')),
+        'store_name' => trim($all['store_name'] ?? (defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels')),
     ];
 
     return $cache;
@@ -438,7 +438,7 @@ function ezymart_sms_notify_invoice(string $phone, string $orderNumber, string $
         return false;
     }
 
-    $store = $settings['store_name'] !== '' ? $settings['store_name'] : 'ARIGATO.LK';
+    $store = $settings['store_name'] !== '' ? $settings['store_name'] : (defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels');
     $message = sprintf(
         '%s: Invoice %s for your order #%s is ready. Download PDF: %s',
         $store,

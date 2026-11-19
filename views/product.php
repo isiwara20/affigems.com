@@ -152,12 +152,12 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     color: #888;
 }
 .product-page-breadcrumb a {
-    color: #D4A017;
+    color: #002868;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
-.product-page-breadcrumb a:hover { color: #D4A017; }
+.product-page-breadcrumb a:hover { color: #002868; }
 .product-page-breadcrumb .separator { color: #ccc; font-size: 10px; }
 
 /* Product Section */
@@ -242,10 +242,10 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     transition: all 0.2s;
 }
 .thumb:hover {
-    border-color: #E5A91A;
+    border-color: #003b94;
 }
 .thumb.active {
-    border-color: #D4A017;
+    border-color: #002868;
     box-shadow: 0 2px 8px rgba(0,82,212,0.15);
 }
 .thumb img {
@@ -260,7 +260,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .product-info { padding: 5px 0; }
 .product-category-badge {
     display: inline-block;
-    background: #D4A017;
+    background: #002868;
     color: #fff;
     padding: 5px 14px;
     border-radius: 6px;
@@ -273,7 +273,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .product-title {
     font-size: 1.65rem;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 8px;
     line-height: 1.35;
 }
@@ -282,7 +282,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     font-size: 14px;
     margin-bottom: 14px;
 }
-.product-author span { color: #D4A017; font-weight: 600; }
+.product-author span { color: #002868; font-weight: 600; }
 .product-heading-top {
     display: none;
     margin-bottom: 18px;
@@ -295,7 +295,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 }
 .product-rating .stars { color: #c9a96e; font-size: 15px; }
 .product-rating .rating-text { color: #666; font-size: 13px; }
-.product-rating .rating-text strong { color: #D4A017; }
+.product-rating .rating-text strong { color: #002868; }
 
 /* Price */
 .product-price-section {
@@ -307,10 +307,10 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     border-top: 1px solid #f0f4ff;
     border-bottom: 1px solid #f0f4ff;
 }
-.product-price { font-size: 1.9rem; font-weight: 800; color: #D4A017; }
+.product-price { font-size: 1.9rem; font-weight: 800; color: #002868; }
 .product-original-price { font-size: 1.1rem; color: #bbb; text-decoration: line-through; }
 .product-discount-badge {
-    background: #D4A017;
+    background: #002868;
     color: #fff;
     padding: 4px 10px;
     border-radius: 6px;
@@ -333,7 +333,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .product-share-label {
     font-size: 13px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     white-space: nowrap;
 }
 .product-share-buttons {
@@ -350,7 +350,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     display: block;
     font-size: 13px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 8px;
 }
 .product-variation-options {
@@ -359,7 +359,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     gap: 8px;
 }
 .product-variation-btn {
-    border: 1.5px solid #F5E6B8;
+    border: 1.5px solid #dbe5f5;
     background: #fff;
     color: #333;
     border-radius: 10px;
@@ -370,10 +370,10 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     transition: all 0.2s;
     font-family: 'Poppins', sans-serif;
 }
-.product-variation-btn:hover { border-color: #E5A91A; color: #E5A91A; }
+.product-variation-btn:hover { border-color: #003b94; color: #003b94; }
 .product-variation-btn.is-active {
-    background: #D49A0A;
-    border-color: #E5A91A;
+    background: #001f52;
+    border-color: #003b94;
     color: #fff;
 }
 .product-variation-btn.is-disabled {
@@ -405,7 +405,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 }
 .product-variation-hint {
     font-size: 12px;
-    color: #E5A91A;
+    color: #003b94;
     margin-top: 8px;
 }
 
@@ -434,7 +434,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .share-tg { background: #229ed9; }
 .share-pin { background: #e60023; }
 .share-copy {
-    background: #D49A0A;
+    background: #001f52;
     width: auto;
     padding: 0 14px;
     border-radius: 20px;
@@ -457,7 +457,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 /* Stock */
 .stock-status { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; font-size: 13px; font-weight: 500; }
 .stock-status.in-stock { color: #16a34a; }
-.stock-status.low-stock { color: #D4A017; }
+.stock-status.low-stock { color: #002868; }
 .stock-status.out-of-stock { color: #dc3545; }
 
 /* Restock notify */
@@ -478,7 +478,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     font-weight: 700;
     color: #0d1137;
 }
-.restock-notify__title i { color: #E5A91A; }
+.restock-notify__title i { color: #003b94; }
 .restock-notify__desc {
     margin: 0 0 16px;
     font-size: 13px;
@@ -496,7 +496,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     margin-bottom: 6px;
     font-size: 12px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
 }
 .restock-notify__field input {
     width: 100%;
@@ -510,8 +510,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 }
 .restock-notify__field input:focus {
     outline: none;
-    border-color: #E5A91A;
-    box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.08);
+    border-color: #003b94;
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.08);
 }
 .restock-notify__submit {
     width: 100%;
@@ -522,7 +522,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     padding: 12px 18px;
     border: none;
     border-radius: 10px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -530,7 +530,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     cursor: pointer;
     transition: background 0.2s;
 }
-.restock-notify__submit:hover { background: #D4A017; }
+.restock-notify__submit:hover { background: #002868; }
 .restock-notify__submit:disabled { opacity: 0.7; cursor: not-allowed; }
 .restock-notify__message {
     margin-top: 12px;
@@ -553,8 +553,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(229, 169, 26, 0.1);
-    color: #E5A91A;
+    background: rgba(0, 40, 104, 0.1);
+    color: #003b94;
     font-size: 22px;
     animation: restockWaitingPulse 2.4s ease-in-out infinite;
 }
@@ -569,8 +569,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     100% { transform: rotate(360deg); }
 }
 @keyframes restockWaitingPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(229, 169, 26, 0.18); }
-    50% { box-shadow: 0 0 0 10px rgba(229, 169, 26, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 40, 104, 0.18); }
+    50% { box-shadow: 0 0 0 10px rgba(0, 40, 104, 0); }
 }
 .restock-notify__waiting-title {
     margin: 0 0 10px;
@@ -633,7 +633,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     border: 1px solid #d7e3f8;
     border-radius: 10px;
     background: #fff;
-    color: #E5A91A;
+    color: #003b94;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
@@ -642,10 +642,10 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 }
 .restock-notify__back-btn:hover {
     background: #f4f8ff;
-    border-color: #E5A91A;
+    border-color: #003b94;
 }
 .restock-notify.is-waiting {
-    border-color: rgba(229, 169, 26, 0.18);
+    border-color: rgba(0, 40, 104, 0.18);
     background: linear-gradient(180deg, #f4f8ff 0%, #fff 100%);
 }
 @media (max-width: 640px) {
@@ -668,15 +668,15 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     transition: all 0.2s;
 }
 .feature-item:hover {
-    border-color: #E5A91A;
+    border-color: #003b94;
     background: #fff;
 }
-.feature-item i { font-size: 1.1rem; color: #E5A91A; margin-bottom: 6px; display: block; }
+.feature-item i { font-size: 1.1rem; color: #003b94; margin-bottom: 6px; display: block; }
 .feature-item span { font-size: 10px; color: #555; font-weight: 600; display: block; letter-spacing: 0.2px; }
 
 /* Quantity */
 .quantity-section { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
-.quantity-label { font-weight: 600; color: #D4A017; font-size: 14px; }
+.quantity-label { font-weight: 600; color: #002868; font-size: 14px; }
 .quantity-selector {
     display: flex;
     align-items: center;
@@ -691,11 +691,11 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     display: flex; align-items: center; justify-content: center;
     transition: all 0.2s;
 }
-.qty-btn:hover { background: #D49A0A; color: #1a1a1a; }
+.qty-btn:hover { background: #001f52; color: #ffffff; }
 .qty-input {
     width: 50px; height: 40px;
     border: none; border-left: 1px solid #e8ecf5; border-right: 1px solid #e8ecf5;
-    text-align: center; font-size: 14px; font-weight: 700; color: #D4A017;
+    text-align: center; font-size: 14px; font-weight: 700; color: #002868;
     background: #fff;
 }
 .qty-input:focus { outline: none; }
@@ -705,22 +705,22 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .product-sticky-actions { display: none; }
 .btn-add-cart {
     flex: 1; padding: 15px 24px;
-    background: #D49A0A; color: #1a1a1a; border: none; border-radius: 50px;
+    background: #001f52; color: #ffffff; border: none; border-radius: 50px;
     font-size: 14px; font-weight: 600; cursor: pointer;
     display: flex; align-items: center; justify-content: center; gap: 10px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s;
 }
-.btn-add-cart:hover { background: #D4A017; box-shadow: 0 6px 20px rgba(196,138,10,0.25); transform: translateY(-1px); }
+.btn-add-cart:hover { background: #002868; box-shadow: 0 6px 20px rgba(0,40,104,0.25); transform: translateY(-1px); }
 .btn-buy-now {
     flex: 1; padding: 15px 24px;
-    background: #fff; color: #E5A91A; border: 2px solid #E5A91A; border-radius: 50px;
+    background: #fff; color: #003b94; border: 2px solid #003b94; border-radius: 50px;
     font-size: 14px; font-weight: 600; cursor: pointer;
     display: flex; align-items: center; justify-content: center; gap: 10px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s;
 }
-.btn-buy-now:hover { background: #D49A0A; color: #1a1a1a; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,82,212,0.3); }
+.btn-buy-now:hover { background: #001f52; color: #ffffff; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,82,212,0.3); }
 
 /* Trust Badges */
 .trust-badges {
@@ -735,7 +735,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 }
 .trust-badge:last-child { border-right: none; }
 .trust-badge:hover { background: #fff; }
-.trust-badge i { font-size: 1.2rem; color: #D4A017; margin-bottom: 6px; display: block; }
+.trust-badge i { font-size: 1.2rem; color: #002868; margin-bottom: 6px; display: block; }
 .trust-badge span { font-size: 10px; color: #555; font-weight: 600; display: block; }
 
 .product-wishlist-form { margin-bottom: 20px; }
@@ -783,8 +783,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 20px; margin-bottom: 20px;
 }
 .sidebar-widget h3 {
-    font-size: 14px; font-weight: 700; color: #D4A017;
-    margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #D4A017;
+    font-size: 14px; font-weight: 700; color: #002868;
+    margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #002868;
 }
 .category-list { list-style: none; padding: 0; margin: 0; }
 .category-list li a {
@@ -792,8 +792,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     border-radius: 6px; font-size: 13px; font-weight: 500;
     transition: all 0.2s; border-left: 3px solid transparent; margin-bottom: 1px;
 }
-.category-list li a:hover { background: #fafafa; color: #D4A017; border-left-color: #D4A017; }
-.category-list li a.active { background: #f0f4ff; color: #D4A017; font-weight: 600; border-left-color: #D4A017; }
+.category-list li a:hover { background: #fafafa; color: #002868; border-left-color: #002868; }
+.category-list li a.active { background: #f0f4ff; color: #002868; font-weight: 600; border-left-color: #002868; }
 
 /* Tabs */
 .product-tabs { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; min-height: 450px; }
@@ -803,11 +803,11 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     font-size: 13px; font-weight: 500; color: #777; position: relative;
     font-family: 'Poppins', sans-serif; transition: color 0.2s;
 }
-.tab-btn:hover { color: #D4A017; }
-.tab-btn.active { color: #D4A017; font-weight: 600; background: #fff; }
+.tab-btn:hover { color: #002868; }
+.tab-btn.active { color: #002868; font-weight: 600; background: #fff; }
 .tab-btn.active::after {
     content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
-    height: 2px; background: #D4A017;
+    height: 2px; background: #002868;
 }
 .tab-content { padding: 28px; display: none; height: 400px; overflow-y: auto; }
 .tab-content.active { display: block; }
@@ -816,22 +816,22 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 /* Reviews - Professional UI */
 .review-summary { margin-bottom: 20px; padding: 18px; background: #f8f9fb; border-radius: 10px; border: 1px solid #eee; }
 .review-avg { display: flex; align-items: center; gap: 16px; }
-.avg-number { font-size: 2.6rem; font-weight: 800; color: #D4A017; line-height: 1; }
+.avg-number { font-size: 2.6rem; font-weight: 800; color: #002868; line-height: 1; }
 .review-count { font-size: 12px; color: #888; display: block; margin-top: 4px; }
 .reviews-list { margin-bottom: 20px; }
 .no-reviews { color: #999; font-size: 13px; text-align: center; padding: 40px 20px; }
 .review-item { padding: 14px 16px; border: 1px solid #f0f0f0; border-radius: 10px; margin-bottom: 8px; background: #fff; }
 .review-item:hover { border-color: #e0e0e0; }
 .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-.reviewer-avatar { width: 34px; height: 34px; border-radius: 50%; background: #D4A017; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.reviewer-avatar { width: 34px; height: 34px; border-radius: 50%; background: #002868; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
 .reviewer-info { flex: 1; }
-.reviewer-info strong { font-size: 13px; color: #D4A017; display: block; margin-bottom: 1px; }
+.reviewer-info strong { font-size: 13px; color: #002868; display: block; margin-bottom: 1px; }
 .reviewer-info .review-stars { display: flex; gap: 1px; }
 .review-date { font-size: 10px; color: #bbb; white-space: nowrap; }
 .review-comment { font-size: 12px; color: #555; line-height: 1.6; padding-left: 44px; }
 /* Review Form */
 .add-review-form { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 18px; margin-top: 12px; }
-.add-review-form h4 { font-size: 13px; font-weight: 600; color: #D4A017; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+.add-review-form h4 { font-size: 13px; font-weight: 600; color: #002868; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
 .rating-input { margin-bottom: 12px; }
 .rating-input > label { display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
 .star-rating-input { display: flex; flex-direction: row-reverse; gap: 2px; justify-content: flex-end; }
@@ -841,12 +841,12 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .review-textarea { margin-bottom: 12px; }
 .review-textarea label { display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
 .review-textarea textarea { width: 100%; padding: 10px 12px; border: 1.5px solid #e4e8f0; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 12px; resize: vertical; outline: none; min-height: 60px; background: #fafafa; transition: all 0.3s; }
-.review-textarea textarea:focus { border-color: #D4A017; background: #fff; }
-.btn-submit-review { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #D4A017; color: #fff; border: none; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
-.btn-submit-review:hover { background: #D49A0A; }
+.review-textarea textarea:focus { border-color: #002868; background: #fff; }
+.btn-submit-review { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #002868; color: #fff; border: none; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-submit-review:hover { background: #001f52; }
 .login-to-review { background: #f8f9fb; padding: 18px; border-radius: 10px; text-align: center; margin-top: 12px; border: 1px solid #eee; }
 .login-to-review p { font-size: 12px; color: #666; margin: 0; }
-.login-to-review a { color: #D4A017; font-weight: 600; text-decoration: none; }
+.login-to-review a { color: #002868; font-weight: 600; text-decoration: none; }
 
 /* Author Section */
 .author-section {
@@ -856,16 +856,16 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .author-left { display: flex; align-items: center; gap: 24px; }
 .author-details { }
 .author-label { font-size: 11px; color: #999; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-.author-details h4 { font-size: 18px; font-weight: 700; color: #D4A017; margin-bottom: 3px; }
+.author-details h4 { font-size: 18px; font-weight: 700; color: #002868; margin-bottom: 3px; }
 .author-role { font-size: 13px; font-weight: 600; color: #444; margin-bottom: 8px; }
 .author-exp { font-size: 12px; color: #666; line-height: 1.7; margin-bottom: 14px; }
 .author-link {
     display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; font-weight: 600; color: #D4A017; text-decoration: none;
-    padding: 9px 18px; border: 1.5px solid #D4A017; border-radius: 50px;
+    font-size: 12px; font-weight: 600; color: #002868; text-decoration: none;
+    padding: 9px 18px; border: 1.5px solid #002868; border-radius: 50px;
     transition: all 0.3s;
 }
-.author-link:hover { background: #D4A017; color: #fff; }
+.author-link:hover { background: #002868; color: #fff; }
 .author-stats { display: flex; gap: 30px; }
 .author-stats-col { display: flex; flex-direction: column; gap: 16px; }
 .author-stat-item { display: flex; align-items: center; gap: 14px; }
@@ -874,14 +874,14 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
     display: flex; align-items: center; justify-content: center;
     color: #555; font-size: 16px; flex-shrink: 0; background: #fff;
 }
-.author-stat-item strong { display: block; font-size: 18px; font-weight: 700; color: #D4A017; }
+.author-stat-item strong { display: block; font-size: 18px; font-weight: 700; color: #002868; }
 .author-stat-item span { display: block; font-size: 11px; color: #888; }
 
 /* Related Products */
 .related-section { margin-bottom: 60px; }
 .related-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
-.related-header h2 { font-size: 1.3rem; font-weight: 700; color: #D4A017; }
-.related-view-all { font-size: 13px; font-weight: 600; color: #D4A017; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+.related-header h2 { font-size: 1.3rem; font-weight: 700; color: #002868; }
+.related-view-all { font-size: 13px; font-weight: 600; color: #002868; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
 .related-view-all:hover { gap: 10px; }
 .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .related-card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; transition: all 0.25s; text-decoration: none; color: inherit; display: block; }
@@ -890,8 +890,8 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
 .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .related-card-img .placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #ddd; font-size: 2rem; background: #f8f8f8; }
 .related-card-body { padding: 14px; }
-.related-card-body h4 { font-size: 12px; font-weight: 600; color: #D4A017; margin-bottom: 6px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.related-card-body .related-price { font-size: 14px; font-weight: 700; color: #D4A017; }
+.related-card-body h4 { font-size: 12px; font-weight: 600; color: #002868; margin-bottom: 6px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.related-card-body .related-price { font-size: 14px; font-weight: 700; color: #002868; }
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -979,7 +979,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-top: 1px solid #e8ecf5;
-        box-shadow: 0 -4px 24px rgba(196, 138, 10, 0.1);
+        box-shadow: 0 -4px 24px rgba(0, 40, 104, 0.1);
         transform: translateY(calc(100% + 24px));
         opacity: 0;
         visibility: hidden;
@@ -1103,7 +1103,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
                     <p class="product-author">By <span><?php echo htmlspecialchars($product['author']); ?></span></p>
                 </div>
                 <?php if (!empty($product['warranty_period'])): ?>
-                <p style="font-size:13px;color:#D4A017;margin:0 0 12px;display:flex;align-items:center;gap:8px;">
+                <p style="font-size:13px;color:#002868;margin:0 0 12px;display:flex;align-items:center;gap:8px;">
                     <i class="fas fa-shield-alt"></i>
                     <strong><?php echo htmlspecialchars(ezymart_warranty_period_label($product['warranty_period'])); ?></strong> warranty included
                 </p>
@@ -1524,7 +1524,7 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
                     <span class="author-label">About the Brand</span>
                     <h4><?php echo SITE_NAME; ?></h4>
                     <p class="author-role"><?php echo STORE_TAGLINE; ?></p>
-                    <p class="author-exp">Reliable mobiles, accessories, and tech products at fair prices - delivered with care across Sri Lanka.<br>Operated by <?php echo STORE_OWNER; ?> from <?php echo STORE_LOCATION; ?>. Shop online at <?php echo STORE_DOMAIN; ?>.</p>
+                    <p class="author-exp">Direct source supplier of high-quality Sri Lankan sapphires, fine jewelry and certified precious gemstones.<br>Operated by <?php echo STORE_OWNER; ?> from <?php echo STORE_LOCATION; ?>. Shop online at <?php echo STORE_DOMAIN; ?>.</p>
                     <a href="<?php echo BASE_URL; ?>about.php" class="author-link">View More About Us <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -1534,37 +1534,37 @@ $productShareMessage = $product['name'] . ' — ' . $productSharePrice . ' ' . $
                         <div class="author-stat-icon"><i class="fas fa-certificate"></i></div>
                         <div>
                             <strong>100%</strong>
-                            <span>Original Products</span>
+                            <span>Certified Authentic</span>
                         </div>
                     </div>
                     <div class="author-stat-item">
-                        <div class="author-stat-icon"><i class="fas fa-pump-soap"></i></div>
+                        <div class="author-stat-icon"><i class="fas fa-gem"></i></div>
                         <div>
-                            <strong>100+</strong>
-                            <span>Tech Items</span>
+                            <strong>Direct</strong>
+                            <span>Mine Source</span>
                         </div>
                     </div>
                     <div class="author-stat-item">
                         <div class="author-stat-icon"><i class="fas fa-headset"></i></div>
                         <div>
                             <strong>24/7</strong>
-                            <span>Customer Care</span>
+                            <span>Direct Support</span>
                         </div>
                     </div>
                 </div>
                 <div class="author-stats-col">
                     <div class="author-stat-item">
-                        <div class="author-stat-icon"><i class="fas fa-truck"></i></div>
+                        <div class="author-stat-icon"><i class="fas fa-globe-asia"></i></div>
                         <div>
-                            <strong>Island Wide</strong>
-                            <span>Delivery in Sri Lanka</span>
+                            <strong>Global</strong>
+                            <span>Worldwide Reach</span>
                         </div>
                     </div>
                     <div class="author-stat-item">
-                        <div class="author-stat-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="author-stat-icon"><i class="fas fa-shield-alt"></i></div>
                         <div>
-                            <strong>Trusted</strong>
-                            <span>Trusted Tech Store</span>
+                            <strong>Ethical</strong>
+                            <span>State Gem Corp Registered</span>
                         </div>
                     </div>
                 </div>

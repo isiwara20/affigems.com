@@ -13,7 +13,7 @@ function lumak_email_brand_name(): string
     if (defined('ADMIN_BRAND')) {
         return ADMIN_BRAND;
     }
-    return (defined('SITE_NAME') ? SITE_NAME : 'ARIGATO.LK') . ' Store';
+    return defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels';
 }
 
 function lumak_email_logo_url(): string
@@ -198,17 +198,17 @@ function lumak_send_mail_with_attachment(
 function lumak_email_button(string $url, string $label): string
 {
     return '<table width="100%" cellpadding="0" cellspacing="0" role="presentation"><tr><td align="center" style="padding:18px 0 6px;">'
-        . '<a href="' . htmlspecialchars($url) . '" style="display:inline-block;padding:14px 32px;background:#E0A810;color:#1a1a1a;text-decoration:none;border-radius:999px;font-size:14px;font-weight:700;">'
+        . '<a href="' . htmlspecialchars($url) . '" style="display:inline-block;padding:14px 32px;background:#002868;color:#ffffff;text-decoration:none;border-radius:999px;font-size:14px;font-weight:700;">'
         . htmlspecialchars($label) . '</a></td></tr></table>';
 }
 
 function lumak_email_info_box(array $rows): string
 {
-    $html = '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFF8E6;border:1px solid #F5E6B8;border-radius:12px;margin:18px 0;">';
+    $html = '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f8fafd;border:1px solid #dbe5f5;border-radius:12px;margin:18px 0;">';
     foreach ($rows as $row) {
         $label = htmlspecialchars($row[0] ?? '');
         $value = htmlspecialchars($row[1] ?? '');
-        $color = $row[2] ?? '#D4A017';
+        $color = $row[2] ?? '#002868';
         $html .= '<tr><td style="padding:10px 16px;color:#888;font-size:12px;border-bottom:1px solid #f0e8ff;">' . $label . '</td>'
             . '<td style="padding:10px 16px;color:' . htmlspecialchars($color) . ';font-size:13px;font-weight:700;text-align:right;border-bottom:1px solid #f0e8ff;">' . $value . '</td></tr>';
     }
@@ -218,16 +218,16 @@ function lumak_email_info_box(array $rows): string
 
 function lumak_email_data_table(array $headers, array $rows): string
 {
-    $html = '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border:1px solid #F5E6B8;border-radius:12px;overflow:hidden;margin:16px 0;">';
+    $html = '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border:1px solid #dbe5f5;border-radius:12px;overflow:hidden;margin:16px 0;">';
     $html .= '<tr>';
     foreach ($headers as $header) {
-        $html .= '<th style="padding:11px 12px;background:#FFE8A8;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:#D4A017;text-align:left;">' . htmlspecialchars($header) . '</th>';
+        $html .= '<th style="padding:11px 12px;background:#e8f0fe;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:#002868;text-align:left;">' . htmlspecialchars($header) . '</th>';
     }
     $html .= '</tr>';
     foreach ($rows as $row) {
         $html .= '<tr>';
         foreach ($row as $cell) {
-            $html .= '<td style="padding:10px 12px;border-top:1px solid #FFE8A8;font-size:13px;color:#333;">' . $cell . '</td>';
+            $html .= '<td style="padding:10px 12px;border-top:1px solid #e8f0fe;font-size:13px;color:#333;">' . $cell . '</td>';
         }
         $html .= '</tr>';
     }
@@ -246,32 +246,32 @@ function lumak_email_wrap(string $subtitle, string $contentHtml): string
     $email = defined('STORE_EMAIL') ? htmlspecialchars(STORE_EMAIL) : '';
 
     return '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>'
-        . '<body style="margin:0;padding:0;background:#FFF8E6;font-family:Poppins,Arial,sans-serif;color:#333;">'
-        . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFF8E6;padding:36px 16px;">'
+        . '<body style="margin:0;padding:0;background:#f8fafd;font-family:Poppins,Arial,sans-serif;color:#333;">'
+        . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f8fafd;padding:36px 16px;">'
         . '<tr><td align="center">'
         . '<table width="600" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;background:#ffffff;border-radius:18px;overflow:hidden;box-shadow:0 10px 40px rgba(1,43,127,0.14);">'
-        . '<tr><td style="background:#C48A0A;padding:28px 24px;text-align:center;">'
+        . '<tr><td style="background:#002868;padding:28px 24px;text-align:center;">'
         . '<a href="' . $storeUrl . '" style="text-decoration:none;"><img src="' . $logo . '" alt="' . $brand . '" style="max-width:150px;height:auto;display:block;margin:0 auto 12px;"></a>'
         . '<p style="margin:0;color:rgba(255,255,255,0.92);font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">' . $subtitleHtml . '</p>'
         . '</td></tr>'
         . '<tr><td style="padding:34px 30px 28px;">' . $contentHtml . '</td></tr>'
-        . '<tr><td style="background:#FFF8E6;padding:22px 30px;text-align:center;border-top:1px solid #f0e8ff;">'
-        . '<p style="margin:0 0 6px;font-size:13px;font-weight:700;color:#C48A0A;">' . $brand . '</p>'
-        . '<p style="margin:0 0 4px;font-size:11px;color:#888;">Mobile phones &amp; accessories with islandwide delivery</p>'
+        . '<tr><td style="background:#f8fafd;padding:22px 30px;text-align:center;border-top:1px solid #f0e8ff;">'
+        . '<p style="margin:0 0 6px;font-size:13px;font-weight:700;color:#002868;">' . $brand . '</p>'
+        . '<p style="margin:0 0 4px;font-size:11px;color:#888;">Direct Source for Sri Lankan Sapphires &amp; Fine Jewelry</p>'
         . ($phone ? '<p style="margin:0 0 4px;font-size:11px;color:#888;">' . $phone . '</p>' : '')
-        . ($email ? '<p style="margin:0 0 8px;font-size:11px;color:#888;"><a href="mailto:' . $email . '" style="color:#E5A91A;text-decoration:none;">' . $email . '</a></p>' : '')
+        . ($email ? '<p style="margin:0 0 8px;font-size:11px;color:#888;"><a href="mailto:' . $email . '" style="color:#003b94;text-decoration:none;">' . $email . '</a></p>' : '')
         . '<p style="margin:8px 0 0;font-size:11px;color:#aaa;">&copy; ' . $year . ' ' . $brand . '. All rights reserved.</p>'
         . '</td></tr></table></td></tr></table></body></html>';
 }
 
 function lumak_email_reset_password_template(string $name, string $resetLink): string
 {
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">Reset Your Password</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">Reset Your Password</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Hi <strong>' . htmlspecialchars($name) . '</strong>,</p>'
         . '<p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:#555;">We received a request to reset your password. Click the button below to choose a new one.</p>'
         . lumak_email_button($resetLink, 'Reset Password')
         . '<p style="margin:16px 0 0;font-size:12px;line-height:1.6;color:#888;">This link expires in <strong>1 hour</strong>. If you did not request this, you can safely ignore this email.</p>'
-        . '<p style="margin:12px 0 0;font-size:12px;line-height:1.6;color:#888;word-break:break-all;">Or copy this link:<br><a href="' . htmlspecialchars($resetLink) . '" style="color:#E0A810;">' . htmlspecialchars($resetLink) . '</a></p>';
+        . '<p style="margin:12px 0 0;font-size:12px;line-height:1.6;color:#888;word-break:break-all;">Or copy this link:<br><a href="' . htmlspecialchars($resetLink) . '" style="color:#002868;">' . htmlspecialchars($resetLink) . '</a></p>';
 
     return lumak_email_wrap('Account Security', $content);
 }
@@ -287,7 +287,7 @@ function lumak_email_order_status_template(
     $statusColors = [
         'pending' => '#ea580c',
         'processing' => '#2563eb',
-        'shipped' => '#E0A810',
+        'shipped' => '#002868',
         'delivered' => '#16a34a',
         'cancelled' => '#ef4444',
     ];
@@ -299,7 +299,7 @@ function lumak_email_order_status_template(
         'cancelled' => 'Your order has been cancelled. Contact us if you need help.',
     ];
 
-    $color = $statusColors[$status] ?? '#D4A017';
+    $color = $statusColors[$status] ?? '#002868';
     $msg = $statusMessages[$status] ?? 'Your order status has been updated.';
 
     $infoRows = [
@@ -316,7 +316,7 @@ function lumak_email_order_status_template(
 
     $content = '<div style="text-align:center;margin-bottom:18px;">'
         . '<span style="display:inline-block;padding:8px 18px;background:' . $color . ';color:#fff;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;">' . htmlspecialchars(ucfirst($status)) . '</span></div>'
-        . '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;text-align:center;">Order Update</h2>'
+        . '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;text-align:center;">Order Update</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Hi <strong>' . htmlspecialchars($name) . '</strong>,</p>'
         . '<p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:#555;">' . htmlspecialchars($msg) . '</p>'
         . lumak_email_info_box($infoRows)
@@ -355,7 +355,7 @@ function lumak_email_payment_status_template(string $name, string $orderNumber, 
         'pending' => 'Your payment is still pending. We will notify you once it is confirmed.',
     ];
 
-    $color = $statusColors[$status] ?? '#D4A017';
+    $color = $statusColors[$status] ?? '#002868';
     $msg = $statusMessages[$status] ?? 'Your payment status has been updated.';
     $label = $status === 'paid' ? 'Paid' : ucfirst($status);
 
@@ -366,7 +366,7 @@ function lumak_email_payment_status_template(string $name, string $orderNumber, 
 
     $content = '<div style="text-align:center;margin-bottom:18px;">'
         . '<span style="display:inline-block;padding:8px 18px;background:' . $color . ';color:#fff;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;">' . htmlspecialchars($label) . '</span></div>'
-        . '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;text-align:center;">Payment Update</h2>'
+        . '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;text-align:center;">Payment Update</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Hi <strong>' . htmlspecialchars($name) . '</strong>,</p>'
         . '<p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:#555;">' . htmlspecialchars($msg) . '</p>'
         . lumak_email_info_box([
@@ -499,15 +499,15 @@ function lumak_email_new_order_template(
         $badge = '<div style="background:#ecfdf5;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px;margin:0 0 16px;font-size:13px;color:#166534;">Placed via WhatsApp checkout.</div>';
     }
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">Order #' . htmlspecialchars($orderNumber) . '</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">Order #' . htmlspecialchars($orderNumber) . '</h2>'
         . $badge
         . lumak_email_info_box([
             ['Customer', $customerName],
             ['Phone', $phone],
             ['Email', $customerEmail ?: 'N/A'],
-            ['Total', 'LKR ' . number_format($total, 0), '#D4A017'],
+            ['Total', 'LKR ' . number_format($total, 0), '#002868'],
         ])
-        . '<h3 style="margin:18px 0 10px;font-size:14px;color:#D4A017;">Order Items</h3>'
+        . '<h3 style="margin:18px 0 10px;font-size:14px;color:#002868;">Order Items</h3>'
         . lumak_email_data_table(['Product', 'Qty', 'Total'], $rows)
         . lumak_email_button((defined('BASE_URL') ? BASE_URL : '/') . 'admin/orders.php', 'View in Admin');
 
@@ -516,15 +516,16 @@ function lumak_email_new_order_template(
 
 function lumak_email_newsletter_welcome_template(): string
 {
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#C48A0A;">Welcome to ARIGATO.LK!</h2>'
+    $brand = htmlspecialchars(lumak_email_brand_name());
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">Welcome to ' . $brand . '!</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Thank you for subscribing to our newsletter.</p>'
         . '<p style="margin:0 0 10px;font-size:14px;line-height:1.7;color:#555;">You will receive updates on:</p>'
         . '<ul style="margin:0 0 18px;padding-left:20px;color:#555;font-size:14px;line-height:1.9;">'
-        . '<li>New arrivals and trending tech</li>'
-        . '<li>Exclusive offers and discounts</li>'
-        . '<li>Mobiles, accessories, and gadget picks</li>'
-        . '<li>Store announcements</li></ul>'
-        . lumak_email_button(lumak_email_store_url() . 'shop.php', 'Browse the Shop');
+        . '<li>Exclusive Ceylon sapphire arrivals and fine gemstones</li>'
+        . '<li>Special offers and bespoke jewelry showcases</li>'
+        . '<li>China tour highlights and international partnerships</li>'
+        . '<li>Direct mine source announcements</li></ul>'
+        . lumak_email_button(lumak_email_store_url() . 'shop.php', 'Browse the Collection');
 
     return lumak_email_wrap('Newsletter', $content);
 }
@@ -578,7 +579,7 @@ function lumak_email_newsletter_body_plain(string $body): string
 
 function lumak_email_newsletter_broadcast_template(string $subject, string $body): string
 {
-    $content = '<h2 style="margin:0 0 14px;font-size:22px;color:#D4A017;">' . htmlspecialchars($subject, ENT_QUOTES, 'UTF-8') . '</h2>'
+    $content = '<h2 style="margin:0 0 14px;font-size:22px;color:#002868;">' . htmlspecialchars($subject, ENT_QUOTES, 'UTF-8') . '</h2>'
         . '<div style="font-size:14px;line-height:1.8;color:#555;">' . lumak_email_newsletter_body_html($body) . '</div>'
         . lumak_email_button(lumak_email_store_url() . 'shop.php', 'Shop Now');
 
@@ -606,7 +607,7 @@ function lumak_email_chat_notification_template(
         $rows[] = ['Message', $clientMessage];
     }
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">New Chat Message</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">New Chat Message</h2>'
         . '<p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#555;">' . htmlspecialchars($intro) . '</p>'
         . lumak_email_info_box($rows)
         . lumak_email_button((defined('BASE_URL') ? BASE_URL : '/') . 'admin/chats.php?id=' . $conversationId, 'Open Chat in Admin');
@@ -616,10 +617,10 @@ function lumak_email_chat_notification_template(
 
 function lumak_email_chat_reply_template(string $userName, string $replyMessage): string
 {
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">Support Reply</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">Support Reply</h2>'
         . '<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#555;">Hi <strong>' . htmlspecialchars($userName) . '</strong>,</p>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Our support team has replied to your chat:</p>'
-        . '<div style="border-left:4px solid #E0A810;padding:14px 18px;background:#FFF8E6;border-radius:0 12px 12px 0;margin:0 0 18px;">'
+        . '<div style="border-left:4px solid #002868;padding:14px 18px;background:#f8fafd;border-radius:0 12px 12px 0;margin:0 0 18px;">'
         . '<p style="margin:0;font-size:14px;line-height:1.7;color:#333;">' . nl2br(htmlspecialchars($replyMessage)) . '</p></div>'
         . lumak_email_button(lumak_email_store_url() . 'contact.php', 'Continue on Website');
 

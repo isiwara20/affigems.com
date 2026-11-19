@@ -25,8 +25,8 @@ $gatewayCount = count($availableGateways);
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand: #E5A91A;
-            --brand-dark: #D4A017;
+            --brand: #003b94;
+            --brand-dark: #002868;
             --ink: #0d1137;
             --muted: #6b7099;
             --line: #e8ecf4;
@@ -37,7 +37,7 @@ $gatewayCount = count($availableGateways);
         body { font-family:'Poppins',sans-serif; background:var(--page); color:var(--ink); min-height:100vh; }
 
         .topbar {
-            background:#8A6508;
+            background:#001f52;
             padding:18px 24px;
             display:flex; align-items:center; justify-content:space-between;
         }
@@ -260,7 +260,7 @@ $gatewayCount = count($availableGateways);
                     $payTotal = ezymart_payment_total_with_surcharge($baseAmount, $gid);
                     $isBnpl = ($brand['type'] ?? '') === 'bnpl';
                     $cards = $brand['cards'] ?? ['visa', 'mastercard'];
-                    $accent = $brand['accent'] ?? '#E5A91A';
+                    $accent = $brand['accent'] ?? '#003b94';
                     $logoBg = $brand['logo_bg'] ?? '#111827';
                 ?>
                 <label class="pay-tile" data-gateway="<?php echo htmlspecialchars($gid); ?>">

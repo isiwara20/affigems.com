@@ -42,7 +42,7 @@ $conn->exec("CREATE TABLE IF NOT EXISTS products (
     stock INT DEFAULT 0,
     image VARCHAR(255) NULL,
     images TEXT NULL,
-    author VARCHAR(100) DEFAULT 'ARIGATO.LK',
+    author VARCHAR(100) DEFAULT 'Affinity Gems & Jewels',
     status ENUM('active', 'inactive') DEFAULT 'active',
     featured TINYINT(1) DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -218,7 +218,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Products - Admin | ARIGATO.LK</title>
+    <title>Products - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -422,7 +422,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
 
                 <!-- Footer -->
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

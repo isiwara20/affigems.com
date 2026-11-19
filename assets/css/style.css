@@ -1,18 +1,23 @@
-/* ===== ARIGATO.LK AMBER / GOLD THEME ===== */
+/* ===== AFFINITY GEMS & JEWELS ROYAL SAPPHIRE BLUE THEME ===== */
 :root {
-    /* Primary brand color — Arigato amber/yellow (darker) */
-    --purple-dark: #B8860B;
-    --purple-darker: #8A6508;
-    --purple-primary: #E0A810;
-    --purple-mid: #D49A0A;
-    --purple-accent: #E5A91A;
-    --purple-light: #FFEEC2;
-    --purple-lavender: #FFF3D6;
-    --purple-soft: #FFF8E6;
+    /* Primary brand colors — Affinity Royal Sapphire Blue */
+    --purple-dark: #001f52;
+    --purple-darker: #001b44;
+    --purple-primary: #002868;
+    --purple-mid: #003b94;
+    --purple-accent: #0a58ca;
+    --purple-light: #e8f0fe;
+    --purple-lavender: #f4f7fc;
+    --purple-soft: #f8fafd;
 
-    /* Gold accent */
-    --arigato-gold: #E0A810;
-    --arigato-gold-dark: #C48A0A;
+    /* Sapphire Blue accents */
+    --arigato-gold: #002868;
+    --arigato-gold-dark: #001f52;
+    --brand-blue: #002868;
+    --brand-blue-dark: #001f52;
+    --brand-blue-mid: #003b94;
+    --brand-blue-light: #e8f0fe;
+    --brand-blue-subtle: #f8fafd;
     --lumak-topbar-real: 38px;
     --lumak-topbar-h: var(--lumak-topbar-real);
     --lumak-navbar-h: 65px;
@@ -49,7 +54,7 @@ body {
     z-index: 1000;
     width: 100%;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(196, 138, 10, 0.12);
+    box-shadow: 0 2px 12px rgba(0, 40, 104, 0.12);
 }
 
 #main-content {
@@ -93,8 +98,8 @@ ul {
 }
 
 .top-bar {
-    background: var(--purple-primary);
-    color: #1a1a1a;
+    background: #002868;
+    color: #ffffff;
     font-size: 12px;
     padding: 10px 0;
     width: 100%;
@@ -129,7 +134,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: rgba(26, 26, 26, 0.92);
+    color: rgba(255, 255, 255, 0.92);
     font-weight: 500;
 }
 
@@ -138,7 +143,7 @@ ul {
 .top-bar-right .language-selector i,
 .top-bar-right .currency-selector i,
 .top-bar-right .top-link i {
-    color: rgba(26, 26, 26, 0.95);
+    color: #002868;
     font-size: 11px;
 }
 
@@ -147,14 +152,14 @@ ul {
 .top-bar-right .top-link:hover,
 .top-bar-right .language-selector:hover,
 .top-bar-right .currency-selector:hover {
-    color: #8A6508;
+    color: #002868;
 }
 
 .top-bar-left span:hover i,
 .top-bar-right a:hover i,
 .top-bar-right .top-link:hover i,
 .top-bar-right .language-selector:hover i {
-    color: #8A6508;
+    color: #002868;
 }
 
 .top-bar-right {
@@ -189,7 +194,7 @@ ul {
 .top-bar-divider {
     width: 1px;
     height: 14px;
-    background: rgba(26, 26, 26, 0.22);
+    background: rgba(255, 255, 255, 0.22);
     margin: 0 18px;
     flex-shrink: 0;
 }
@@ -201,7 +206,7 @@ ul {
 }
 
 .language-selector:hover {
-    color: #8A6508 !important;
+    color: #001f52 !important;
 }
 
 /* ===== NAVBAR ===== */
@@ -249,7 +254,7 @@ ul {
 .logo-brand {
     font-size: 20px;
     font-weight: 800;
-    color: #D4A017;
+    color: #002868;
     line-height: 1.2;
 }
 
@@ -261,7 +266,7 @@ ul {
 
 .logo-phone i {
     font-size: 10px;
-    color: #E5A91A;
+    color: #003b94;
 }
 
 /* Search Bar */
@@ -277,7 +282,7 @@ ul {
 }
 
 .search-bar:focus-within {
-    border-color: #E0A810;
+    border-color: #002868;
     box-shadow: 0 0 0 3px rgba(250, 188, 39, 0.06);
 }
 
@@ -309,7 +314,7 @@ ul {
 }
 
 .search-btn {
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -320,7 +325,7 @@ ul {
 }
 
 .search-btn:hover {
-    background: #E0A810;
+    background: #002868;
 }
 
 /* Nav Actions */
@@ -355,12 +360,12 @@ ul {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    color: #E0A810;
+    color: #002868;
     transition: all 0.3s;
 }
 
 .nav-action-item:hover .nav-action-icon {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
 }
 
@@ -372,7 +377,7 @@ ul {
 .nav-action-label {
     font-size: 13px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     line-height: 1.2;
 }
 
@@ -387,7 +392,7 @@ ul {
     position: absolute;
     top: -4px;
     right: -4px;
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     font-size: 9px;
     font-weight: 700;
@@ -442,7 +447,7 @@ ul {
 
 .profile-dropdown-item:hover {
     background: #f8f9fc;
-    color: #D4A017;
+    color: #002868;
 }
 
 .profile-dropdown-item i {
@@ -453,7 +458,7 @@ ul {
 }
 
 .profile-dropdown-item:hover i {
-    color: #D4A017;
+    color: #002868;
 }
 
 .profile-dropdown-item.logout {
@@ -480,7 +485,7 @@ ul {
     background: none;
     border: none;
     font-size: 22px;
-    color: #E0A810;
+    color: #002868;
     cursor: pointer;
     padding: 8px;
     width: 42px;
@@ -510,14 +515,14 @@ ul {
     height: 42px;
     min-width: 42px;
     border-radius: 50%;
-    color: #E0A810;
+    color: #002868;
     text-decoration: none;
     background: #f0f2f8;
     transition: background 0.2s;
 }
 
 .mobile-header-cart:hover {
-    background: #FFF3D6;
+    background: #f4f7fc;
 }
 
 .mobile-header-cart i {
@@ -594,14 +599,14 @@ ul {
 
 .mobile-menu-item i {
     font-size: 16px;
-    color: #E0A810;
+    color: #002868;
     width: 22px;
     text-align: center;
 }
 
 .mobile-hotline-number {
     font-weight: 700;
-    color: #E0A810;
+    color: #002868;
     letter-spacing: 0.02em;
 }
 
@@ -626,7 +631,7 @@ ul {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.3;
-    color: #E0A810;
+    color: #002868;
 }
 
 .store-phone-table--sm {
@@ -654,7 +659,7 @@ ul {
 }
 
 .store-phone-link:hover {
-    color: #D4A017;
+    color: #002868;
 }
 
 .mobile-badge {
@@ -735,14 +740,14 @@ ul {
 .login-form-container h1 {
     font-size: 32px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 6px;
     letter-spacing: -0.5px;
-    font-style: italic;
+    font-style: normal;
 }
 
 .login-subtitle {
-    color: #5a7a6a;
+    color: #555566;
     font-size: 14px;
     margin-bottom: 32px;
 }
@@ -817,9 +822,9 @@ ul {
 
 .form-group label {
     display: block;
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     margin-bottom: 8px;
 }
 
@@ -834,9 +839,9 @@ ul {
 }
 
 .input-wrapper:focus-within {
-    border-color: #E0A810;
+    border-color: #002868;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(250, 188, 39, 0.06);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.08);
 }
 
 .input-icon {
@@ -848,7 +853,7 @@ ul {
 }
 
 .input-wrapper:focus-within .input-icon {
-    color: #E0A810;
+    color: #002868;
 }
 
 .input-wrapper input {
@@ -860,7 +865,7 @@ ul {
     font-size: 14px;
     border-radius: 12px;
     background: transparent;
-    color: #333;
+    color: #1a1a2e;
 }
 
 .input-wrapper input::placeholder {
@@ -880,7 +885,7 @@ ul {
 }
 
 .toggle-password:hover {
-    color: #E0A810;
+    color: #002868;
 }
 
 /* Form Options */
@@ -903,19 +908,19 @@ ul {
 .remember-me input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #E0A810;
+    accent-color: #002868;
     border-radius: 4px;
 }
 
 .forgot-password {
     font-size: 13px;
-    color: #E5A91A;
+    color: #002868;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .forgot-password:hover {
-    color: #E5A91A;
+    color: #001f52;
     text-decoration: underline;
 }
 
@@ -923,8 +928,8 @@ ul {
 .btn-login {
     width: 100%;
     padding: 16px 24px;
-    background: #E0A810;
-    color: #1a1a1a;
+    background: #002868;
+    color: #ffffff;
     border: none;
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
@@ -948,7 +953,7 @@ ul {
 .btn-login i {
     position: absolute;
     right: 20px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.18);
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -959,9 +964,9 @@ ul {
 }
 
 .btn-login:hover {
-    background: #D49A0A;
+    background: #001f52;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(250, 188, 39, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 40, 104, 0.25);
 }
 
 .btn-login:active {
@@ -1008,8 +1013,8 @@ ul {
 
 .login-method-tab.is-active {
     background: #fff;
-    color: #D4A017;
-    box-shadow: 0 2px 8px rgba(196, 138, 10, 0.08);
+    color: #002868;
+    box-shadow: 0 2px 8px rgba(0, 40, 104, 0.08);
 }
 
 .login-panels-stage {
@@ -1090,7 +1095,7 @@ ul {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     margin-bottom: 10px;
 }
 
@@ -1115,14 +1120,14 @@ ul {
     text-align: center;
     padding: 0;
     transition: all 0.2s ease;
-    caret-color: #E0A810;
+    caret-color: #002868;
 }
 
 .login-otp-box:focus {
     outline: none;
-    border-color: #E0A810;
+    border-color: #002868;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(250, 188, 39, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.08);
 }
 
 .login-otp-box.is-filled {
@@ -1262,11 +1267,11 @@ ul {
 
 .btn-login-secondary {
     margin-top: 10px;
-    background: #8A6508;
+    background: #002868;
 }
 
 .btn-login-secondary:hover {
-    background: #6B4F06;
+    background: #001f52;
 }
 
 .login-otp-back {
@@ -1275,7 +1280,7 @@ ul {
     margin-top: 12px;
     border: none;
     background: transparent;
-    color: #E0A810;
+    color: #002868;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
@@ -1285,6 +1290,7 @@ ul {
 
 .login-otp-back:hover {
     text-decoration: underline;
+    color: #001f52;
 }
 
 .login-divider {
@@ -1360,18 +1366,18 @@ ul {
 .register-link {
     text-align: center;
     font-size: 13px;
-    color: #5a7a6a;
+    color: #555566;
     margin-top: 20px;
 }
 
 .register-link a {
-    color: #D4A017;
+    color: #002868;
     font-weight: 700;
     transition: color 0.3s;
 }
 
 .register-link a:hover {
-    color: #E5A91A;
+    color: #001f52;
     text-decoration: underline;
 }
 
@@ -1440,10 +1446,10 @@ ul {
     justify-content: center;
     width: 70px;
     height: 70px;
-    background: #f0f2f8;
+    background: #eef2fb;
     border-radius: 50%;
     font-size: 28px;
-    color: #E0A810;
+    color: #002868;
 }
 
 .back-to-login {
@@ -1455,14 +1461,15 @@ ul {
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    font-weight: 500;
-    color: #E0A810;
+    font-weight: 600;
+    color: #002868;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .back-to-login a:hover {
-    color: #E5A91A;
+    color: #001f52;
+    text-decoration: underline;
 }
 
 .back-to-login a i {
@@ -1472,8 +1479,8 @@ ul {
 /* ===== CATEGORY NAVIGATION BAR ===== */
 .category-nav {
     background: #fff;
-    border-bottom: 1px solid #F5E6B8;
-    border-top: 1px solid #F5E6B8;
+    border-bottom: 1px solid #dbe5f5;
+    border-top: 1px solid #dbe5f5;
     padding: 0;
     box-shadow: none;
     position: relative;
@@ -1505,7 +1512,7 @@ ul {
     gap: 8px;
     padding: 0 20px;
     background: var(--purple-primary);
-    background-color: #E0A810;
+    background-color: #002868;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -1527,7 +1534,7 @@ ul {
 .category-nav .all-categories-btn:hover,
 .category-nav .all-categories-btn.active {
     background: var(--purple-mid);
-    background-color: #E5A91A;
+    background-color: #003b94;
     color: #fff;
 }
 
@@ -1608,8 +1615,8 @@ ul {
 .cat-dropdown-list li:hover a,
 .cat-dropdown-list li.active a {
     background: #f8f9fc;
-    color: #E5A91A;
-    border-left-color: #E5A91A;
+    color: #003b94;
+    border-left-color: #003b94;
 }
 
 .cat-dropdown-list li a i {
@@ -1620,7 +1627,7 @@ ul {
 
 .cat-dropdown-list li:hover a i,
 .cat-dropdown-list li.active a i {
-    color: #E5A91A;
+    color: #003b94;
 }
 
 /* Right Panel: Products */
@@ -1656,8 +1663,8 @@ ul {
 }
 
 .cat-product-list li a:hover {
-    background: #FFE8A8;
-    color: #E5A91A;
+    background: #e8f0fe;
+    color: #003b94;
     padding-left: 24px;
 }
 
@@ -1698,15 +1705,15 @@ ul {
 }
 
 .category-nav .cat-link:hover {
-    color: #C48A0A;
-    background: #FFE8A8;
+    color: #002868;
+    background: #e8f0fe;
 }
 
 .category-nav .cat-link.active {
-    color: #C48A0A;
+    color: #002868;
     font-weight: 700;
-    border-bottom-color: #E0A810;
-    background: #FFF3D6;
+    border-bottom-color: #002868;
+    background: #f4f7fc;
 }
 
 /* Category nav - hide items progressively on smaller screens */
@@ -1775,7 +1782,7 @@ ul {
 .page-title {
     font-size: 30px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 6px;
 }
 
@@ -1790,7 +1797,7 @@ ul {
 .page-body h2 {
     font-size: 18px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     margin-top: 30px;
     margin-bottom: 12px;
 }
@@ -1824,17 +1831,17 @@ ul {
 }
 
 .page-body ul li strong {
-    color: #E0A810;
+    color: #002868;
 }
 
 .page-body a {
-    color: #E0A810;
+    color: #002868;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 .page-body a:hover {
-    color: #D4A017;
+    color: #002868;
 }
 
 .page-ordered-list {
@@ -1886,8 +1893,8 @@ ul {
     height: 22px;
     border-radius: 50%;
     background: #fff;
-    border: 1px solid #F5E6B8;
-    color: #E0A810;
+    border: 1px solid #dbe5f5;
+    color: #002868;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -1916,7 +1923,7 @@ ul {
 }
 
 .faq-item p a {
-    color: #E0A810;
+    color: #002868;
 }
 
 @media (max-width: 768px) {
@@ -1936,7 +1943,7 @@ ul {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: #C48A0A;
+    background: #002868;
     color: #fff;
     width: 100%;
     margin: 0;
@@ -2072,7 +2079,7 @@ ul {
     bottom: 0;
     width: 30px;
     height: 2px;
-    background: #4caf50;
+    background: #002868;
     border-radius: 2px;
 }
 
@@ -2102,7 +2109,7 @@ ul {
 .footer-social a:hover {
     background: #fff;
     border-color: #fff;
-    color: #D4A017;
+    color: #002868;
     transform: translateY(-2px);
 }
 
@@ -2241,7 +2248,7 @@ ul {
     bottom: 0;
     width: 30px;
     height: 2px;
-    background: #E0A810;
+    background: #002868;
     border-radius: 2px;
 }
 
@@ -2308,22 +2315,23 @@ ul {
 .btn-subscribe {
     width: 100%;
     padding: 11px;
-    background: #E0A810;
-    color: #1a1a1a;
+    background: #002868;
+    color: #002868;
     border: none;
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
 }
 
 .btn-subscribe:hover {
-    background: #D49A0A;
+    background: #f1b71c;
+    color: #001f52;
     transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(196, 138, 10, 0.35);
+    box-shadow: 0 4px 15px rgba(0, 40, 104, 0.4);
 }
 
 /* Payment Section */
@@ -2333,7 +2341,7 @@ ul {
 
 .payment-title {
     font-size: 12px;
-    color: #5a7a6a;
+    color: rgba(255, 255, 255, 0.75);
     margin-bottom: 10px;
     font-weight: 500;
     text-transform: uppercase;
@@ -2383,7 +2391,7 @@ ul {
 .footer-bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 14px 0 14px;
-    background: #A87608;
+    background: #001f52;
 }
 
 .footer-bottom-content {
@@ -2457,7 +2465,7 @@ ul {
     background: #fff;
     border-radius: 999px;
     box-shadow:
-        0 8px 32px rgba(196, 138, 10, 0.14),
+        0 8px 32px rgba(0, 40, 104, 0.14),
         0 2px 8px rgba(0, 0, 0, 0.06),
         0 0 0 1px rgba(250, 188, 39, 0.06);
 }
@@ -2498,12 +2506,12 @@ ul {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #E0A810;
+    background: #002868;
     margin-bottom: 1px;
 }
 
 .mobile-nav-item.is-active {
-    color: #E0A810;
+    color: #002868;
 }
 
 .mobile-nav-item.is-active .mobile-nav-dot {
@@ -2512,7 +2520,7 @@ ul {
 
 .mobile-nav-item--shop {
     margin-top: -18px;
-    color: #E0A810;
+    color: #002868;
 }
 
 .mobile-nav-shop-ring {
@@ -2637,7 +2645,7 @@ ul {
 }
 
 .mobile-cat-sheet-all {
-    color: #E0A810;
+    color: #002868;
     font-weight: 600;
     margin-bottom: 4px;
 }
@@ -2655,13 +2663,13 @@ body.mobile-cat-open {
 @media (max-width: 992px) {
     .login-wrapper {
         grid-template-columns: 1fr;
-        max-width: 92%;
-        width: 92%;
+        max-width: 540px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .login-brand-panel {
-        min-height: 300px;
-        padding: 0;
+        display: none !important;
     }
 
     .footer-grid {
@@ -3031,12 +3039,7 @@ body.mobile-cat-open {
     }
 
     .login-brand-panel {
-        min-height: 260px;
-        padding: 0;
-    }
-
-    .login-brand-panel h2 {
-        font-size: 20px;
+        display: none !important;
     }
 
     .login-wrapper {
@@ -3089,12 +3092,12 @@ body.mobile-cat-open {
     flex-wrap: wrap;
 }
 .product-page-breadcrumb a {
-    color: #D4A017;
+    color: #002868;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
-.product-page-breadcrumb a:hover { color: #E5A91A; }
+.product-page-breadcrumb a:hover { color: #003b94; }
 .product-page-breadcrumb .separator { color: #ccc; font-size: 10px; }
 
 /* ===== PROFILE PAGE ===== */
@@ -3118,7 +3121,7 @@ body.mobile-cat-open {
 }
 
 .breadcrumb-section .breadcrumb a:hover {
-    color: #E5A91A;
+    color: #003b94;
 }
 
 .breadcrumb-sep {
@@ -3128,7 +3131,7 @@ body.mobile-cat-open {
 }
 
 .breadcrumb-current {
-    color: #E0A810;
+    color: #002868;
     font-weight: 500;
 }
 
@@ -3145,7 +3148,7 @@ body.mobile-cat-open {
 .profile-page-header h1 {
     font-size: 26px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 4px;
 }
 
@@ -3216,7 +3219,7 @@ body.mobile-cat-open {
 .profile-sidebar-title {
     font-size: 14px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     padding: 0 20px 14px;
     margin-bottom: 4px;
     border-bottom: 1px solid #f0f2f8;
@@ -3243,13 +3246,13 @@ body.mobile-cat-open {
 
 .profile-nav-item:hover {
     background: #f8f9fc;
-    color: #E0A810;
+    color: #002868;
 }
 
 .profile-nav-item.active {
     background: #f0f2f8;
-    color: #E0A810;
-    border-left-color: #E0A810;
+    color: #002868;
+    border-left-color: #002868;
     font-weight: 600;
 }
 
@@ -3261,7 +3264,7 @@ body.mobile-cat-open {
 }
 
 .profile-nav-item.active i {
-    color: #E0A810;
+    color: #002868;
 }
 
 /* Sidebar Help */
@@ -3277,7 +3280,7 @@ body.mobile-cat-open {
 .profile-sidebar-help h4 {
     font-size: 14px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 4px;
 }
 
@@ -3299,7 +3302,7 @@ body.mobile-cat-open {
     border-radius: 10px;
     font-size: 12px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     text-decoration: none;
     transition: all 0.2s;
 }
@@ -3328,7 +3331,7 @@ body.mobile-cat-open {
 .profile-card-header h2 {
     font-size: 16px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
 }
 
 .profile-card-body {
@@ -3369,7 +3372,7 @@ body.mobile-cat-open {
     right: 4px;
     width: 30px;
     height: 30px;
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -3382,13 +3385,13 @@ body.mobile-cat-open {
 }
 
 .photo-edit-btn:hover {
-    background: #E0A810;
+    background: #002868;
 }
 
 .edit-photo-link {
     font-size: 12px;
     font-weight: 500;
-    color: #E0A810;
+    color: #002868;
     background: none;
     border: none;
     cursor: pointer;
@@ -3399,7 +3402,7 @@ body.mobile-cat-open {
 }
 
 .edit-photo-link:hover {
-    color: #E5A91A;
+    color: #003b94;
 }
 
 /* Profile Form */
@@ -3419,15 +3422,15 @@ body.mobile-cat-open {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .btn-edit-profile:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
-    border-color: #E0A810;
+    border-color: #002868;
 }
 
 .btn-edit-profile i {
@@ -3496,7 +3499,7 @@ body.mobile-cat-open {
     display: block;
     font-size: 12px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     margin-bottom: 6px;
 }
 
@@ -3514,7 +3517,7 @@ body.mobile-cat-open {
 }
 
 .profile-form .form-group input:focus {
-    border-color: #E0A810;
+    border-color: #002868;
     background: #fff;
     box-shadow: 0 0 0 3px rgba(250, 188, 39, 0.06);
 }
@@ -3527,7 +3530,7 @@ body.mobile-cat-open {
 
 .form-hint {
     font-size: 11px;
-    color: #E5A91A;
+    color: #003b94;
     margin-top: 4px;
     display: block;
 }
@@ -3543,7 +3546,7 @@ body.mobile-cat-open {
 
 .btn-save-profile {
     padding: 12px 28px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -3555,7 +3558,7 @@ body.mobile-cat-open {
 }
 
 .btn-save-profile:hover {
-    background: #E0A810;
+    background: #002868;
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(250, 188, 39, 0.25);
 }
@@ -3570,7 +3573,7 @@ body.mobile-cat-open {
 .profile-preferences h3 {
     font-size: 15px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 14px;
 }
 
@@ -3587,7 +3590,7 @@ body.mobile-cat-open {
 .checkbox-label input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #E0A810;
+    accent-color: #002868;
     border-radius: 4px;
 }
 
@@ -3609,7 +3612,7 @@ body.mobile-cat-open {
 .profile-overview-card h3 {
     font-size: 15px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid #f0f2f8;
@@ -3638,7 +3641,7 @@ body.mobile-cat-open {
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    color: #E0A810;
+    color: #002868;
 }
 
 .overview-stat-info {
@@ -3654,7 +3657,7 @@ body.mobile-cat-open {
 .overview-stat-value {
     font-size: 14px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
 }
 
 /* Overview Meta */
@@ -3677,7 +3680,7 @@ body.mobile-cat-open {
 .overview-meta-item i {
     width: 16px;
     text-align: center;
-    color: #E0A810;
+    color: #002868;
 }
 
 .overview-meta-item span {
@@ -3777,7 +3780,7 @@ body.mobile-cat-open {
 .empty-state h4 {
     font-size: 15px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 6px;
 }
 
@@ -3822,7 +3825,7 @@ body.mobile-cat-open {
 }
 
 .password-toggle-btn:hover {
-    color: #E0A810;
+    color: #002868;
 }
 
 /* Address Grid */
@@ -3841,12 +3844,12 @@ body.mobile-cat-open {
 }
 
 .address-card:hover {
-    border-color: #E0A810;
+    border-color: #002868;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .address-card-default {
-    border-color: #E0A810;
+    border-color: #002868;
     background: #f8f9fc;
 }
 
@@ -3865,7 +3868,7 @@ body.mobile-cat-open {
     gap: 8px;
     font-size: 13px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
 }
 
 .address-label i {
@@ -3877,7 +3880,7 @@ body.mobile-cat-open {
     font-size: 10px;
     padding: 2px 8px;
     border-radius: 20px;
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
@@ -3906,7 +3909,7 @@ body.mobile-cat-open {
 }
 
 .address-action-btn:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
 }
 
@@ -3924,7 +3927,7 @@ body.mobile-cat-open {
 .address-name {
     font-size: 14px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
 }
 
 .address-text {
@@ -3944,14 +3947,14 @@ body.mobile-cat-open {
 
 .address-phone i {
     font-size: 10px;
-    color: #E0A810;
+    color: #002868;
 }
 
 /* Add address button in empty state */
 .btn-add-address-empty {
     margin-top: 16px;
     padding: 10px 22px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -3996,7 +3999,7 @@ body.mobile-cat-open {
 }
 
 .profile-select:focus {
-    border-color: #E0A810;
+    border-color: #002868;
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(250, 188, 39, 0.06);
 }
@@ -4053,7 +4056,7 @@ body.mobile-cat-open {
     }
 
     .profile-nav-item.active {
-        background: #E0A810;
+        background: #002868;
         color: #fff;
         border-left-color: transparent;
     }
@@ -4109,7 +4112,7 @@ body.mobile-cat-open {
     right: 24px;
     width: 56px;
     height: 56px;
-    background: #D49A0A;
+    background: #001f52;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -4131,6 +4134,67 @@ body.mobile-cat-open {
     transform: scale(0);
     opacity: 0;
     pointer-events: none;
+}
+
+/* ===== FLOATING WHATSAPP TRIGGER ===== */
+.whatsapp-floating-trigger {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9989;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whatsapp-floating-trigger:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+    color: #fff !important;
+}
+
+.whatsapp-floating-tooltip {
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #111827;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.whatsapp-floating-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #111827;
+}
+
+.whatsapp-floating-trigger:hover .whatsapp-floating-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-4px);
 }
 
 .chatbot-badge {
@@ -4177,7 +4241,7 @@ body.mobile-cat-open {
 
 /* Header */
 .chatbot-header {
-    background: #D49A0A;
+    background: #001f52;
     padding: 14px 16px;
     display: flex;
     align-items: center;
@@ -4318,7 +4382,7 @@ body.mobile-cat-open {
 }
 
 .chat-bubble-user {
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border-radius: 14px 14px 4px 14px;
 }
@@ -4388,7 +4452,7 @@ body.mobile-cat-open {
 }
 
 .chat-product-item:hover {
-    border-color: #E0A810;
+    border-color: #002868;
     background: #f8f9fc;
 }
 
@@ -4419,7 +4483,7 @@ body.mobile-cat-open {
 .chat-product-item-info .chat-product-price {
     font-size: 11px;
     font-weight: 700;
-    color: #E5A91A;
+    color: #003b94;
 }
 
 .chat-product-item i {
@@ -4460,7 +4524,7 @@ body.mobile-cat-open {
 }
 
 .chat-category-item:hover {
-    border-color: #E0A810;
+    border-color: #002868;
     background: #f8f9fc;
 }
 
@@ -4494,15 +4558,15 @@ body.mobile-cat-open {
     font-family: 'Poppins', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    color: #E0A810;
+    color: #002868;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .chatbot-quick-btn:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
-    border-color: #E0A810;
+    border-color: #002868;
 }
 
 /* Input Area */
@@ -4528,13 +4592,13 @@ body.mobile-cat-open {
 }
 
 .chatbot-input-area input:focus {
-    border-color: #E0A810;
+    border-color: #002868;
 }
 
 .chatbot-send-btn {
     width: 38px;
     height: 38px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -4588,6 +4652,34 @@ body.mobile-cat-open {
     body.has-product-sticky-actions .mobile-chrome-stack .chatbot-trigger {
         right: 8px;
     }
+
+    .mobile-chrome-stack .whatsapp-floating-trigger {
+        position: absolute;
+        right: 4px;
+        bottom: calc(100% + 64px + var(--lumak-product-sticky-h, 0px));
+        left: auto;
+        top: auto;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        pointer-events: auto;
+        z-index: 2;
+        transition: bottom 0.28s ease, transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-floating-tooltip {
+        display: none !important;
+    }
+
+    body.mobile-cat-open .mobile-chrome-stack .whatsapp-floating-trigger {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.85);
+    }
+
+    body.has-product-sticky-actions .mobile-chrome-stack .whatsapp-floating-trigger {
+        right: 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4602,6 +4694,13 @@ body.mobile-cat-open {
         width: 42px;
         height: 42px;
         font-size: 17px;
+    }
+
+    .mobile-chrome-stack .whatsapp-floating-trigger {
+        right: 2px;
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
     }
 }
 
@@ -4636,7 +4735,7 @@ body.mobile-cat-open {
 }
 
 .myorders-card:hover {
-    border-color: #E0A810;
+    border-color: #002868;
     box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
 
@@ -4656,7 +4755,7 @@ body.mobile-cat-open {
 .myorders-card-number {
     font-size: 14px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
 }
 
 .myorders-card-date {
@@ -4709,7 +4808,7 @@ body.mobile-cat-open {
 .myorders-card-total {
     font-size: 16px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
 }
 
 .myorders-card-footer {
@@ -4720,7 +4819,7 @@ body.mobile-cat-open {
 .myorders-card-view {
     font-size: 12px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -4760,7 +4859,7 @@ body.mobile-cat-open {
 .myorders-empty h3 {
     font-size: 18px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 6px;
 }
 
@@ -4775,7 +4874,7 @@ body.mobile-cat-open {
     align-items: center;
     gap: 8px;
     padding: 12px 28px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border-radius: 10px;
     font-size: 13px;
@@ -4801,14 +4900,14 @@ body.mobile-cat-open {
     gap: 6px;
     font-size: 13px;
     font-weight: 500;
-    color: #E0A810;
+    color: #002868;
     text-decoration: none;
     margin-bottom: 20px;
     transition: color 0.2s;
 }
 
 .myorders-back:hover {
-    color: #E5A91A;
+    color: #003b94;
 }
 
 .myorders-detail-header {
@@ -4825,7 +4924,7 @@ body.mobile-cat-open {
 .myorders-detail-header h2 {
     font-size: 18px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 2px;
 }
 
@@ -4869,14 +4968,14 @@ body.mobile-cat-open {
 }
 
 .progress-step.completed .progress-icon {
-    background: #E0A810;
-    border-color: #E0A810;
+    background: #002868;
+    border-color: #002868;
     color: #fff;
 }
 
 .progress-step.current .progress-icon {
-    border-color: #E5A91A;
-    color: #E5A91A;
+    border-color: #003b94;
+    color: #003b94;
     box-shadow: 0 0 0 4px rgba(0, 68, 204, 0.1);
 }
 
@@ -4888,7 +4987,7 @@ body.mobile-cat-open {
 
 .progress-step.completed .progress-label,
 .progress-step.current .progress-label {
-    color: #D4A017;
+    color: #002868;
     font-weight: 600;
 }
 
@@ -4901,7 +5000,7 @@ body.mobile-cat-open {
 }
 
 .progress-line.completed {
-    background: #E0A810;
+    background: #002868;
 }
 
 .myorders-cancelled-notice {
@@ -4929,7 +5028,7 @@ body.mobile-cat-open {
 .myorders-items-card h3 {
     font-size: 14px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -4937,7 +5036,7 @@ body.mobile-cat-open {
 }
 
 .myorders-items-card h3 i {
-    color: #E5A91A;
+    color: #003b94;
 }
 
 .myorders-items-list {
@@ -4959,7 +5058,7 @@ body.mobile-cat-open {
 .myorders-item-info h4 {
     font-size: 13px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 2px;
 }
 
@@ -4971,14 +5070,14 @@ body.mobile-cat-open {
 .myorders-item-total {
     font-size: 14px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
 }
 
 /* Totals */
 .myorders-totals {
     margin-top: 14px;
     padding-top: 14px;
-    border-top: 1.5px solid #D4A017;
+    border-top: 1.5px solid #002868;
 }
 
 .myorders-total-row {
@@ -4993,7 +5092,7 @@ body.mobile-cat-open {
 }
 
 .myorders-total-row strong {
-    color: #D4A017;
+    color: #002868;
 }
 
 .myorders-total-row.discount strong {
@@ -5009,7 +5108,7 @@ body.mobile-cat-open {
 .myorders-total-row.grand span {
     font-size: 15px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
 }
 
 .myorders-total-row.grand strong {
@@ -5034,7 +5133,7 @@ body.mobile-cat-open {
 .myorders-info-card h3 {
     font-size: 13px;
     font-weight: 700;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -5042,7 +5141,7 @@ body.mobile-cat-open {
 }
 
 .myorders-info-card h3 i {
-    color: #E5A91A;
+    color: #003b94;
     font-size: 13px;
 }
 
@@ -5113,7 +5212,7 @@ body.mobile-cat-open {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 18px rgba(196, 138, 10, 0.06);
+    box-shadow: 0 4px 18px rgba(0, 40, 104, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     position: relative;
 }
@@ -5153,7 +5252,7 @@ body.mobile-cat-open {
     justify-content: center;
     aspect-ratio: 1 / 1;
     font-size: 2.6rem;
-    color: #E0A810;
+    color: #002868;
     opacity: 0.22;
 }
 
@@ -5189,13 +5288,13 @@ body.mobile-cat-open {
 }
 
 .ez-product-card__badge--bestseller {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
 }
 
 .ez-product-card__badge--shipping {
     background: rgba(255, 255, 255, 0.95);
-    color: #E0A810;
+    color: #002868;
     border: 1px solid rgba(250, 188, 39, 0.15);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -5234,7 +5333,7 @@ body.mobile-cat-open {
 }
 
 .ez-product-card__icon-btn:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     transform: scale(1.05);
 }
@@ -5273,7 +5372,7 @@ body.mobile-cat-open {
     border: none;
     border-radius: 999px;
     background: #fff;
-    color: #E0A810;
+    color: #002868;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 700;
@@ -5296,7 +5395,7 @@ body.mobile-cat-open {
 }
 
 .ez-product-card__quick-btn:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
 }
 
@@ -5326,7 +5425,7 @@ body.mobile-cat-open {
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 8px 28px rgba(250, 188, 39, 0.16);
-    color: #E0A810;
+    color: #002868;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
@@ -5373,7 +5472,7 @@ body.mobile-cat-open {
 }
 
 .ez-product-card__title a:hover {
-    color: #E0A810;
+    color: #002868;
 }
 
 .ez-product-card__rating {
@@ -5407,7 +5506,7 @@ body.mobile-cat-open {
 .ez-product-card__price {
     font-size: 17px;
     font-weight: 800;
-    color: #E0A810;
+    color: #002868;
 }
 
 .ez-product-card__original {
@@ -5514,12 +5613,12 @@ body.mobile-cat-open {
 
 .ez-product-card__btn--cart {
     background: #fff;
-    color: #E0A810;
-    border: 1.5px solid #E0A810;
+    color: #002868;
+    border: 1.5px solid #002868;
 }
 
 .ez-product-card__btn--cart:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
 }
 
@@ -5644,7 +5743,7 @@ body.ez-qv-open {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #E0A810;
+    color: #002868;
 }
 
 .ez-qv__eyebrow i {
@@ -5669,7 +5768,7 @@ body.ez-qv-open {
 }
 
 .ez-qv__close:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     transform: rotate(90deg);
 }
@@ -5730,7 +5829,7 @@ body.ez-qv-open {
 
 .ez-qv__pill--ship {
     background: #eff6ff;
-    color: #E0A810;
+    color: #002868;
 }
 
 .ez-qv__pill--deal {
@@ -5795,7 +5894,7 @@ body.ez-qv-open {
 .ez-qv__price {
     font-size: clamp(1.35rem, 2.5vw, 1.75rem);
     font-weight: 800;
-    color: #E0A810;
+    color: #002868;
 }
 
 .ez-qv__price-old {
@@ -5873,12 +5972,12 @@ body.ez-qv-open {
 
 .ez-qv__btn--cart {
     background: #fff;
-    color: #E0A810;
-    border: 2px solid #E0A810;
+    color: #002868;
+    border: 2px solid #002868;
 }
 
 .ez-qv__btn--cart:hover {
-    background: #E0A810;
+    background: #002868;
     color: #fff;
     transform: translateY(-1px);
     box-shadow: 0 8px 22px rgba(250, 188, 39, 0.22);
@@ -5906,7 +6005,7 @@ body.ez-qv-open {
     margin-top: 8px;
     font-size: 13px;
     font-weight: 600;
-    color: #E0A810;
+    color: #002868;
     text-decoration: none;
     transition: gap 0.2s ease, color 0.2s ease;
 }

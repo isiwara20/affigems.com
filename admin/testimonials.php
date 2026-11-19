@@ -44,7 +44,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Testimonials - Admin | ARIGATO.LK</title>
+    <title>Testimonials - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
         .testimonial-card.rejected { border-left: 4px solid #ef4444; opacity: 0.6; }
         .testimonial-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
         .testimonial-user { display: flex; align-items: center; gap: 12px; }
-        .testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; background: #8A6508; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+        .testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; background: #001f52; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
         .testimonial-name { font-size: 14px; font-weight: 600; color: #0d1137; }
         .testimonial-meta { font-size: 11px; color: #888; }
         .testimonial-stars { color: #f5a623; font-size: 13px; margin-bottom: 10px; }
@@ -158,7 +158,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                 <?php endif; ?>
 
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved. Developed by Chandila.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved. Developed by Chandila.</p>
                 </div>
             </div>
         </main>

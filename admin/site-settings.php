@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $settingsDAL->set('low_stock_email', trim($_POST['low_stock_email'] ?? ''));
     $settingsDAL->set('low_stock_threshold', trim($_POST['low_stock_threshold'] ?? '5'));
     $settingsDAL->set('order_notification_email', trim($_POST['order_notification_email'] ?? ''));
-    $settingsDAL->set('store_name', trim($_POST['store_name'] ?? 'ARIGATO.LK'));
+    $settingsDAL->set('store_name', trim($_POST['store_name'] ?? 'Affinity Gems & Jewels'));
     $settingsDAL->set('store_phone', trim($_POST['store_phone'] ?? ''));
     $settingsDAL->set('store_email', trim($_POST['store_email'] ?? ''));
     $settingsDAL->set('store_address', trim($_POST['store_address'] ?? ''));
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $settings = $settingsDAL->getAll();
 $lowStockEmail = $settings['low_stock_email'] ?? '';
 $lowStockThreshold = $settings['low_stock_threshold'] ?? '5';
-$storeName = $settings['store_name'] ?? 'ARIGATO.LK';
+$storeName = $settings['store_name'] ?? (defined('ADMIN_BRAND') ? ADMIN_BRAND : 'Affinity Gems & Jewels');
 $storePhone = $settings['store_phone'] ?? '';
 $storeEmail = $settings['store_email'] ?? '';
 $storeAddress = $settings['store_address'] ?? '';
@@ -124,20 +124,20 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                             </div>
                             <div class="form-group" style="margin-bottom:16px;">
                                 <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">Store Phone</label>
-                                <input type="text" name="store_phone" value="<?php echo htmlspecialchars($storePhone); ?>" placeholder="077 899 8990" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
+                                <input type="text" name="store_phone" value="<?php echo htmlspecialchars($storePhone); ?>" placeholder="+94 777 554542" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
                             </div>
                             <div class="form-group" style="margin-bottom:16px;">
                                 <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">Store Email</label>
-                                <input type="email" name="store_email" value="<?php echo htmlspecialchars($storeEmail); ?>" placeholder="info@arigato.lk" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
+                                <input type="email" name="store_email" value="<?php echo htmlspecialchars($storeEmail); ?>" placeholder="murshidmunzeer@gmail.com" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
                             </div>
                             <div class="form-group" style="margin-bottom:16px;">
                                 <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">WhatsApp Number</label>
-                                <input type="text" name="whatsapp_number" value="<?php echo htmlspecialchars($whatsappNumber); ?>" placeholder="+94778998990" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
+                                <input type="text" name="whatsapp_number" value="<?php echo htmlspecialchars($whatsappNumber); ?>" placeholder="94777554542" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
                             </div>
                         </div>
                         <div class="form-group" style="margin-bottom:0;">
                             <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">Store Address</label>
-                            <input type="text" name="store_address" value="<?php echo htmlspecialchars($storeAddress); ?>" placeholder="779/3, Pannipitiya Road, Pelawatta, Battaramulla" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
+                            <input type="text" name="store_address" value="<?php echo htmlspecialchars($storeAddress); ?>" placeholder="44/6 Jayasamagi Mawatha, Kalubowila, Dehiwala" style="width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none;">
                         </div>
                     </div>
 
@@ -168,7 +168,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                     <!-- SMS (Notify.lk / ShoutOUT) -->
                     <div class="content-card" style="background:#fff; border:1px solid #eee; border-radius:14px; padding:28px; margin-bottom:20px;">
                         <h3 style="font-size:15px; font-weight:700; color:#0d1137; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                            <i class="fas fa-sms" style="color:#E0A810;"></i> SMS Notifications
+                            <i class="fas fa-sms" style="color:#002868;"></i> SMS Notifications
                         </h3>
                         <label style="display:flex; align-items:center; gap:10px; margin-bottom:18px; cursor:pointer;">
                             <input type="checkbox" name="sms_enabled" value="1" <?php echo $smsEnabled ? 'checked' : ''; ?> style="width:18px; height:18px;">
@@ -178,11 +178,11 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                         <div class="form-group" style="margin-bottom:20px;">
                             <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:8px;">SMS Gateway</label>
                             <div style="display:flex; flex-wrap:wrap; gap:12px;">
-                                <label style="display:flex; align-items:center; gap:8px; padding:10px 16px; border:1.5px solid <?php echo $smsProvider === 'notify_lk' ? '#E0A810' : '#e4e8f0'; ?>; border-radius:10px; cursor:pointer; background:<?php echo $smsProvider === 'notify_lk' ? '#f0f6ff' : '#fff'; ?>;">
+                                <label style="display:flex; align-items:center; gap:8px; padding:10px 16px; border:1.5px solid <?php echo $smsProvider === 'notify_lk' ? '#002868' : '#e4e8f0'; ?>; border-radius:10px; cursor:pointer; background:<?php echo $smsProvider === 'notify_lk' ? '#f0f6ff' : '#fff'; ?>;">
                                     <input type="radio" name="sms_api_provider" value="notify_lk" <?php echo $smsProvider === 'notify_lk' ? 'checked' : ''; ?> class="sms-provider-radio">
                                     <span style="font-size:13px; font-weight:600; color:#333;">Notify.lk</span>
                                 </label>
-                                <label style="display:flex; align-items:center; gap:8px; padding:10px 16px; border:1.5px solid <?php echo $smsProvider === 'shoutout' ? '#E0A810' : '#e4e8f0'; ?>; border-radius:10px; cursor:pointer; background:<?php echo $smsProvider === 'shoutout' ? '#f0f6ff' : '#fff'; ?>;">
+                                <label style="display:flex; align-items:center; gap:8px; padding:10px 16px; border:1.5px solid <?php echo $smsProvider === 'shoutout' ? '#002868' : '#e4e8f0'; ?>; border-radius:10px; cursor:pointer; background:<?php echo $smsProvider === 'shoutout' ? '#f0f6ff' : '#fff'; ?>;">
                                     <input type="radio" name="sms_api_provider" value="shoutout" <?php echo $smsProvider === 'shoutout' ? 'checked' : ''; ?> class="sms-provider-radio">
                                     <span style="font-size:13px; font-weight:600; color:#333;">ShoutOUT</span>
                                 </label>
@@ -203,7 +203,7 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                                 </div>
                                 <div class="form-group">
                                     <label style="display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px;">Sender ID</label>
-                                    <input type="text" name="sms_sender_id" value="<?php echo htmlspecialchars($smsSenderId); ?>" placeholder="e.g. ARIGATO" style="<?php echo $inputStyle; ?>">
+                                    <input type="text" name="sms_sender_id" value="<?php echo htmlspecialchars($smsSenderId); ?>" placeholder="e.g. AFFIGEMS" style="<?php echo $inputStyle; ?>">
                                     <p style="font-size:11px; color:#6b7099; margin-top:4px;">Approved sender ID from <a href="https://www.notify.lk/" target="_blank" rel="noopener">Notify.lk</a> (case sensitive)</p>
                                 </div>
                             </div>
@@ -253,14 +253,14 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                             <i class="fas fa-info-circle"></i> Active gateway: <strong><?php echo htmlspecialchars($smsProvider === 'shoutout' ? 'ShoutOUT' : 'Notify.lk'); ?></strong>.
                             Notify.lk docs: <a href="https://developer.notify.lk/api-endpoints/" target="_blank" rel="noopener">developer.notify.lk</a>.
                             ShoutOUT: <a href="https://www.getshoutout.com/" target="_blank" rel="noopener">getshoutout.com</a>.
-                            <a href="<?php echo BASE_URL; ?>admin/sms-campaign.php" style="color:#E0A810; font-weight:600;">Send SMS campaign &rarr;</a>
+                            <a href="<?php echo BASE_URL; ?>admin/sms-campaign.php" style="color:#002868; font-weight:600;">Send SMS campaign &rarr;</a>
                         </p>
                     </div>
 
                     <!-- Google Analytics -->
                     <div class="content-card" style="background:#fff; border:1px solid #eee; border-radius:14px; padding:28px; margin-bottom:20px;">
                         <h3 style="font-size:15px; font-weight:700; color:#0d1137; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                            <i class="fas fa-chart-line" style="color:#E0A810;"></i> Google Analytics (GA4)
+                            <i class="fas fa-chart-line" style="color:#002868;"></i> Google Analytics (GA4)
                         </h3>
                         <label style="display:flex; align-items:center; gap:10px; margin-bottom:18px; cursor:pointer;">
                             <input type="checkbox" name="google_analytics_enabled" value="1" <?php echo $gaEnabled ? 'checked' : ''; ?> style="width:18px; height:18px;">
@@ -278,13 +278,13 @@ $inputStyle = "width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                         </div>
                     </div>
 
-                    <button type="submit" style="padding:13px 30px; background:#8A6508; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button type="submit" style="padding:13px 30px; background:#001f52; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <i class="fas fa-save"></i> Save Settings
                     </button>
                 </form>
 
                 <div class="admin-footer" style="margin-top:40px;">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

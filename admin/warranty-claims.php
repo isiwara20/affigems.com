@@ -79,7 +79,7 @@ function warranty_claim_is_video(?string $path): bool
     <style>
         .filter-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
         .filter-tabs a { padding:8px 14px; border-radius:8px; font-size:12px; font-weight:600; text-decoration:none; background:#f0f2f8; color:#333; }
-        .filter-tabs a.active { background:#D4A017; color:#fff; }
+        .filter-tabs a.active { background:#002868; color:#fff; }
         .warranty-table-card {
             width: 100%;
             max-width: 100%;
@@ -102,7 +102,7 @@ function warranty_claim_is_video(?string $path): bool
             white-space: nowrap;
         }
         .claim-status-badge.pending { background:#fff7ed; color:#ea580c; }
-        .claim-status-badge.approved { background:#eff6ff; color:#E5A91A; }
+        .claim-status-badge.approved { background:#eff6ff; color:#003b94; }
         .claim-status-badge.replaced { background:#ecfdf5; color:#16a34a; }
         .claim-status-badge.rejected { background:#fef2f2; color:#ef4444; }
         .claim-cell-main,
@@ -152,12 +152,12 @@ function warranty_claim_is_video(?string $path): bool
         #warrantyClaimsTable th:nth-child(9),
         #warrantyClaimsTable td:nth-child(9) { width: 130px; white-space: nowrap; overflow: visible; }
         .claim-action-btn {
-            border: none; background: #f0f5fc; color: #D4A017; border-radius: 8px;
+            border: none; background: #f0f5fc; color: #002868; border-radius: 8px;
             padding: 7px 10px; font-size: 11px; font-weight: 600; cursor: pointer;
             font-family: 'Poppins', sans-serif; margin: 2px 2px 2px 0;
             display: inline-block;
         }
-        .claim-action-btn:hover { background: #D4A017; color: #fff; }
+        .claim-action-btn:hover { background: #002868; color: #fff; }
         .claim-action-btn.attach { background: #ecfdf5; color: #16a34a; }
         .claim-action-btn.attach:hover { background: #16a34a; color: #fff; }
         .admin-modal-overlay {
@@ -193,7 +193,7 @@ function warranty_claim_is_video(?string $path): bool
         .admin-modal-form textarea { min-height: 80px; resize: vertical; }
         .admin-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
         .btn-modal-primary {
-            padding: 10px 18px; background: #D4A017; color: #fff; border: none;
+            padding: 10px 18px; background: #002868; color: #fff; border: none;
             border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
             font-family: 'Poppins', sans-serif;
         }
@@ -361,7 +361,7 @@ function warranty_claim_is_video(?string $path): bool
                 </div>
 
                 <div class="admin-footer">
-                    <p>&copy; <?php echo date('Y'); ?> ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

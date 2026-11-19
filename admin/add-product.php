@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!in_array($warrantyPeriod, $warrantyOptions, true)) {
         $warrantyPeriod = '';
     }
-    $author = trim($_POST['author'] ?? 'ARIGATO.LK');
+    $author = trim($_POST['author'] ?? ADMIN_BRAND);
     $status = $_POST['status'] ?? 'active';
     $featured = isset($_POST['featured']) ? 1 : 0;
     $hasVariations = isset($_POST['has_variations']) ? 1 : 0;
@@ -306,7 +306,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title><?php echo $isEdit ? 'Edit Product' : 'Add Product'; ?> - Admin | ARIGATO.LK</title>
+    <title><?php echo $isEdit ? 'Edit Product' : 'Add Product'; ?> - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -420,13 +420,13 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
             border-bottom: none;
         }
         .variation-skus-table tbody tr:hover {
-            background: #FFF8E6;
+            background: #f8fafd;
         }
         .variation-skus-table tbody tr:nth-child(even) {
             background: #fcfcfd;
         }
         .variation-skus-table tbody tr:nth-child(even):hover {
-            background: #FFF8E6;
+            background: #f8fafd;
         }
         .variation-combo-cell {
             min-width: 0;
@@ -506,13 +506,13 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
         }
         .variation-toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
         .variation-chip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-        .variation-chip { background: #FFE8A8; color: #D4A017; border: 1px solid #F5E6B8; padding: 4px 10px; border-radius: 999px; font-size: 11px; }
-        .btn-variation { border: 1px dashed #c4b5fd; background: #FFF8E6; color: #D4A017; border-radius: 10px; padding: 8px 12px; font-size: 12px; font-weight: 600; cursor: pointer; }
-        .btn-variation:hover { background: #FFE8A8; }
+        .variation-chip { background: #e8f0fe; color: #002868; border: 1px solid #dbe5f5; padding: 4px 10px; border-radius: 999px; font-size: 11px; }
+        .btn-variation { border: 1px dashed #c4b5fd; background: #f8fafd; color: #002868; border-radius: 10px; padding: 8px 12px; font-size: 12px; font-weight: 600; cursor: pointer; }
+        .btn-variation:hover { background: #e8f0fe; }
         #variationsSection[hidden] { display: none !important; }
         .variation-guide {
-            background: #FFF8E6;
-            border: 1px solid #F5E6B8;
+            background: #f8fafd;
+            border: 1px solid #dbe5f5;
             border-radius: 14px;
             padding: 16px 18px;
             margin-bottom: 18px;
@@ -521,7 +521,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
             margin: 0 0 10px;
             font-size: 14px;
             font-weight: 700;
-            color: #D4A017;
+            color: #002868;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -798,7 +798,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                                 <div class="form-group">
                                     <label for="author">Author</label>
                                     <input type="text" id="author" name="author" class="form-control" 
-                                           value="<?php echo htmlspecialchars($editProduct['author'] ?? 'ARIGATO.LK'); ?>">
+                                           value="<?php echo htmlspecialchars($editProduct['author'] ?? (defined('ADMIN_BRAND') ? ADMIN_BRAND : 'Affinity Gems & Jewels')); ?>">
                                 </div>
                                 
                                 <div class="form-group">
@@ -894,7 +894,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
 
                 <!-- Footer -->
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>
@@ -1104,10 +1104,10 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     }
 
     function parseColorValue(value) {
-        if (!value) return { label: '', hex: '#E5A91A' };
+        if (!value) return { label: '', hex: '#003b94' };
         if (value.indexOf('|') !== -1) {
             var parts = value.split('|');
-            return { label: parts[0].trim(), hex: parts[1].trim() || '#E5A91A' };
+            return { label: parts[0].trim(), hex: parts[1].trim() || '#003b94' };
         }
         if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(value)) {
             return { label: value.toUpperCase(), hex: value };
@@ -1175,7 +1175,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                 valuesWrap.innerHTML =
                     '<div class="color-picker-panel">' +
                         '<div class="color-add-row">' +
-                            '<input type="color" class="variation-color-input" data-index="' + index + '" value="#E5A91A">' +
+                            '<input type="color" class="variation-color-input" data-index="' + index + '" value="#003b94">' +
                             '<input type="text" class="form-control variation-color-label" data-index="' + index + '" placeholder="Color name (e.g. Purple, Pink)">' +
                             '<button type="button" class="btn-secondary variation-color-add" data-index="' + index + '"><i class="fas fa-plus"></i> Add</button>' +
                         '</div>' +

@@ -13,7 +13,7 @@ function ezymart_contact_generate_reference(): string
 
 function ezymart_contact_admin_email(): string
 {
-    return defined('STORE_EMAIL') ? STORE_EMAIL : 'info@arigato.lk';
+    return defined('STORE_EMAIL') ? STORE_EMAIL : 'murshidmunzeer@gmail.com';
 }
 
 function ezymart_contact_email_admin_template(array $data): string
@@ -31,12 +31,12 @@ function ezymart_contact_email_admin_template(array $data): string
         $rows[] = ['Email', $data['email']];
     }
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;">New Customer Enquiry</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;">New Customer Enquiry</h2>'
         . '<p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#555;">A new message was submitted through the contact form on '
         . htmlspecialchars(lumak_email_brand_name()) . '.</p>'
         . lumak_email_info_box($rows)
-        . '<p style="margin:18px 0 8px;font-size:12px;font-weight:700;color:#D4A017;text-transform:uppercase;letter-spacing:0.04em;">Message</p>'
-        . '<div style="padding:16px 18px;background:#FFF8E6;border:1px solid #F5E6B8;border-radius:12px;font-size:14px;line-height:1.75;color:#333;white-space:pre-wrap;">'
+        . '<p style="margin:18px 0 8px;font-size:12px;font-weight:700;color:#002868;text-transform:uppercase;letter-spacing:0.04em;">Message</p>'
+        . '<div style="padding:16px 18px;background:#f8fafd;border:1px solid #dbe5f5;border-radius:12px;font-size:14px;line-height:1.75;color:#333;white-space:pre-wrap;">'
         . nl2br(htmlspecialchars($data['message'])) . '</div>'
         . '<p style="margin:18px 0 0;font-size:12px;color:#888;">Submitted on ' . htmlspecialchars(date('d M Y, h:i A')) . '</p>';
 
@@ -48,14 +48,14 @@ function ezymart_contact_email_customer_template(array $data): string
     $name = htmlspecialchars($data['full_name']);
     $ref = htmlspecialchars($data['reference_no']);
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;text-align:center;">We Received Your Message</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;text-align:center;">We Received Your Message</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;text-align:center;">Hi <strong>' . $name . '</strong>, thank you for contacting '
         . htmlspecialchars(lumak_email_brand_name()) . '. Your enquiry has been logged successfully.</p>'
         . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin:20px 0;">'
         . '<tr><td align="center">'
-        . '<div style="display:inline-block;padding:18px 28px;background:linear-gradient(135deg,#FFF8E6,#fff);border:2px dashed #b8d4ff;border-radius:14px;text-align:center;">'
+        . '<div style="display:inline-block;padding:18px 28px;background:linear-gradient(135deg,#f8fafd,#fff);border:2px dashed #b8d4ff;border-radius:14px;text-align:center;">'
         . '<p style="margin:0 0 6px;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.08em;">Your Reference Number</p>'
-        . '<p style="margin:0;font-size:26px;font-weight:800;color:#D4A017;letter-spacing:0.06em;">' . $ref . '</p>'
+        . '<p style="margin:0;font-size:26px;font-weight:800;color:#002868;letter-spacing:0.06em;">' . $ref . '</p>'
         . '</div></td></tr></table>'
         . lumak_email_info_box([
             ['Topic', $data['topic']],
@@ -70,7 +70,7 @@ function ezymart_contact_email_customer_template(array $data): string
 
 function ezymart_contact_sms_customer_message(string $referenceNo): string
 {
-    $brand = defined('SITE_NAME') ? SITE_NAME : 'ARIGATO.LK';
+    $brand = defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels';
     return ezymart_sms_truncate(
         'Thank you for contacting ' . $brand . '. Your reference is ' . $referenceNo . '. We will respond within 1-3 working days.',
         621

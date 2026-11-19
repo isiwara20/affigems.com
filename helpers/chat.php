@@ -9,7 +9,7 @@ require_once __DIR__ . '/../services/AsyncMailQueue.php';
 
 function lumak_chat_admin_email(): string
 {
-    return defined('STORE_EMAIL') ? STORE_EMAIL : 'info@arigato.lk';
+    return defined('STORE_EMAIL') ? STORE_EMAIL : 'murshidmunzeer@gmail.com';
 }
 
 /**

@@ -4,7 +4,7 @@
                 <a href="<?php echo BASE_URL; ?>admin/index.php" class="sidebar-brand" title="<?php echo ADMIN_BRAND; ?>">
                     <img src="<?php echo asset_image_url('assets/images/logobottom.png'); ?>" alt="<?php echo ADMIN_BRAND; ?>" class="sidebar-logo sidebar-logo-full" style="width:auto; height:36px; border-radius:0;">
                 </a>
-                <span class="sidebar-logo-mini">LM</span>
+                <span class="sidebar-logo-mini">AG</span>
             </div>
 
             <nav class="sidebar-nav">

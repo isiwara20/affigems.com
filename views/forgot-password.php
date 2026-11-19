@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Forgot Password - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Forgot Password - " . SITE_NAME;
 $pagePreloadImages = [asset_image_url('assets/images/login-couple3.png')];
 require_once __DIR__ . '/partials/header.php';
 

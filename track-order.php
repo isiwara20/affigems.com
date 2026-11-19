@@ -30,7 +30,7 @@ require_once __DIR__ . '/views/partials/header.php';
 .track-hero {
     position: relative;
     padding: clamp(40px, 6vw, 56px) 0 clamp(48px, 7vw, 64px);
-    background: #D49A0A;
+    background: #001f52;
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -97,34 +97,34 @@ require_once __DIR__ . '/views/partials/header.php';
 /* Search Form */
 .track-search {
     background: #fff;
-    border: 1px solid #F5E6B8;
+    border: 1px solid #dbe5f5;
     border-radius: 16px;
     padding: 28px 30px;
     margin-bottom: 24px;
-    box-shadow: 0 8px 32px rgba(196, 138, 10, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 40, 104, 0.1);
 }
 .track-search-form { display: flex; gap: 12px; }
 .track-search-form input {
     flex: 1;
     padding: 15px 20px;
-    border: 1.5px solid #F5E6B8;
+    border: 1.5px solid #dbe5f5;
     border-radius: 12px;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     outline: none;
     text-transform: uppercase;
     transition: all 0.3s;
-    background: #FFF8E6;
+    background: #f8fafd;
 }
 .track-search-form input:focus {
-    border-color: #E5A91A;
+    border-color: #003b94;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.12);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.12);
 }
 .track-search-form input::placeholder { text-transform: none; color: #aaa; }
 .track-search-form button {
     padding: 15px 32px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -136,22 +136,22 @@ require_once __DIR__ . '/views/partials/header.php';
     align-items: center;
     gap: 8px;
     transition: all 0.3s;
-    box-shadow: 0 4px 16px rgba(229, 169, 26, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 40, 104, 0.25);
     white-space: nowrap;
 }
 .track-search-form button:hover {
-    background: #D4A017;
-    box-shadow: 0 6px 22px rgba(229, 169, 26, 0.35);
+    background: #002868;
+    box-shadow: 0 6px 22px rgba(0, 40, 104, 0.35);
     transform: translateY(-1px);
 }
 
 /* Cards */
 .track-result {
     background: #fff;
-    border: 1px solid #F5E6B8;
+    border: 1px solid #dbe5f5;
     border-radius: 16px;
     padding: 32px;
-    box-shadow: 0 4px 20px rgba(196, 138, 10, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 40, 104, 0.06);
 }
 .track-order-header {
     display: flex;
@@ -159,13 +159,13 @@ require_once __DIR__ . '/views/partials/header.php';
     align-items: center;
     margin-bottom: 8px;
     padding-bottom: 18px;
-    border-bottom: 1px solid #FFE8A8;
+    border-bottom: 1px solid #e8f0fe;
 }
-.track-order-header h2 { font-size: 18px; font-weight: 700; color: #D4A017; }
+.track-order-header h2 { font-size: 18px; font-weight: 700; color: #002868; }
 .track-order-header .order-date {
     font-size: 12px;
-    color: #D4A017;
-    background: #FFE8A8;
+    color: #002868;
+    background: #e8f0fe;
     padding: 6px 14px;
     border-radius: 20px;
     font-weight: 500;
@@ -186,7 +186,7 @@ require_once __DIR__ . '/views/partials/header.php';
     left: 50px;
     right: 50px;
     height: 4px;
-    background: #FFF3D6;
+    background: #f4f7fc;
     z-index: 1;
     border-radius: 4px;
 }
@@ -196,7 +196,7 @@ require_once __DIR__ . '/views/partials/header.php';
     top: 24px;
     left: 50px;
     height: 4px;
-    background: #D49A0A;
+    background: #001f52;
     z-index: 2;
     border-radius: 4px;
     animation: progressGrow 1.2s ease-out forwards;
@@ -217,8 +217,8 @@ require_once __DIR__ . '/views/partials/header.php';
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #FFF8E6;
-    border: 3px solid #F5E6B8;
+    background: #f8fafd;
+    border: 3px solid #dbe5f5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,16 +226,16 @@ require_once __DIR__ . '/views/partials/header.php';
     font-size: 16px;
     color: #c4b5fd;
     transition: all 0.4s ease;
-    box-shadow: 0 2px 8px rgba(196, 138, 10, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 40, 104, 0.06);
 }
 .timeline-step.active .timeline-dot {
-    background: #D49A0A;
-    border-color: #E5A91A;
+    background: #001f52;
+    border-color: #003b94;
     color: #fff;
-    box-shadow: 0 4px 16px rgba(229, 169, 26, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 40, 104, 0.35);
     animation: dotPulse 0.6s ease-out;
 }
-.timeline-step.active .timeline-label { color: #D4A017; font-weight: 600; }
+.timeline-step.active .timeline-label { color: #002868; font-weight: 600; }
 .timeline-step.cancelled .timeline-dot {
     background: #ef4444;
     border-color: #ef4444;
@@ -258,50 +258,50 @@ require_once __DIR__ . '/views/partials/header.php';
 /* Order Details */
 .track-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
 .track-detail-card {
-    background: #FFF8E6;
+    background: #f8fafd;
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #F5E6B8;
+    border: 1px solid #dbe5f5;
 }
 .track-detail-card h4 {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #E5A91A;
+    color: #003b94;
     margin-bottom: 12px;
     font-weight: 700;
 }
 .track-detail-card p { font-size: 13px; color: #333; line-height: 1.7; }
-.track-detail-card p strong { color: #D4A017; }
+.track-detail-card p strong { color: #002868; }
 
 /* Order Items */
 .track-items h3 {
     font-size: 14px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 14px;
     padding-top: 16px;
-    border-top: 1px solid #FFE8A8;
+    border-top: 1px solid #e8f0fe;
 }
 .track-item {
     display: flex;
     align-items: center;
     gap: 14px;
     padding: 14px;
-    border: 1px solid #F5E6B8;
+    border: 1px solid #dbe5f5;
     border-radius: 10px;
     margin-bottom: 10px;
     background: #fff;
     transition: border-color 0.2s, background 0.2s;
 }
-.track-item:hover { border-color: #F0D78C; background: #FFF8E6; }
+.track-item:hover { border-color: #c2d4f2; background: #f8fafd; }
 .track-item-img {
     width: 50px;
     height: 50px;
     border-radius: 10px;
     object-fit: cover;
-    border: 1px solid #F5E6B8;
-    background: #FFF8E6;
+    border: 1px solid #dbe5f5;
+    background: #f8fafd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,23 +312,23 @@ require_once __DIR__ . '/views/partials/header.php';
 .track-item-info { flex: 1; }
 .track-item-info h4 { font-size: 13px; font-weight: 600; color: #333; margin-bottom: 2px; }
 .track-item-info span { font-size: 11px; color: #888; }
-.track-item-price { font-size: 14px; font-weight: 700; color: #D4A017; white-space: nowrap; }
+.track-item-price { font-size: 14px; font-weight: 700; color: #002868; white-space: nowrap; }
 
 /* Empty / Info State */
 .track-info-state { text-align: center; padding: 40px 28px; }
 .track-info-icon {
     width: 72px;
     height: 72px;
-    background: #FFF3D6;
+    background: #f4f7fc;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    border: 2px solid #F5E6B8;
+    border: 2px solid #dbe5f5;
 }
-.track-info-icon i { font-size: 28px; color: #E5A91A; }
-.track-info-state h3 { font-size: 16px; font-weight: 700; color: #D4A017; margin-bottom: 8px; }
+.track-info-icon i { font-size: 28px; color: #003b94; }
+.track-info-state h3 { font-size: 16px; font-weight: 700; color: #002868; margin-bottom: 8px; }
 .track-info-state > p {
     font-size: 13px;
     color: #888;
@@ -348,9 +348,9 @@ require_once __DIR__ . '/views/partials/header.php';
     margin: 0 auto 8px;
     font-size: 18px;
 }
-.track-info-step-icon.purple { background: #FFE8A8; color: #E5A91A; }
-.track-info-step-icon.violet { background: #FFF3D6; color: #D4A017; }
-.track-info-step-icon.lavender { background: #FFF8E6; color: #E5A91A; border: 1px solid #F5E6B8; }
+.track-info-step-icon.purple { background: #e8f0fe; color: #003b94; }
+.track-info-step-icon.violet { background: #f4f7fc; color: #002868; }
+.track-info-step-icon.lavender { background: #f8fafd; color: #003b94; border: 1px solid #dbe5f5; }
 .track-info-step-icon.done { background: #ecfdf5; color: #16a34a; }
 .track-info-step span { font-size: 11px; color: #666; font-weight: 500; }
 
@@ -361,40 +361,40 @@ require_once __DIR__ . '/views/partials/header.php';
     margin-top: 24px;
     font-size: 12px;
     font-weight: 600;
-    color: #E5A91A;
+    color: #003b94;
     text-decoration: none;
 }
-.track-help-link:hover { color: #D4A017; }
+.track-help-link:hover { color: #002868; }
 
 /* Testimonial */
 .track-testimonial { margin-top: 20px; }
 .track-testimonial h3 {
     font-size: 15px;
     font-weight: 600;
-    color: #D4A017;
+    color: #002868;
     margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
-.track-testimonial h3 i { color: #E5A91A; }
+.track-testimonial h3 i { color: #003b94; }
 .track-testimonial > p { font-size: 12px; color: #888; margin-bottom: 18px; }
 .track-testimonial textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1.5px solid #F5E6B8;
+    border: 1.5px solid #dbe5f5;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     outline: none;
     resize: vertical;
-    background: #FFF8E6;
+    background: #f8fafd;
     transition: all 0.3s;
 }
 .track-testimonial textarea:focus {
-    border-color: #E5A91A;
+    border-color: #003b94;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(229, 169, 26, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 40, 104, 0.1);
 }
 .track-testimonial label { font-size: 12px; font-weight: 600; color: #333; display: block; margin-bottom: 6px; }
 .btn-track-submit {
@@ -402,7 +402,7 @@ require_once __DIR__ . '/views/partials/header.php';
     align-items: center;
     gap: 8px;
     padding: 11px 24px;
-    background: #D49A0A;
+    background: #001f52;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -413,8 +413,8 @@ require_once __DIR__ . '/views/partials/header.php';
     transition: all 0.3s;
 }
 .btn-track-submit:hover {
-    background: #D4A017;
-    box-shadow: 0 4px 16px rgba(229, 169, 26, 0.25);
+    background: #002868;
+    box-shadow: 0 4px 16px rgba(0, 40, 104, 0.25);
     transform: translateY(-1px);
 }
 .track-success-msg {
@@ -436,8 +436,8 @@ require_once __DIR__ . '/views/partials/header.php';
 
 /* Not Found */
 .track-not-found { text-align: center; padding: 40px; }
-.track-not-found i { font-size: 3rem; color: #F0D78C; margin-bottom: 14px; }
-.track-not-found h3 { font-size: 16px; color: #D4A017; margin-bottom: 6px; }
+.track-not-found i { font-size: 3rem; color: #c2d4f2; margin-bottom: 14px; }
+.track-not-found h3 { font-size: 16px; color: #002868; margin-bottom: 6px; }
 .track-not-found p { font-size: 13px; color: #888; }
 
 @media (max-width: 768px) {

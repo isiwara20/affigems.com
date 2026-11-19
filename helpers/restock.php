@@ -17,7 +17,7 @@ function lumak_email_restock_template(string $productName, string $productUrl, ?
             . 'Option: <strong>' . htmlspecialchars($variationLabel) . '</strong></p>';
     }
 
-    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#D4A017;text-align:center;">Back in Stock!</h2>'
+    $content = '<h2 style="margin:0 0 12px;font-size:22px;color:#002868;text-align:center;">Back in Stock!</h2>'
         . '<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#555;">Good news — an item on your restock alert list is available again.</p>'
         . lumak_email_info_box([
             ['Product', $productName],
@@ -41,7 +41,7 @@ function ezymart_restock_product_url(array $product): string
 function ezymart_restock_sms_message(string $productName, string $productUrl, ?string $variationLabel = null): string
 {
     $settings = ezymart_sms_settings();
-    $store = $settings['store_name'] !== '' ? $settings['store_name'] : 'ARIGATO.LK';
+    $store = $settings['store_name'] !== '' ? $settings['store_name'] : (defined('SITE_NAME') ? SITE_NAME : 'Affinity Gems & Jewels');
 
     $item = $productName;
     if ($variationLabel) {

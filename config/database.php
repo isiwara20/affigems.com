@@ -7,7 +7,8 @@
 class Database {
     private $host = "127.0.0.1";
     private $port = "3306";
-    private $db_name = "arigato_db";
+    private $db_name = "affigems_db";
+    private $fallback_db = "arigato_db";
     private $username = "root";
     private $password = "";
     private $conn;
@@ -38,42 +39,62 @@ class Database {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ];
 
+        $databasesToTry = [$this->db_name, $this->fallback_db];
+
         foreach ($portsToTry as $port) {
+            foreach ($databasesToTry as $candidateDb) {
+                try {
+                    $dsn = "mysql:host={$this->host};port={$port};dbname={$candidateDb};charset=utf8mb4";
+                    $this->conn = new PDO($dsn, $this->username, $this->password, $options);
+                    $this->port = $port;
+                    $this->db_name = $candidateDb;
+                    $this->ensureSchema();
+                    return $this->conn;
+                } catch (PDOException $exception) {
+                    $msg = $exception->getMessage();
+                    // If not unknown DB, don't try another DB on same port
+                    if (stripos($msg, 'Unknown database') === false && stripos($msg, '1049') === false) {
+                        break;
+                    }
+                }
+            }
+
+            // If neither DB exists, try creating primary DB
             try {
+                $dsnNoDb = "mysql:host={$this->host};port={$port};charset=utf8mb4";
+                $tmp = new PDO($dsnNoDb, $this->username, $this->password, $options);
+                $tmp->exec("CREATE DATABASE IF NOT EXISTS `{$this->db_name}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+                $tmp = null;
+
                 $dsn = "mysql:host={$this->host};port={$port};dbname={$this->db_name};charset=utf8mb4";
                 $this->conn = new PDO($dsn, $this->username, $this->password, $options);
                 $this->port = $port;
+                $this->ensureSchema();
                 return $this->conn;
-            } catch (PDOException $exception) {
-                $msg = $exception->getMessage();
-
-                // If DB is missing, try creating it (common on fresh installs).
-                if (
-                    stripos($msg, 'Unknown database') !== false
-                    || stripos($msg, 'SQLSTATE[HY000] [1049]') !== false
-                ) {
-                    try {
-                        $dsnNoDb = "mysql:host={$this->host};port={$port};charset=utf8mb4";
-                        $tmp = new PDO($dsnNoDb, $this->username, $this->password, $options);
-                        $tmp->exec("CREATE DATABASE IF NOT EXISTS `{$this->db_name}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-                        $tmp = null;
-
-                        $dsn = "mysql:host={$this->host};port={$port};dbname={$this->db_name};charset=utf8mb4";
-                        $this->conn = new PDO($dsn, $this->username, $this->password, $options);
-                        $this->port = $port;
-                        return $this->conn;
-                    } catch (PDOException $e2) {
-                        error_log("Connection error (db create failed): " . $e2->getMessage());
-                        $this->conn = null;
-                        continue;
-                    }
-                }
-
-                error_log("Connection error: " . $msg);
+            } catch (PDOException $e2) {
                 $this->conn = null;
             }
         }
 
         return null;
+    }
+
+    /**
+     * Ensure core tables are initialized if connecting to a fresh database
+     */
+    private function ensureSchema(): void {
+        if ($this->conn === null) return;
+        try {
+            $stmt = $this->conn->query("SHOW TABLES LIKE 'admins'");
+            if ($stmt && $stmt->rowCount() === 0) {
+                $sqlFile = __DIR__ . '/../database/setup.sql';
+                if (file_exists($sqlFile)) {
+                    $sql = file_get_contents($sqlFile);
+                    if (!empty($sql)) {
+                        $this->conn->exec($sql);
+                    }
+                }
+            }
+        } catch (Throwable $e) {}
     }
 }

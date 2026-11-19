@@ -12,8 +12,8 @@
 
 define('MAIL_HOST', 'localhost');
 define('MAIL_PORT', 587);
-define('MAIL_USERNAME', 'info@arigato.lk');
-define('MAIL_PASSWORD', 'osloCC@123');
-define('MAIL_FROM_EMAIL', 'info@arigato.lk');
-define('MAIL_FROM_NAME', 'ARIGATO.LK');
+define('MAIL_USERNAME', 'murshidmunzeer@gmail.com');
+define('MAIL_PASSWORD', '');
+define('MAIL_FROM_EMAIL', 'murshidmunzeer@gmail.com');
+define('MAIL_FROM_NAME', 'Affinity Gems & Jewels');
 define('MAIL_ENCRYPTION', ''); // Empty = auto-detect (SMTPAutoTLS will try TLS if available)

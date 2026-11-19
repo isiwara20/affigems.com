@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "Refund Policy - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Refund Policy - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 ?>
 
@@ -7,10 +8,10 @@ require_once __DIR__ . '/partials/header.php';
     <div class="container">
         <div class="page-content">
             <h1 class="page-title">Refund Policy</h1>
-            <p class="page-updated">Last updated: July 2026</p>
+            <p class="page-updated">Last updated: <?php echo date('F Y'); ?></p>
 
             <div class="page-body">
-                <p>We want you to be happy with every ARIGATO.LK purchase. If something isn't right, this policy explains how returns, exchanges, and refunds work.</p>
+                <p>We want you to be completely satisfied with every <?php echo SITE_NAME; ?> purchase. If something isn't right, this policy explains how returns, exchanges, and refunds work.</p>
 
                 <h2>1. Return Eligibility</h2>
                 <p>You may request a return if all of the following apply:</p>
@@ -51,7 +52,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li>Approved refunds are processed within <strong>7–10 business days</strong> after we receive the returned item.</li>
                     <li>Refunds are issued to the <strong>original payment method</strong> used at checkout.</li>
                     <li>Depending on your bank or card provider, it may take an additional 3–7 business days for the refund to appear in your account.</li>
-                    <li>Original shipping fees are non-refundable unless the return is due to an ARIGATO.LK error (wrong item, defective product, etc.).</li>
+                    <li>Original shipping fees are non-refundable unless the return is due to an error on our part (wrong item, defective product, etc.).</li>
                 </ul>
 
                 <h2>6. Exchanges</h2>

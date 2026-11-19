@@ -64,7 +64,7 @@ $admins = $adminDAL->getAll();
         .admin-card { background:#fff; border:1px solid #eee; border-radius:14px; padding:20px; display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; transition:all 0.2s; }
         .admin-card:hover { border-color:#2563eb; }
         .admin-card-left { display:flex; align-items:center; gap:14px; }
-        .admin-card-avatar { width:44px; height:44px; background:#8A6508; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:700; }
+        .admin-card-avatar { width:44px; height:44px; background:#001f52; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:700; }
         .admin-card-info h4 { font-size:14px; font-weight:600; color:#0d1137; margin-bottom:2px; }
         .admin-card-info p { font-size:12px; color:#6b7099; margin:0; }
         .admin-card-info .admin-date { font-size:10px; color:#aaa; margin-top:2px; }
@@ -78,7 +78,7 @@ $admins = $adminDAL->getAll();
         .form-grid .form-group label { display:block; font-size:12px; font-weight:600; color:#333; margin-bottom:6px; }
         .form-grid .form-group input { width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; outline:none; }
         .form-grid .form-group input:focus { border-color:#2563eb; }
-        .btn-add-admin { padding:11px 24px; background:#8A6508; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:6px; height:44px; }
+        .btn-add-admin { padding:11px 24px; background:#001f52; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:6px; height:44px; }
         .btn-add-admin:hover { background:#1a1f4e; }
         @media (max-width:768px) { .form-grid { grid-template-columns:1fr; } }
     </style>
@@ -164,7 +164,7 @@ $admins = $adminDAL->getAll();
                 <?php endforeach; ?>
 
                 <div class="admin-footer" style="margin-top:40px;">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

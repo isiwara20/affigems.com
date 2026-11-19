@@ -47,7 +47,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once __DIR__ . '/partials/favicon.php'; ?>
-    <title>Customers - Admin | ARIGATO.LK</title>
+    <title>Customers - Admin | <?php echo ADMIN_BRAND; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
         .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length { margin-bottom: 16px; font-size: 13px; }
         .dataTables_wrapper { padding: 20px; }
 
-        .customer-avatar { width: 36px; height: 36px; border-radius: 50%; background: #8A6508; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+        .customer-avatar { width: 36px; height: 36px; border-radius: 50%; background: #001f52; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
         .customer-info { display: flex; align-items: center; gap: 12px; }
         .customer-info strong { font-size: 13px; color: #0d1137; display: block; }
         .customer-info small { color: #888; font-size: 11px; }
@@ -159,7 +159,7 @@ $adminName = $_SESSION['user_name'] ?? 'Admin';
                 </div>
 
                 <div class="admin-footer">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved. Developed by Chandila.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved. Developed by Chandila.</p>
                 </div>
             </div>
         </main>

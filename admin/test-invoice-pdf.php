@@ -12,7 +12,7 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
 }
 
 $orderId = (int)($_GET['order_id'] ?? 0);
-echo "ARIGATO.LK Invoice PDF Diagnostic\n";
+echo "Affinity Gems & Jewels Invoice PDF Diagnostic\n";
 echo "============================\n\n";
 
 $fpdfPath = realpath(__DIR__ . '/../libs/FPDF/fpdf.php');

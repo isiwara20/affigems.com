@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__ . '/../config/app.php';
 /**
  * Shop Page - Browse all products
  */
-$pageTitle = "Shop - ARIGATO.LK";
+$pageTitle = "Shop - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 require_once __DIR__ . '/../dal/ProductDAL.php';
 require_once __DIR__ . '/../dal/CategoryDAL.php';
@@ -47,11 +48,11 @@ try {
         $products = $megaDealDAL->getActiveDealProducts();
         $catInfo = null;
         $isHotDealsView = true;
-        $pageTitle = 'Hot Deals - ARIGATO.LK';
+        $pageTitle = 'Hot Deals - ' . SITE_NAME;
     } elseif ($searchQuery) {
         $products = $productDAL->search($searchQuery);
         $catInfo = null;
-        $pageTitle = 'Search: ' . htmlspecialchars($searchQuery) . ' - ARIGATO.LK';
+        $pageTitle = 'Search: ' . htmlspecialchars($searchQuery) . ' - ' . SITE_NAME;
     } elseif ($selectedCategory) {
         $catInfo = $categoryDAL->getBySlug($selectedCategory);
         if ($catInfo) {
@@ -62,23 +63,44 @@ try {
                 $subInfo = $subDAL->getBySlug($selectedSubcategory);
                 if ($subInfo) {
                     $products = $productDAL->getBySubcategory($subInfo['id']);
-                    $pageTitle = htmlspecialchars($subInfo['name']) . ' - ' . htmlspecialchars($catInfo['name']) . ' - ARIGATO.LK';
+                    $pageTitle = htmlspecialchars($subInfo['name']) . ' - ' . htmlspecialchars($catInfo['name']) . ' - ' . SITE_NAME;
                 } else {
                     $products = $productDAL->getByCategory($catInfo['id']);
-                    $pageTitle = htmlspecialchars($catInfo['name']) . ' - ARIGATO.LK';
+                    $pageTitle = htmlspecialchars($catInfo['name']) . ' - ' . SITE_NAME;
                 }
             } else {
                 $products = $productDAL->getByCategory($catInfo['id']);
-                $pageTitle = htmlspecialchars($catInfo['name']) . ' - ARIGATO.LK';
+                $pageTitle = htmlspecialchars($catInfo['name']) . ' - ' . SITE_NAME;
             }
         } else {
+            $slugTitleMap = [
+                'ceylon-sapphires' => 'Ceylon Sapphires',
+                'sapphires' => 'Ceylon Sapphires',
+                'precious-gemstones' => 'Precious Gemstones',
+                'gemstones' => 'Precious Gemstones',
+                'fine-rings' => 'Fine Rings',
+                'rings' => 'Fine Rings',
+                'necklaces-pendants' => 'Necklaces & Pendants',
+                'necklaces' => 'Necklaces & Pendants',
+                'bespoke-jewelry' => 'Bespoke Jewelry',
+                'certified-loose-stones' => 'Certified Loose Stones',
+                'certified-stones' => 'Certified Loose Stones',
+            ];
+            $friendlyName = $slugTitleMap[$selectedCategory] ?? ucwords(str_replace('-', ' ', $selectedCategory));
+            $catInfo = [
+                'id' => 0,
+                'name' => $friendlyName,
+                'slug' => $selectedCategory,
+                'description' => 'Explore authentic ' . $friendlyName . ' from Affinity Gems & Jewels.',
+            ];
             $products = $productDAL->getActive();
+            $pageTitle = $friendlyName . ' - ' . SITE_NAME;
         }
     } else {
         $products = $productDAL->getActive();
         $catInfo = null;
         if ($viewAllProducts) {
-            $pageTitle = 'All Products - ARIGATO.LK';
+            $pageTitle = 'All Products - ' . SITE_NAME;
         }
     }
 } catch (Exception $e) {

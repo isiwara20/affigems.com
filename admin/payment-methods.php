@@ -355,13 +355,13 @@ $inputStyle = 'width:100%; padding:11px 14px; border:1.5px solid #e4e8f0; border
                         </div>
                     </div>
 
-                    <button type="submit" style="margin-top:10px; padding:13px 30px; background:#8A6508; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button type="submit" style="margin-top:10px; padding:13px 30px; background:#001f52; color:#fff; border:none; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <i class="fas fa-save"></i> Save All Payment Settings
                     </button>
                 </form>
 
                 <div class="admin-footer" style="margin-top:40px;">
-                    <p>&copy; 2026 ARIGATO.LK. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php echo ADMIN_BRAND; ?>. All rights reserved.</p>
                 </div>
             </div>
         </main>

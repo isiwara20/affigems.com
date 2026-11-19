@@ -1,28 +1,30 @@
-﻿# Arigato Mobile (Pvt) Ltd — E-Commerce
+# Affinity Gems and Jewels Pvt Ltd — E-Commerce
 
-Mobile phones, accessories & tech store
+Direct Source for Sri Lankan Sapphires, Natural Gemstones & Fine Jewelry.
 
-**Domain:** arigato.lk  
-**Email:** info@arigato.lk  
-**Hotline:** 077 899 8990 / 071 489 9899  
-**Address:** 779/3, Pannipitiya Road, Pelawatta, Battaramulla
+**Company:** Affinity Gems and Jewels Pvt Ltd.  
+**Managing Director:** Murshid Munzeer  
+**Domain:** affigems.com  
+**Email:** murshidmunzeer@gmail.com  
+**Hotline / WhatsApp:** +94 777 554542  
+**Address:** 44/6 Jayasamagi Mawatha, Kalubowila, Dehiwala  
+**Accreditation:** State Gem Corporation of Sri Lanka Registered | International Chamber of Commerce (Sri Lanka) Member
 
 ## Admin Login
-Email: info@arigato.lk  
-Password: Admin@123
+- **URL:** `/admin/`
+- **Email:** murshidmunzeer@gmail.com
+- **Password:** Admin@123
 
 ## Tech Stack
 - PHP (Vanilla MVC)
-- MySQL
-- HTML/CSS/JS
-- PHPMailer
+- MySQL (`affigems_db` / fallback to `arigato_db`)
+- HTML/CSS/JS (Amber Gold & Royal Blue sapphire luxury theme)
+- PHPMailer / FPDF Invoice Generation
 
-## Features
-- Product catalog with categories
-- Shopping cart & checkout
-- Order tracking
-- Customer accounts
-- Admin dashboard
-- WhatsApp integration
-- Newsletter subscription
-- Review system
+## Key Features
+- Ceylon Sapphires, precious stones & bespoke jewelry catalog
+- Floating WhatsApp button with instant customer inquiry integration
+- Multi-channel support (Direct Chatbot, WhatsApp, Inquiry Forms)
+- China tour & global expansion showcase
+- Authenticity verification & warranty tracking system
+- Admin management (Products, Orders, Deals, Coupons, Invoices)

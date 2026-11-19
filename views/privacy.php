@@ -1,5 +1,6 @@
 <?php
-$pageTitle = "Privacy Policy - ARIGATO.LK";
+require_once __DIR__ . '/../config/app.php';
+$pageTitle = "Privacy Policy - " . SITE_NAME;
 require_once __DIR__ . '/partials/header.php';
 ?>
 
@@ -20,7 +21,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Business Registration Number:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Trading Name:</strong> <?php echo SITE_NAME; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                 </ul>
@@ -254,7 +255,7 @@ require_once __DIR__ . '/partials/header.php';
                     <li><strong>Company:</strong> <?php echo STORE_OWNER; ?></li>
                     <li><strong>Business Registration:</strong> <?php echo STORE_BUSINESS_REG; ?></li>
                     <li><strong>Address:</strong> <?php echo STORE_LOCATION; ?></li>
-                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a> / <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_2); ?>"><?php echo STORE_PHONE_2; ?></a></li>
+                    <li><strong>Phone:</strong> <a href="tel:<?php echo preg_replace('/\s+/', '', STORE_PHONE_1); ?>"><?php echo STORE_PHONE_1; ?></a></li>
                     <li><strong>Email:</strong> <a href="mailto:<?php echo STORE_EMAIL; ?>"><?php echo STORE_EMAIL; ?></a></li>
                     <li><strong>Website:</strong> <a href="https://<?php echo STORE_DOMAIN; ?>"><?php echo STORE_DOMAIN; ?></a></li>
                     <li><strong>WhatsApp:</strong> <a href="https://wa.me/<?php echo STORE_WHATSAPP; ?>" target="_blank" rel="noopener"><?php echo STORE_PHONE_1; ?></a></li>

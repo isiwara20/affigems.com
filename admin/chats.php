@@ -133,7 +133,7 @@ if ($selectedChat) {
         .chat-main-top-left { display: flex; align-items: center; gap: 12px; }
         .chat-main-top-left .user-avatar {
             width: 38px; height: 38px;
-            background: #8A6508;
+            background: #001f52;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             color: #fff; font-size: 14px;
@@ -177,7 +177,7 @@ if ($selectedChat) {
             padding: 12px 16px; border-radius: 14px; font-size: 13px; line-height: 1.6; word-wrap: break-word;
         }
         .msg-row.from-user .msg-bubble { background: #fff; border: 1px solid #e8ecf1; color: #333; border-radius: 14px 14px 14px 4px; }
-        .msg-row.from-admin .msg-bubble { background: #8A6508; color: #fff; border-radius: 14px 14px 4px 14px; }
+        .msg-row.from-admin .msg-bubble { background: #001f52; color: #fff; border-radius: 14px 14px 4px 14px; }
         .msg-row.from-bot .msg-bubble { background: #f5f7fa; border: 1px solid #e8ecf1; color: #666; border-radius: 14px 14px 14px 4px; font-style: italic; }
         .msg-time { font-size: 10px; color: #aaa; margin-top: 4px; }
         .msg-row.from-admin .msg-time { text-align: right; }
@@ -199,7 +199,7 @@ if ($selectedChat) {
         }
         .chat-main-footer input:focus { border-color: #1a1f4e; }
         .chat-main-footer button {
-            padding: 13px 24px; background: #8A6508;
+            padding: 13px 24px; background: #001f52;
             color: #fff; border: none; border-radius: 12px;
             font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
             cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s;

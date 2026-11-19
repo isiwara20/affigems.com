@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "My Profile - ARIGATO.LK";
 require_once __DIR__ . '/../config/app.php';
+$pageTitle = "My Profile - " . SITE_NAME;
 
 // Redirect if not logged in - BEFORE any output
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in'] || (isset($_SESSION['is_admin']) && $_SESSION['is_admin'])) {
